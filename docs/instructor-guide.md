@@ -180,8 +180,9 @@ This standard is not punitive. It trains students to verify programs, not merely
 
 See each module's `README.md` for specific facilitation notes and example handshakes. The two complete sample modules are:
 
-- [Module 01: Variables and Expressions](../modules/01-variables-expressions/README.md)
-- [Module 02: Arrays](../modules/02-arrays/README.md)
+- [Module 01: Environment and First Program](../modules/01-environment/README.md)
+- [Module 02: Variables and Expressions](../modules/02-variables-expressions/README.md)
+- [Module 07: Arrays](../modules/07-arrays/README.md)
 
 ---
 

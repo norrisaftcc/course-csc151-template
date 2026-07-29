@@ -1,6 +1,6 @@
 # Lesson 01: Variables and Expressions
 
-**Module:** 01 — Variables and Expressions  
+**Module:** 02 — Variables and Expressions  
 **Estimated time:** 50–75 minutes  
 **Prerequisites:** You can compile and run a Java program with a `main` method.
 
@@ -23,7 +23,7 @@ Before starting, confirm you can do the following:
 - [ ] Compile a `.java` file from the command line or your IDE.
 - [ ] Run a compiled Java program and see output in the console.
 
-If you cannot do both of these, complete Module 00 (Environment Setup) first.
+If you cannot do both of these, complete Module 01 (Environment and First Program) first.
 
 ---
 

@@ -70,13 +70,13 @@ course-csc151-template/
 │   ├── coach-player-record.md        # Activity record form
 │   └── assignment-metadata.yaml      # YAML schema for assignment metadata
 ├── modules/
-│   ├── 01-variables-expressions/     # Sample module: variables and expressions
+│   ├── 02-variables-expressions/     # Sample module: variables and expressions
 │   │   ├── README.md
 │   │   ├── lesson.md
 │   │   └── examples/
 │   │       ├── VariablesDemo.java
 │   │       └── ExpressionTrace.java
-│   └── 02-arrays/                    # Sample module: arrays
+│   └── 07-arrays/                    # Sample module: arrays
 │       ├── README.md
 │       ├── lesson.md
 │       └── examples/
@@ -99,8 +99,8 @@ course-csc151-template/
 | Score an assignment | [Rubric](docs/rubric.md) |
 | See the workflow diagrams | [Workflow Diagrams](docs/workflow-diagrams.md) |
 | Copy a lesson template | [Lesson Template](templates/lesson-template.md) |
-| First sample lesson | [Module 01: Variables and Expressions](modules/01-variables-expressions/lesson.md) |
-| Second sample lesson | [Module 02: Arrays](modules/02-arrays/lesson.md) |
+| First sample lesson | [Module 02: Variables and Expressions](modules/02-variables-expressions/lesson.md) |
+| Second sample lesson | [Module 07: Arrays](modules/07-arrays/lesson.md) |
 
 ---
 

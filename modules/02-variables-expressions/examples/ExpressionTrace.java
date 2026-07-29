@@ -1,5 +1,5 @@
 // ExpressionTrace.java
-// Module 01 — Variables and Expressions
+// Module 02 — Variables and Expressions
 // CSC 151 Java Programming I
 //
 // Trace this program on paper BEFORE running it.

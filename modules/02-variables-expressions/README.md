@@ -1,4 +1,4 @@
-# Module 01: Variables and Expressions
+# Module 02: Variables and Expressions
 
 **Course:** CSC 151 Java Programming I  
 **Position in sequence:** Second module (after environment setup)  
@@ -66,7 +66,7 @@ Students often predict `127` (expecting integer multiplication) rather than `127
 
 ## How this module connects to the next
 
-This module ends with expressions and arithmetic. Module 02 (if following the course map) covers input with `Scanner`. After Module 02, students can build programs that take input, compute a result, and display it — a complete input/process/output cycle. Design the transfer task so students see that the variable they computed here will soon come from a user rather than a literal value.
+This module ends with expressions and arithmetic. Module 03 (if following the course map) covers input with `Scanner`. After Module 03, students can build programs that take input, compute a result, and display it — a complete input/process/output cycle. Design the transfer task so students see that the variable they computed here will soon come from a user rather than a literal value.
 
 > "You don't throw where they're standing; you throw where they're going to be."  
 > Literal meaning: close this module by pointing toward user input, which students will learn next.

@@ -140,7 +140,7 @@ These terms appear throughout the course. Brief definitions are here; the full g
 ## Where to start
 
 1. Read this guide.
-2. Open [Module 01: Variables and Expressions](../modules/01-variables-expressions/lesson.md).
+2. Open [Module 01: Environment and First Program](../modules/01-environment/lesson.md).
 3. Follow the lesson step by step.
 4. Do not skip the prediction step.
 5. Complete the transfer task at the end.

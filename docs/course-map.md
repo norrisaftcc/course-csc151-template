@@ -53,7 +53,7 @@ Topics:
 - String concatenation.
 - `System.out.println` for output.
 
-Sample lesson: [Module 01 in this repository](../modules/01-variables-expressions/lesson.md) covers this topic.
+Sample lesson: [Module 02 in this repository](../modules/02-variables-expressions/lesson.md) covers this topic.
 
 Suggested time: 2–3 class sessions.
 
@@ -133,7 +133,7 @@ Topics:
 - Two-dimensional arrays (brief introduction).
 - `java.util.ArrayList`: add, get, size, remove.
 
-Sample lesson: [Module 02 in this repository](../modules/02-arrays/lesson.md) covers arrays.
+Sample lesson: [Module 07 in this repository](../modules/07-arrays/lesson.md) covers arrays.
 
 Suggested time: 3–4 class sessions.
 

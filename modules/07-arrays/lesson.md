@@ -1,6 +1,6 @@
 # Lesson 02: Arrays
 
-**Module:** 02 — Arrays  
+**Module:** 07 — Arrays  
 **Estimated time:** 75–100 minutes  
 **Prerequisites:** You can write a `for` loop. You can write and call a static method with a return value.
 
