@@ -52,7 +52,7 @@ is what students hear.
 
 | Beat | Course name | What happens | Graded |
 |------|------------|--------------|--------|
-| **Learn** | **Study the Plays** | You read the concept and walk through a worked example. Nothing is at stake yet. | No |
+| **Learn** | **Study the Play** | You read the concept and walk through a worked example. Nothing is at stake yet. | No |
 | **Practice** | **Run the Play** | You rehearse one movement alone: trace a program on paper, repair a broken one. Answers are available. | No |
 | **Apply** | **Team Practice** | You complete the handshake and write code with a coach present. Still not for a score. | No |
 | **Assess** | **The Big Game** | You transfer the skill to a task you have not seen, and it counts. | Yes |
@@ -67,8 +67,8 @@ not need to know anything about football to take this course:
 
 | Course name | Literal meaning |
 |-------------|----------------|
-| Study the Plays | Read and understand the material before you touch it. A playbook is the written record of what a team intends to do; players read it before they rehearse. |
-| Run the Play | Rehearse one movement by itself, slowly, with nothing at stake. |
+| Study the Play | Read and understand the one play you are about to run, before you run it. A play is a single planned movement, written down so a team can read it before rehearsing it. |
+| Run the Play | Rehearse that same play by itself, slowly, with nothing at stake. |
 | Team Practice | Do the whole thing with your coach beside you, still not for a score. |
 | The Big Game | The work that counts toward your grade. |
 
@@ -103,7 +103,7 @@ The fourteen lesson sections are not a separate structure. They are the four bea
 
 | Beat | Course name | Lesson sections |
 |------|------------|-----------------|
-| Learn | Study the Plays | Learning goal · Prior knowledge check · Concept explanation · Worked example |
+| Learn | Study the Play | Learning goal · Prior knowledge check · Concept explanation · Worked example |
 | Practice | Run the Play | Trace before running · Repair or modify code |
 | Apply | Team Practice | Execute-gate handshake · Small coding task · Test evidence · Explanation |
 | Assess | The Big Game | Role rotation · Transfer task · Reflection · Mastery record |

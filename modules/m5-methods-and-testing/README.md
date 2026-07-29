@@ -58,7 +58,7 @@ After this module, students can:
 
 | Beat | Course name | What you do here |
 |------|------------|------------------|
-| **Learn** | Study the Plays | Read how a method declares parameters and a return type, how scope and the call stack work, and what distinguishes a compile-time, runtime, and logic error. |
+| **Learn** | Study the Play | Read how a method declares parameters and a return type, how scope and the call stack work, and what distinguishes a compile-time, runtime, and logic error. |
 | **Practice** | Run the Play | Trace a call stack by hand. Read a stack trace and name the line that caused it. Repair a method that compiles and returns a confidently wrong answer. |
 | **Apply** | Team Practice | Complete the handshake, then write the `ScoreUtils` methods and their tests with a coach present. Run `bash scripts/verify.sh test`. |
 | **Assess** | The Big Game | Write a normal, boundary, and failure test for a method you did not write. |

@@ -30,7 +30,7 @@ After this module, students can:
 
 | Beat | Course name | What you do here |
 |------|------------|------------------|
-| **Learn** | Study the Plays | Read how `int`, `double`, `boolean`, and `String` are declared and assigned, and how an expression is evaluated. |
+| **Learn** | Study the Play | Read how `int`, `double`, `boolean`, and `String` are declared and assigned, and how an expression is evaluated. |
 | **Practice** | Run the Play | Trace `ExpressionTrace.java` on paper, including the integer division. Repair `RepairMe.java`, which has two errors. |
 | **Apply** | Team Practice | Complete the handshake, then write `PayCalculator.java` with a coach present. |
 | **Assess** | The Big Game | Write the same calculation for three different values and a changed output format. |

@@ -71,7 +71,7 @@ name used with students, and **both names stay** — neither replaces the other:
 
 | Beat | Course name | Lesson sections |
 |------|------------|-----------------|
-| Learn | Study the Plays | Learning goal · Prior knowledge check · Concept explanation · Worked example |
+| Learn | Study the Play | Learning goal · Prior knowledge check · Concept explanation · Worked example |
 | Practice | Run the Play | Trace before running · Repair or modify code |
 | Apply | Team Practice | Execute-gate handshake · Small coding task · Test evidence · Explanation |
 | Assess | The Big Game | Role rotation · Transfer task · Reflection · Mastery record |

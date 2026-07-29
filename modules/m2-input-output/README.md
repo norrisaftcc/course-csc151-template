@@ -30,7 +30,7 @@ After this module, students can:
 
 | Beat | Course name | What you do here |
 |------|------------|------------------|
-| **Learn** | Study the Plays | Read how `Scanner` reads a value, and how `printf` format specifiers control output. |
+| **Learn** | Study the Play | Read how `Scanner` reads a value, and how `printf` format specifiers control output. |
 | **Practice** | Run the Play | Trace `TipCalculator` against given input before running it. Repair `Broken.java`, which has two errors. |
 | **Apply** | Team Practice | Complete the handshake, then write `AreaCalc` with a coach present. |
 | **Assess** | The Big Game | Extend the program to print both area and perimeter, formatted to a stated number of decimal places. |

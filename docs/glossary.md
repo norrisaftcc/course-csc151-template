@@ -108,17 +108,17 @@ Compare **handoff**, which is the role switch that happens after a task is compl
 
 ## L
 
-### Learn (Study the Plays)
+### Learn (Study the Play)
 
 The first beat of the [LPAA cycle](course-map.md#the-lpaa-cycle). The player reads the concept and walks through a worked example. Nothing is at stake. Its lesson sections are the learning goal, the prior knowledge check, the concept explanation, and the worked example.
 
-**Study the plays** is the course's name for this beat. Literal meaning: read and understand the material before you touch it. A playbook is the written record of what a team intends to do, and players read it before they rehearse.
+**Study the play** is the course's name for this beat. Literal meaning: read and understand the one play you are about to run, before you run it. A play is a single planned movement, written down so a team can read it before rehearsing it. The play you study in this beat is the play you rehearse in the next one.
 
 See also: **LPAA cycle**.
 
 ### LPAA cycle
 
-The four beats every module runs, in order: **Learn**, **Practice**, **Apply**, **Assess**. Each beat has a second name used with students: Study the Plays, Run the Play, Team Practice, and The Big Game. Both names are correct, and neither replaces the other.
+The four beats every module runs, in order: **Learn**, **Practice**, **Apply**, **Assess**. Each beat has a second name used with students: Study the Play, Run the Play, Team Practice, and The Big Game. Both names are correct, and neither replaces the other.
 
 Only the fourth beat is graded. The first three exist so that the fourth is never the first time a student meets a skill. See **no-new-plays rule**.
 
@@ -164,7 +164,7 @@ See also: **coach**, **execute gate**, **role rotation**.
 
 The second beat of the [LPAA cycle](course-map.md#the-lpaa-cycle). The player rehearses one movement alone: tracing a program on paper, or repairing a broken one. Answers are available, and a wrong prediction costs nothing. Its lesson sections are "trace before running" and "repair or modify code".
 
-**Run the play** is the course's name for this beat. Literal meaning: rehearse one movement by itself, slowly, with nothing at stake.
+**Run the play** is the course's name for this beat. Literal meaning: rehearse that same play by itself, slowly, with nothing at stake.
 
 Practice is where the prediction is cheap to get wrong, which is why the prediction habit is built here rather than at the gate.
 

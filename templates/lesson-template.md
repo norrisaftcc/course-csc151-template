@@ -19,7 +19,7 @@
 >
 > | Beat | Course name | Sections |
 > |------|------------|----------|
-> | Learn | Study the Plays | Learning goal → Worked example |
+> | Learn | Study the Play | Learning goal → Worked example |
 > | Practice | Run the Play | Trace before running → Repair or modify code |
 > | Apply | Team Practice | Execute-gate handshake → Explanation |
 > | Assess | The Big Game | Role rotation → Mastery record |
@@ -36,7 +36,7 @@
 
 ## Learning goal
 
-> **Beat: Learn — Study the Plays.**
+> **Beat: Learn — Study the Play.**
 
 > State one observable goal. Use active language. Example: "The student can write a `for` loop that sums the elements of an `int` array."
 

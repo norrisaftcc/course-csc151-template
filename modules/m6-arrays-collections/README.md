@@ -30,7 +30,7 @@ After this module, students can:
 
 | Beat | Course name | What you do here |
 |------|------------|------------------|
-| **Learn** | Study the Plays | Read how an array is declared, indexed, and traversed, and how `ArrayList` differs. |
+| **Learn** | Study the Play | Read how an array is declared, indexed, and traversed, and how `ArrayList` differs. |
 | **Practice** | Run the Play | Trace `findMax` against `{-3, -5, -1, -8}` one iteration at a time — the all-negative case, where initializing to 0 gives the wrong answer. Repair `RepairMax.java`. |
 | **Apply** | Team Practice | Complete the handshake, then write `MyArrayMax.java` and test it against all three arrays named in the handshake. |
 | **Assess** | The Big Game | Write `findMin` and apply the same three test cases to it. |

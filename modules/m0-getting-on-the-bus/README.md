@@ -52,7 +52,7 @@ After this module, students can:
 
 | Beat | Course name | What you do here |
 |------|------------|------------------|
-| **Learn** | Study the Plays | Read the three STE-100 rules, the Markdown and Mermaid syntax, what a Java program is, the compile-run cycle, and the five AI teammate rules. |
+| **Learn** | Study the Play | Read the three STE-100 rules, the Markdown and Mermaid syntax, what a Java program is, the compile-run cycle, and the five AI teammate rules. |
 | **Practice** | Run the Play | Repair a broken Mermaid diagram. Trace `HelloWorld.java` before running it. Repair a request that fails the floor test. Nothing here is graded, and a wrong prediction costs nothing. |
 | **Apply** | Team Practice | Complete your first execute-gate handshake with a coach. Write and run `HelloWorld.java`, then `Surface.java`. |
 | **Assess** | The Big Game | Rewrite an unfamiliar task description in STE. Diagram a process you have not seen. Assay a classmate's request and report what survives. |

@@ -24,7 +24,7 @@ A player who cannot explain the goal has not understood it. A coach who cannot i
 ## The LPAA cycle, and the promise it makes
 
 Every module runs four beats: **Learn**, **Practice**, **Apply**, **Assess**. With students,
-use the course's names — **Study the Plays**, **Run the Play**, **Team Practice**, and **The
+use the course's names — **Study the Play**, **Run the Play**, **Team Practice**, and **The
 Big Game**. Both sets of names are correct. The full mapping, including which lesson sections
 belong to which beat, is in the [Course Map](course-map.md#the-lpaa-cycle).
 
@@ -66,7 +66,7 @@ requirement is a test of resilience will not tell you, and you will not find out
 
 | Beat | Course name | Your job |
 |------|------------|----------|
-| Learn | Study the Plays | Explain and demonstrate. Nothing is at stake, so do not quiz. |
+| Learn | Study the Play | Explain and demonstrate. Nothing is at stake, so do not quiz. |
 | Practice | Run the Play | Let them be wrong cheaply. A wrong prediction here costs nothing and is the most useful thing that happens all lesson. |
 | Apply | Team Practice | Be present. Run the handshake. Ask, do not tell. |
 | Assess | The Big Game | Step back. Answer questions about the task, not about the solution. |

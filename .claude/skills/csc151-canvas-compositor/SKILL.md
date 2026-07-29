@@ -56,7 +56,7 @@ carry:
 
 | Beat | Course name | Lesson sections it covers | Register | Device consequences |
 |---|---|---|---|---|
-| **Learn** | Study the Plays | Learning goal · Prior knowledge check · Concept explanation · Worked example | Exposition | Prose-heavy. Code blocks are read, not typed. Longest of the four. |
+| **Learn** | Study the Play | Learning goal · Prior knowledge check · Concept explanation · Worked example | Exposition | Prose-heavy. Code blocks are read, not typed. Longest of the four. |
 | **Practice** | Run the Play | Trace before running · Repair code | Check | Very short. Usually no breakouts at all. Predictions stay hidden — see *Predictions*. |
 | **Apply** | Team Practice | Execute-gate handshake · Small coding task · Test evidence · Explanation | Instructor-led walkthrough | Numbered `<ol>` steps carry the page. The handshake panel is mandatory and comes before any code. |
 | **Assess** | The Big Game | Role rotation · Transfer task · Reflection · Mastery record | Contract | Terse. Task statement first. Numbered requirements. Pre-flight checklist mandatory. |
