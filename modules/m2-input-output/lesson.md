@@ -1,8 +1,8 @@
-# Lesson 03: Input and Output
+# Lesson 2: Input and Output
 
-**Module:** 03 — Input and Output  
+**Module:** 2 — Input and Output  
 **Estimated time:** 50–75 minutes  
-**Prerequisites:** You can compile and run a Java program. You can declare `int`, `double`, and `String` variables (Module 02).
+**Prerequisites:** You can compile and run a Java program. You can declare `int`, `double`, and `String` variables (Module 1).
 
 ---
 
@@ -23,7 +23,7 @@ Before starting, confirm you can do the following:
 - [ ] Declare and assign a variable of type `int`, `double`, and `String`.
 - [ ] Compile and run a Java program from the command line or your IDE.
 
-If you cannot do both of these, complete Module 02 (Variables and Expressions) first.
+If you cannot do both of these, complete Module 1 (Variables and Expressions) first.
 
 ---
 

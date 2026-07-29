@@ -1,6 +1,6 @@
-# Lesson 01: Environment and First Program
+# Lesson 0.2: Environment and First Program
 
-**Module:** 01 — Environment and First Program  
+**Module:** 0 — Getting on The Bus (submodule 0.2)  
 **Estimated time:** 50–75 minutes  
 **Prerequisites:** None. This is the first lesson.
 

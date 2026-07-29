@@ -178,11 +178,11 @@ This standard is not punitive. It trains students to verify programs, not merely
 
 ## Facilitation examples by module
 
-See each module's `README.md` for specific facilitation notes and example handshakes. The two complete sample modules are:
+See each module's `README.md` for specific facilitation notes and example handshakes. The sample modules with full facilitation notes are:
 
-- [Module 01: Environment and First Program](../modules/01-environment/README.md)
-- [Module 02: Variables and Expressions](../modules/02-variables-expressions/README.md)
-- [Module 07: Arrays](../modules/07-arrays/README.md)
+- [Module 0: Getting on The Bus](../modules/m0-getting-on-the-bus/README.md)
+- [Module 1: Variables and Expressions](../modules/m1-variables-expressions/README.md)
+- [Module 6: Arrays and Collections](../modules/m6-arrays-collections/README.md)
 
 ---
 

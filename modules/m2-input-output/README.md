@@ -1,4 +1,4 @@
-# Module 03: Input and Output
+# Module 2: Input and Output
 
 **Course:** CSC 151 Java Programming I  
 **Position in sequence:** Third module (after Variables and Expressions)  
@@ -75,7 +75,7 @@ Introduce this pattern only when students encounter the symptom. Do not front-lo
 
 ## How this module connects to the next
 
-Module 04 (Conditionals) will read user input and then branch based on its value. After this module, students know how to get a value from the user; Module 04 teaches them what to do with it depending on what it is.
+Module 3 (Conditionals) will read user input and then branch based on its value. After this module, students know how to get a value from the user; Module 3 teaches them what to do with it depending on what it is.
 
 > "You don't throw where they're standing; you throw where they're going to be."  
 > Literal meaning: close this module by showing a one-line `if` that checks the value the user just entered. Students see the connection before they learn the full syntax.

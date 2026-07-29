@@ -12,7 +12,7 @@ A reusable, open course framework for community college students learning introd
 
 This repository gives instructors and students a starting framework for a first Java programming course. It includes:
 
-- A **coach/player teaching model** with explicit handoffs.
+- A **coach/player teaching model** with explicit handshakes.
 - An **execute gate** — a shared handshake before running or submitting code.
 - **Simplified technical English** so explanations are clear to every reader.
 - **Mermaid diagrams** that render on GitHub.
@@ -77,17 +77,15 @@ course-csc151-template/
 │   ├── rubric-template.md            # Blank rubric
 │   ├── coach-player-record.md        # Activity record form
 │   ├── assignment-metadata.yaml      # YAML schema for assignment metadata
-│   └── project-proposal-template.md  # Module 10 final project proposal form
-├── modules/
-│   ├── 00-ste-markdown-mermaid/      # Orientation: STE writing, Markdown, Mermaid
-│   │   ├── README.md
-│   │   └── lesson.md
-│   ├── 01-environment/               # Sample module: environment and first program
-│   │   ├── README.md
-│   │   ├── lesson.md
+│   └── project-proposal-template.md  # Module 8 final project proposal form
+├── modules/                          # Module 0 through Module 8, plus the Appendix
+│   ├── m0-getting-on-the-bus/        # Orientation: STE writing, Markdown, Mermaid,
+│   │   ├── README.md                 #   environment, first program, AI teammate
+│   │   ├── lesson-1-writing-and-diagrams.md
+│   │   ├── lesson-2-environment-and-first-program.md
 │   │   └── examples/
 │   │       └── HelloWorld.java
-│   ├── 02-variables-expressions/     # Sample module: variables and expressions
+│   ├── m1-variables-expressions/     # Sample module: variables and expressions
 │   │   ├── README.md
 │   │   ├── lesson.md
 │   │   ├── assignment-01.md          # Filled assignment example
@@ -96,13 +94,13 @@ course-csc151-template/
 │   │   └── examples/
 │   │       ├── VariablesDemo.java
 │   │       └── ExpressionTrace.java
-│   ├── 03-input-output/              # Sample module: Scanner and printf
+│   ├── m2-input-output/              # Sample module: Scanner and printf
 │   │   ├── README.md
 │   │   ├── lesson.md
 │   │   └── examples/
 │   │       ├── ScannerDemo.java
 │   │       └── FormattedOutput.java
-│   └── 07-arrays/                    # Sample module: arrays
+│   └── m6-arrays-collections/        # Sample module: arrays and collections
 │       ├── README.md
 │       ├── lesson.md
 │       ├── assignment-metadata.yaml  # Populated metadata example
@@ -112,6 +110,9 @@ course-csc151-template/
 └── scripts/
     └── check-java.sh                 # Lightweight Java compile check
 ```
+
+Modules 3, 4, 5, 7, and 8 and the Appendix are specified in the
+[Course Map](docs/course-map.md) and are not yet built as directories.
 
 ---
 
@@ -129,10 +130,10 @@ course-csc151-template/
 | See the workflow diagrams | [Workflow Diagrams](docs/workflow-diagrams.md) |
 | Copy a lesson template | [Lesson Template](templates/lesson-template.md) |
 | Propose a final project | [Project Proposal Template](templates/project-proposal-template.md) |
-| First sample lesson | [Module 01: Environment and First Program](modules/01-environment/lesson.md) |
-| Second sample lesson | [Module 02: Variables and Expressions](modules/02-variables-expressions/lesson.md) |
-| Third sample lesson | [Module 03: Input and Output](modules/03-input-output/lesson.md) |
-| Fourth sample lesson | [Module 07: Arrays](modules/07-arrays/lesson.md) |
+| First sample lesson | [Module 0: Getting on The Bus](modules/m0-getting-on-the-bus/lesson-2-environment-and-first-program.md) |
+| Second sample lesson | [Module 1: Variables and Expressions](modules/m1-variables-expressions/lesson.md) |
+| Third sample lesson | [Module 2: Input and Output](modules/m2-input-output/lesson.md) |
+| Fourth sample lesson | [Module 6: Arrays and Collections](modules/m6-arrays-collections/lesson.md) |
 
 ---
 

@@ -1,5 +1,5 @@
 // ArrayStats.java
-// Module 07 — Arrays
+// Module 6 — Arrays and Collections
 // CSC 151 Java Programming I
 //
 // Computes the minimum, maximum, and sum of an int array

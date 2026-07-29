@@ -1,5 +1,5 @@
 # Assignment Metadata
-# Module 02 — Variables and Expressions
+# Module 1 — Variables and Expressions
 # CSC 151 Java Programming I
 # This file is a populated example of the metadata schema in templates/assignment-metadata.yaml.
 
@@ -13,7 +13,7 @@ assignment:
   learning_goal: "Declare int, double, and String variables; compute arithmetic expressions; and predict the effect of integer division."
 
   prerequisites:
-    - "Module 01: compile and run a Java program"
+    - "Module 0: compile and run a Java program"
     - "System.out.println for output"
 
   java_topic: "variables, arithmetic expressions, integer division, casting"

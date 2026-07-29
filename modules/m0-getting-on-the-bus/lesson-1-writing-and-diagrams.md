@@ -1,6 +1,6 @@
-# Lesson 00: Technical Writing, Markdown, and Mermaid
+# Lesson 0.1: Technical Writing, Markdown, and Mermaid
 
-**Module:** 00 — Technical Writing, Markdown, and Mermaid
+**Module:** 0 — Getting on The Bus (submodule 0.1)
 **Estimated time:** 60–90 minutes
 **Prerequisites:** None.
 
@@ -12,7 +12,7 @@ After this lesson, you can:
 
 - Apply three STE-100 rules to improve a sentence.
 - Format a task description in Markdown: headers, bold text, a numbered list, a code block, and a checklist.
-- Read and write a Mermaid flowchart that diagrams a handoff.
+- Read and write a Mermaid flowchart that diagrams a handshake.
 
 ---
 
@@ -62,10 +62,10 @@ Do not use synonyms for technical terms. Choose one word and use it throughout.
 
 | Inconsistent (avoid) | Consistent (use) |
 |---------------------|-----------------|
-| Complete the handshake. Confirm the handoff. | Confirm the handoff. |
+| Complete the handshake. Confirm the handoff. | Confirm the handshake. |
 | The student executes the program. Later, the learner runs the code. | The player executes the code. |
 
-In this course, the structured agreement before execution is called the **handoff**. Use that term every time.
+In this course, the structured agreement before execution is called the **handshake**. Use that term every time.
 
 ---
 
@@ -155,7 +155,7 @@ Checklist (task list):
 
 In team sports, a **play diagram** shows each actor's position and the sequence of actions in a planned play. It makes a plan visible before the play starts.
 
-In this course, a Mermaid flowchart serves the same purpose: it makes the steps and decisions in a handoff visible so that every participant understands the plan before execution begins. Diagramming a play means drawing the sequence of actions and decisions so that no step is assumed or skipped.
+In this course, a Mermaid flowchart serves the same purpose: it makes the steps and decisions in a handshake visible so that every participant understands the plan before execution begins. Diagramming a play means drawing the sequence of actions and decisions so that no step is assumed or skipped.
 
 ### Flowchart basics
 
@@ -193,9 +193,9 @@ flowchart LR
 **Plain-text description:**
 The coach states the goal. The player restates it. If the restatement matches, the gate opens. If not, the coach clarifies and the player tries again.
 
-### Diagramming the handoff
+### Diagramming the handshake
 
-The **handoff** is the four-part agreement before execution. The canonical play diagram for the handoff is in [docs/workflow-diagrams.md](../../docs/workflow-diagrams.md).
+The **handshake** is the four-part agreement before execution. The canonical play diagram for the handshake is in [docs/workflow-diagrams.md](../../docs/workflow-diagrams.md).
 
 For this exercise, use the diagram in that file as your reference. Read it before continuing.
 
@@ -303,17 +303,17 @@ flowchart LR
 
 ---
 
-## Execute-gate handoff
+## Execute-gate handshake
 
-You are now going to write a Markdown task card and a Mermaid diagram. Complete the handoff with your coach before writing anything.
+You are now going to write a Markdown task card and a Mermaid diagram. Complete the handshake with your coach before writing anything.
 
 **Coach provides this task:**
 
-> Write a Markdown-formatted task card for a classmate. The card must describe the handoff process in three numbered steps using STE rules. Each step must be one sentence in active voice. Then add a Mermaid flowchart that diagrams those three steps. The diagram must include at least one decision node.
+> Write a Markdown-formatted task card for a classmate. The card must describe the handshake process in three numbered steps using STE rules. Each step must be one sentence in active voice. Then add a Mermaid flowchart that diagrams those three steps. The diagram must include at least one decision node.
 >
 > Constraints: Each sentence must be in active voice. You may use only the three steps you name in your list. You may not describe more or fewer than three steps.
 
-**Player: complete the handoff using this format:**
+**Player: complete the handshake using this format:**
 
 ```
 Goal: The task card must ______.
@@ -330,8 +330,8 @@ Success check: We know it works when ______.
 
 Write a Markdown file that contains:
 
-1. A level-2 header: `## Handoff steps`
-2. A numbered list of three steps describing the handoff in STE language.
+1. A level-2 header: `## Handshake steps`
+2. A numbered list of three steps describing the handshake in STE language.
 3. A Mermaid flowchart of those three steps, with at least one decision node.
 4. A plain-text description of the diagram (one sentence per node or edge).
 
@@ -373,19 +373,19 @@ Answer these questions in writing or out loud to your coach:
 
 ## Role rotation
 
-Switch roles with your partner. The new coach describes the transfer task. The new player restates the plan and completes the handoff before writing.
+Switch roles with your partner. The new coach describes the transfer task. The new player restates the plan and completes the handshake before writing.
 
 ---
 
 ## Transfer task
 
-**Changed condition:** Instead of diagramming the handoff, diagram the **role rotation** — what happens after the player completes a task and roles switch.
+**Changed condition:** Instead of diagramming the handshake, diagram the **role rotation** — what happens after the player completes a task and roles switch.
 
 **Coach provides this task:**
 
 > Write a Mermaid flowchart that diagrams the role rotation after a player completes a task. Include at least one decision node. Write a plain-text description of the diagram. Use STE rules in all text nodes: active voice, one topic per label.
 
-**Player: complete the full handoff before writing.**
+**Player: complete the full handshake before writing.**
 
 <details>
 <summary>Example diagram (check only after completing your own)</summary>
@@ -398,11 +398,11 @@ flowchart TD
     B -- Yes --> D[Player explains the result]
     D --> E[Roles switch]
     E --> F[New coach states the next task]
-    F --> G[New player confirms the handoff]
+    F --> G[New player confirms the handshake]
 ```
 
 **Plain-text description:**
-The player reports evidence. If the evidence does not meet the success check, the coach asks one diagnostic question and the player tries again. When the evidence passes, the player explains the result. Roles switch. The new coach states the next task. The new player confirms the handoff.
+The player reports evidence. If the evidence does not meet the success check, the coach asks one diagnostic question and the player tries again. When the evidence passes, the player explains the result. Roles switch. The new coach states the next task. The new player confirms the handshake.
 
 </details>
 
@@ -429,7 +429,7 @@ Answer one of the following:
 | Write a Mermaid flowchart that renders | | | |
 | Include a decision node in a diagram | | | |
 | Write a plain-text description of a diagram | | | |
-| Complete the execute-gate handoff | | | |
+| Complete the execute-gate handshake | | | |
 | Explain the result with evidence | | | |
 | Coach role completed | | | |
 | Transfer task completed independently | | | |

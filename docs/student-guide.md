@@ -140,7 +140,7 @@ These terms appear throughout the course. Brief definitions are here; the full g
 ## Where to start
 
 1. Read this guide.
-2. Open [Module 01: Environment and First Program](../modules/01-environment/lesson.md).
+2. Open [Module 0: Getting on The Bus](../modules/m0-getting-on-the-bus/lesson-2-environment-and-first-program.md).
 3. Follow the lesson step by step.
 4. Do not skip the prediction step.
 5. Complete the transfer task at the end.

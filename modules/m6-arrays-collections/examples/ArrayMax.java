@@ -1,5 +1,5 @@
 // ArrayMax.java
-// Module 07 — Arrays
+// Module 6 — Arrays and Collections
 // CSC 151 Java Programming I
 //
 // Demonstrates finding the maximum value in an int array

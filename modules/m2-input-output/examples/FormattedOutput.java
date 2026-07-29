@@ -1,5 +1,5 @@
 // FormattedOutput.java
-// Module 03 — Input and Output
+// Module 2 — Input and Output
 // CSC 151 Java Programming I
 //
 // Demonstrates System.out.printf format specifiers for aligned output.

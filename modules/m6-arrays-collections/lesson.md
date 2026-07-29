@@ -1,6 +1,6 @@
-# Lesson 02: Arrays
+# Lesson 6: Arrays and Collections
 
-**Module:** 07 — Arrays  
+**Module:** 6 — Arrays and Collections  
 **Estimated time:** 75–100 minutes  
 **Prerequisites:** You can write a `for` loop. You can write and call a static method with a return value.
 

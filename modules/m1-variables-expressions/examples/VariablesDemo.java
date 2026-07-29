@@ -1,5 +1,5 @@
 // VariablesDemo.java
-// Module 02 — Variables and Expressions
+// Module 1 — Variables and Expressions
 // CSC 151 Java Programming I
 //
 // Demonstrates variable declaration, assignment, and arithmetic expressions.

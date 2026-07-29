@@ -1,5 +1,5 @@
 // HelloWorld.java
-// Module 01 — Environment and First Program
+// Module 0 — Getting on The Bus
 // CSC 151 Java Programming I
 //
 // The simplest complete Java program.

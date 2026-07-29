@@ -1,4 +1,4 @@
-# Module 07: Arrays
+# Module 6: Arrays and Collections
 
 **Course:** CSC 151 Java Programming I  
 **Position in sequence:** Seventh module (after Methods)  

@@ -74,9 +74,13 @@ A specific, observable statement of what a student will be able to do after a le
 
 The moment when the coach and player switch roles. Handoffs are explicit and practiced. The new coach describes the next task and defines the success check before the new player begins.
 
+**Do not use "handoff" for the agreement before execution.** That agreement is the **handshake**. A handshake opens the gate; a handoff switches the roles. Keeping the two terms separate is an application of the STE rule taught in Module 0: one term for one concept.
+
 ### Handshake
 
-See **execute gate**.
+The four-part agreement — goal, constraints, prediction, success check — that the coach and player confirm before the player runs or submits code. The coach opens the gate with the word "Agreed." See **execute gate**.
+
+Compare **handoff**, which is the role switch that happens after a task is complete.
 
 ---
 
