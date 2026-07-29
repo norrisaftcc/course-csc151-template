@@ -376,10 +376,23 @@ public class IntegerDivision {
     document.getElementById(id).classList.toggle("lit", on);
   }
 
+  function hideResult() {
+    result.hidden = true;
+    verdict.innerHTML = "";
+    ["chip-execute", "chip-evidence", "chip-explain"].forEach(function (id) {
+      setChip(id, false);
+    });
+  }
+
   // The gate is the only thing that decides whether the page moves on.
   function refreshGate() {
     var hasPrediction = filled(prediction);
     var hasCheck      = filled(check);
+
+    // Editing the huddle after the snap retracts the result. Revising a
+    // prediction while the answer is on screen is the exact habit this page
+    // argues against, so the page must not permit it either.
+    if (!result.hidden) { hideResult(); }
 
     setChip("chip-prediction", hasPrediction);
     setChip("chip-check", hasCheck);
@@ -451,18 +464,15 @@ public class IntegerDivision {
     setChip("chip-evidence", true);
     setChip("chip-explain", true);
 
+    var still = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     result.hidden = false;
-    result.scrollIntoView({ behavior: "smooth", block: "start" });
+    result.scrollIntoView({ behavior: still ? "auto" : "smooth", block: "start" });
   });
 
   resetBtn.addEventListener("click", function () {
     prediction.value = "";
     check.value = "";
-    result.hidden = true;
-    verdict.innerHTML = "";
-    ["chip-execute", "chip-evidence", "chip-explain"].forEach(function (id) {
-      setChip(id, false);
-    });
+    hideResult();
     refreshGate();
     prediction.focus();
   });
