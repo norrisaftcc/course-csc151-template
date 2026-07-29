@@ -39,6 +39,10 @@ Instructors who forked an earlier version of this template can use this log to i
 - `.devcontainer/` — Codespaces and local dev container setup: JDK 21, the VS Code Java extension pack, and a post-create script that installs the test runner and runs a smoke check.
 - `modules/m5-methods-and-testing/` — `ScoreUtils.java` and `ScoreUtilsTest.java`, demonstrating the `tests/` convention and the three required test tiers (normal, boundary, failure).
 - `.expected` fixtures for every existing example, and a `.stdin` fixture for `ScannerDemo`.
+- `.claude/skills/csc151-canvas-compositor/` — composes Markdown into sanitizer-safe, inline-styled Canvas HTML. Ported from `csc134-canvas-compositor`: retargeted to Java escaping, remapped onto the course's fourteen-section lesson shape, and given two new voices — *Your AI Teammate* (monospace, because a machine emitted it) and *What The Coach Might Say* (sans and italic, because a machine did not). Coach sayings are synthesized and never attributed to a real person; the skill's self-check refuses to emit without the mandatory literal-meaning gloss.
+- `.claude/skills/the-algorithm/` — vendored unmodified so the repository is self-contained. Its fixed strings are exact; it is not forked.
+- `.claude/skills/csc151-execute-gate/` — maps The Algorithm's PROVIDE and ASSAY onto course work, and states the correspondence between its floor nouns and the four gate parts. The AI policy's central rule descends from its gate-integrity rule: only a live human opens the gate.
+- `CLAUDE.md` — house style for coding agents working in this repository.
 - `docs/ai-teammate-policy.md` — AI coding assistance is explicitly allowed. States the five rules, the disclosure standard, and the explain-any-line bar.
 - `docs/prompting-your-ai-teammate.md` — the PROVIDE and ASSAY operations taught as student skills, with the four floor items mapped to the four parts of the execute gate.
 - AI teammate disclosure section and a "Coaching an AI teammate" mastery row in `templates/coach-player-record.md`.
