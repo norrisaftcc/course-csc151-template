@@ -58,7 +58,7 @@ course-csc151-template/
 ├── LICENSE                           # MIT
 ├── .github/
 │   ├── workflows/
-│   │   └── check-java.yml            # CI: compiles all Java examples on push/PR
+│   │   └── check-java.yml            # CI: compiles, runs, and tests Java examples
 │   └── PULL_REQUEST_TEMPLATE.md      # Contribution checklist for pull requests
 ├── docs/
 │   ├── instructor-guide.md           # Coach/player dynamics, facilitation
@@ -107,8 +107,13 @@ course-csc151-template/
 │       └── examples/
 │           ├── ArrayMax.java
 │           └── ArrayStats.java
-└── scripts/
-    └── check-java.sh                 # Lightweight Java compile check
+├── scripts/
+│   ├── verify.sh                     # The course verifier: compile, run, test
+│   ├── fetch-junit.sh                # Installs the JUnit runner into .tools/
+│   └── check-java.sh                 # Compatibility shim; calls verify.sh compile
+└── .devcontainer/                    # Codespaces and local dev container setup
+    ├── devcontainer.json
+    └── post-create.sh
 ```
 
 Modules 3, 4, 5, 7, and 8 and the Appendix are specified in the
@@ -144,7 +149,19 @@ Modules 3, 4, 5, 7, and 8 and the Appendix are specified in the
 3. Review the [Course Map](docs/course-map.md) and adjust the sequence for your institution.
 4. Copy a template from `templates/` for each new lesson or assignment.
 5. Replace placeholder text with your own content.
-6. Run `scripts/check-java.sh` to verify that all Java examples compile.
+6. Run `bash scripts/verify.sh all` to check that every example compiles, runs, and prints what it claims.
+
+### Working surfaces
+
+Students work in **GitHub Codespaces**, in **local VS Code with the Java extension**, or in both. A Codespace needs no setup: the dev container installs the JDK, the Java extension, and the test runner. Every graded task in this course runs on either surface.
+
+| Command | What it does |
+|---------|-------------|
+| `bash scripts/verify.sh compile` | Compile every `.java` file |
+| `bash scripts/verify.sh examples` | Run each example and compare its output against the recorded expectation |
+| `bash scripts/verify.sh test` | Run the JUnit tests |
+| `bash scripts/verify.sh all` | All of the above |
+| `bash scripts/fetch-junit.sh` | Install the JUnit runner (once per machine) |
 
 ---
 

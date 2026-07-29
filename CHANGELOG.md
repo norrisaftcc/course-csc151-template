@@ -34,6 +34,11 @@ Instructors who forked an earlier version of this template can use this log to i
 
 ### Added
 
+- `scripts/verify.sh` — the course verifier, replacing compile-only checking. Subcommands: `compile`, `run`, `examples`, `test`, `all`. It compiles each file, runs examples, and compares real standard output against a recorded `.expected` file, with an optional `.stdin` fixture for programs that read input.
+- `scripts/fetch-junit.sh` — installs the JUnit console runner into a gitignored `.tools/` directory. The jar is not committed, so forks stay small and the download is checksum-verified.
+- `.devcontainer/` — Codespaces and local dev container setup: JDK 21, the VS Code Java extension pack, and a post-create script that installs the test runner and runs a smoke check.
+- `modules/m5-methods-and-testing/` — `ScoreUtils.java` and `ScoreUtilsTest.java`, demonstrating the `tests/` convention and the three required test tiers (normal, boundary, failure).
+- `.expected` fixtures for every existing example, and a `.stdin` fixture for `ScannerDemo`.
 - `docs/ai-teammate-policy.md` — AI coding assistance is explicitly allowed. States the five rules, the disclosure standard, and the explain-any-line bar.
 - `docs/prompting-your-ai-teammate.md` — the PROVIDE and ASSAY operations taught as student skills, with the four floor items mapped to the four parts of the execute gate.
 - AI teammate disclosure section and a "Coaching an AI teammate" mastery row in `templates/coach-player-record.md`.
@@ -41,6 +46,8 @@ Instructors who forked an earlier version of this template can use this log to i
 
 ### Fixed
 
+- **`FormattedOutput.java` printed a misaligned table.** The new verifier caught it on its first run: the separator rule was 38 characters while the data rows were 41, and the grand-total line was 40, so its number did not line up under the Total column. In an example whose purpose is teaching aligned output, that was a defect. The rule and the total now match the row width, and the documented output matches what the program actually prints.
+- **`scripts/check-java.sh` is now a shim** that calls `verify.sh compile`, so older instructions and older forks keep working.
 - **Resolved the handshake/handoff synonym drift.** `modules/00-ste-markdown-mermaid/README.md` had declared "handoff" the preferred term for the execute-gate agreement while every other document said "handshake," and called the two synonymous — in a course whose first lesson bans synonym drift. The two words now name different things: a **handshake** opens the gate, a **handoff** switches the roles. `docs/glossary.md` states the distinction.
 
 ---

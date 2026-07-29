@@ -4,7 +4,8 @@ Before submitting this pull request, confirm each item:
 
 ### Content standards
 
-- [ ] All Java examples compile — run `bash scripts/check-java.sh` from the repository root.
+- [ ] All Java checks pass — run `bash scripts/verify.sh all` from the repository root.
+- [ ] Every new example has a `.expected` file recording its output (and a `.stdin` file if it reads input).
 - [ ] All new text follows STE rules: active voice, one topic per sentence, consistent terms.
 - [ ] Every new term is defined at first use.
 - [ ] All Markdown renders correctly — verify headers, code blocks, and Mermaid diagrams in GitHub preview.

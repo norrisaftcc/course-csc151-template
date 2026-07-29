@@ -8,7 +8,8 @@
 // To compile: javac ScannerDemo.java
 // To run:     java ScannerDemo
 //
-// Sample interaction (user input shown after the colon):
+// Sample interaction when you type the input yourself
+// (what you type is shown after the colon):
 //   Enter your name: Jordan
 //   Enter your score (int): 85
 //   Enter your bonus multiplier (double): 1.5
@@ -17,6 +18,17 @@
 //   Score:    85
 //   Bonus:    1.5
 //   Adjusted: 127.5
+//
+// The recorded output in ScannerDemo.expected looks different, and the
+// difference is worth understanding. That file records what the program
+// prints when the input comes from ScannerDemo.stdin instead of from your
+// keyboard. Two things change:
+//
+//   1. Your typing is never echoed, because you did not type anything.
+//   2. The three prompts run together on one line, because System.out.print
+//      does not end the line and nothing was inserted between the prompts.
+//
+// The program is identical either way. Only the source of the input changed.
 
 import java.util.Scanner;
 
