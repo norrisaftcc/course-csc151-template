@@ -223,11 +223,11 @@ This matrix shows which modules contribute to each CLO. A filled cell means at l
 
 Before this mapping is submitted for formal approval, resolve the following. Resolved items are kept, struck through, with the decision recorded — a fork needs to see what was decided, not only what is left.
 
-1. **CLO-3 depth:** Does "object-oriented principles" require inheritance and polymorphism, or is encapsulation (fields + methods + constructor) sufficient for CSC 151? Submodule 8.1 can absorb inheritance and interfaces for sections that need the depth.
-2. **CLO-5 assessment:** Is there a common assessment rubric for test evidence, or does each instructor set their own standard? See [rubric.md](rubric.md).
-3. **Module 0 credit:** Does the institution count submodule 0.1 (writing and tools) as graded work, or as an ungraded prerequisite activity?
-4. ~~**CLO-4 without a graphical display.**~~ **Resolved.** CLO-4 is fulfilled by processing a user event as a function call. A console menu selection and a Swing button press are both accepted evidence, and the console path is not the lesser one. Submodule 8.2 therefore carries no local-machine requirement, and every graded task runs in a Codespace.
-5. **AI teammate disclosure:** Confirm that the disclosure standard in the [AI Teammate Policy](ai-teammate-policy.md) matches the institution's academic integrity policy.
+1. **CLO-3 depth:** Does "object-oriented principles" require inheritance and polymorphism, or is encapsulation (fields + methods + constructor) sufficient for CSC 151? Submodule 8.1 can absorb inheritance and interfaces for sections that need the depth. ANSWER: "object-oriented principles" here indicates fields, methods, and constructor (encapsulation). Inheritance and polymorphism would live in the follow up class, CSC-251.
+2. **CLO-5 assessment:** Is there a common assessment rubric for test evidence, or does each instructor set their own standard? See [rubric.md](rubric.md). ANSWER: Lightweight rubric (sum to 20, 4 categories), for now. 
+3. **Module 0 credit:** Does the institution count submodule 0.1 (writing and tools) as graded work, or as an ungraded prerequisite activity? ANSWER: Module 0 is the time spent so that new students are able to log in and use the tools, ungraded prerequisite.
+4. ~~**CLO-4 without a graphical display.**~~ **Resolved.** CLO-4 is fulfilled by processing a user event as a function call. A console menu selection and a Swing button press are both accepted evidence, and the console path is not the lesser one. Submodule 8.2 therefore carries no local-machine requirement, and every graded task runs in a Codespace. ANSWER: Swing examples are kept as alternatives or worked examples. 
+5. **AI teammate disclosure:** Confirm that the disclosure standard in the [AI Teammate Policy](ai-teammate-policy.md) matches the institution's academic integrity policy. ANSWER: pending human review.
 
 ---
 
