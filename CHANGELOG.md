@@ -11,6 +11,10 @@ Instructors who forked an earlier version of this template can use this log to i
 
 *Changes that are complete but not yet tagged as a release.*
 
+### Changed
+
+- **JUnit 1.11.4 is the accepted version for this course.** The pin in `scripts/fetch-junit.sh` and its recorded SHA-256 describe that exact jar, so changing the version means re-recording the checksum. The script says so where the version is set.
+
 ### Added
 
 - `spikes/` — throwaway prototypes that answer one question each. Nothing in this directory is course content, and nothing is linked from a module.
