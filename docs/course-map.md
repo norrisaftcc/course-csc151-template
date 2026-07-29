@@ -148,7 +148,9 @@ Submodule 0.2 — Environment and first program:
 - Reading error messages.
 - Working with an AI teammate, and what honest use requires.
 
-Suggested time: 2–3 class sessions.
+Lessons in this repository: [0.1 Writing and diagrams](../modules/m0-getting-on-the-bus/lesson-1-writing-and-diagrams.md) · [0.2 Environment and first program](../modules/m0-getting-on-the-bus/lesson-2-environment-and-first-program.md) · [0.3 Work surfaces and the AI teammate](../modules/m0-getting-on-the-bus/lesson-3-work-surfaces-and-ai-teammate.md).
+
+Suggested time: 3–4 class sessions. Lesson 0.3 is the third of three, and the 16-week calendar gives Module 0 four sessions.
 
 ---
 
@@ -164,7 +166,7 @@ Topics:
 - String concatenation.
 - `System.out.println` for output.
 
-Sample lesson: [Module 1 in this repository](../modules/m1-variables-expressions/lesson.md).
+Lesson in this repository: [Module 1](../modules/m1-variables-expressions/lesson.md).
 
 Suggested time: 2–3 class sessions.
 
@@ -180,9 +182,9 @@ Topics:
 - `System.out.printf` for formatted output.
 - Reading `int`, `double`, and `String` values.
 
-Sample lesson: [Module 2 in this repository](../modules/m2-input-output/lesson.md).
+Lesson in this repository: [Module 2](../modules/m2-input-output/lesson.md).
 
-Suggested time: 1–2 class sessions.
+Suggested time: 2–3 class sessions.
 
 ---
 
@@ -196,6 +198,8 @@ Topics:
 - `if`, `if-else`, `else if` chains.
 - `switch` statement, introduced as an alternative to long `else if` chains.
 - Common mistakes: using `=` instead of `==`.
+
+Lesson in this repository: [Module 3](../modules/m3-conditionals/lesson.md).
 
 Suggested time: 2–3 class sessions.
 
@@ -213,6 +217,8 @@ Topics:
 - `break` and `continue`.
 - Nested loops.
 - Common mistakes: off-by-one errors, infinite loops.
+
+Lesson in this repository: [Module 4](../modules/m4-loops/lesson.md).
 
 Suggested time: 3–4 class sessions.
 
@@ -240,6 +246,8 @@ Submodule 5.2 — Testing and debugging:
 - Debugging strategy: reproduce, isolate, fix, verify.
 - Running the course verifier: `bash scripts/verify.sh test`.
 
+Lessons in this repository: [5.1 Methods](../modules/m5-methods-and-testing/lesson-1-methods.md) · [5.2 Testing and debugging](../modules/m5-methods-and-testing/lesson-2-testing-and-debugging.md).
+
 Suggested time: 4–5 class sessions.
 
 ---
@@ -256,7 +264,7 @@ Topics:
 - Two-dimensional arrays, briefly.
 - `java.util.ArrayList`: add, get, size, remove.
 
-Sample lesson: [Module 6 in this repository](../modules/m6-arrays-collections/lesson.md).
+Lesson in this repository: [Module 6](../modules/m6-arrays-collections/lesson.md).
 
 Suggested time: 3–4 class sessions.
 
@@ -274,6 +282,8 @@ Topics:
 - Creating objects with `new`.
 - The difference between a class and an object.
 - The `toString` method.
+
+Lesson in this repository: [Module 7](../modules/m7-classes-objects/lesson.md).
 
 Suggested time: 4–5 class sessions.
 
@@ -299,6 +309,8 @@ Submodule 8.2 — Final project:
 - A short written or spoken reflection on design decisions.
 
 **How CLO-4 is assessed.** CLO-4 is satisfied by **processing a user event as a function call.** The assessed skill is the *register-and-dispatch cycle*, not one graphical toolkit. Students implement a handler interface and register it with a dispatcher. Selecting an option from a console menu triggers the handler, and so does pressing a Swing button; **both are accepted evidence, and neither is the lesser path.** The console version runs and is verified in a Codespace with no display, so no student is disadvantaged by their work surface. Students working locally may wire the same handler classes to Swing buttons, changing no logic — which demonstrates separation of concerns directly, because the logic layer does not know what produced the event.
+
+Lessons in this repository: [8.1 Event-driven programming](../modules/m8-events-and-capstone/lesson-1-event-driven-programming.md) · [8.2 Final project](../modules/m8-events-and-capstone/lesson-2-final-project.md).
 
 Suggested time: 3–4 class sessions for 8.1, then 1–2 weeks for 8.2.
 

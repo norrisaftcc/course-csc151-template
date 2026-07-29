@@ -52,6 +52,7 @@ and formatting were each rehearsed before it.
 | [lesson.md](lesson.md) | Full lesson with Scanner, printf, input/process/output pattern, handshake, and transfer task |
 | [examples/ScannerDemo.java](examples/ScannerDemo.java) | Reads name, score, and bonus; prints a formatted summary |
 | [examples/FormattedOutput.java](examples/FormattedOutput.java) | Demonstrates printf column alignment with a receipt table |
+| [examples/ScannerMixedInput.java](examples/ScannerMixedInput.java) | Runnable reference for the leftover-newline problem: reads an `int`, consumes the newline, then reads a full line. Not taught in the lesson — see the facilitation note below |
 
 ---
 
@@ -82,7 +83,12 @@ input.nextLine();           // consume the leftover newline
 String comment = input.nextLine();  // now reads the full next line
 ```
 
-Introduce this pattern only when students encounter the symptom. Do not front-load it.
+[examples/ScannerMixedInput.java](examples/ScannerMixedInput.java) is this pattern as a runnable
+program, with its own `.stdin` fixture, so you can show the symptom and the fix in a terminal
+rather than on a slide.
+
+Introduce this pattern only when students encounter the symptom. Do not front-load it. It is not
+part of any beat in the lesson, and nothing graded in this module depends on it.
 
 ### Accessible facilitation
 

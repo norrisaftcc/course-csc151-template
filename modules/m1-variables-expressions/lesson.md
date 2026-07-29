@@ -283,13 +283,19 @@ Write a Java program named `PayCalculator.java` that:
 
 ## Test evidence
 
-After running your code, fill in this table:
+Evidence in this course has three tiers, and you record all three every time. **Normal** is the
+case the program was written for. **Boundary** is the smallest or largest case it still has to
+handle. **Failure** is the case that breaks it, recorded so you know what the break looks like.
 
-| Test | Expected output | Actual output | Match? |
-|------|----------------|---------------|--------|
-| `hours = 8, rate = 12.50` | `Alex earned: 100.0` | | |
-| `hours = 0, rate = 12.50` | `Alex earned: 0.0` | | |
-| `hours = 40, rate = 25.0` | `Alex earned: 1000.0` | | |
+| Tier | What to run | Expected | Actual | Match? |
+|------|-------------|----------|--------|--------|
+| **Normal** | `hours = 8`, `rate = 12.50` | `Alex earned: 100.0` | | |
+| **Boundary** | `hours = 0`, `rate = 12.50` | `Alex earned: 0.0` | | |
+| **Failure** | Change the declaration to `int totalPay = hours * rate;`, compile, then restore `double` | `javac` reports `incompatible types: possible lossy conversion from double to int`, and the program never runs | | |
+
+The failure tier is the one worth your attention. `hours * rate` is a `double` because one of
+its operands is a `double`. An `int` variable cannot hold that value without discarding the
+fraction, so the compiler refuses rather than dropping the cents silently.
 
 ---
 
@@ -316,14 +322,14 @@ Switch roles with your partner. The new coach describes the transfer task below.
 
 **Coach provides this task:**
 
-> Declare `int units = 15`, `double price = 4.99`, and `String product = "Notebooks"`. Compute the subtotal as `units * price`. Print two lines:
+> Declare `int units = 12`, `double price = 4.25`, and `String product = "Notebooks"`. Compute the subtotal as `units * price`. Print two lines:
 >
 > ```
 > Product: Notebooks
-> Subtotal: 74.85
+> Subtotal: 51.0
 > ```
 >
-> Constraint: You may not hard-code `74.85` — it must be the computed result. Your prediction must match the exact format above.
+> Constraint: You may not hard-code `51.0` — it must be the computed result. Your prediction must match the exact format above.
 
 **Player: complete the full handshake before writing code.**
 
@@ -332,10 +338,11 @@ Switch roles with your partner. The new coach describes the transfer task below.
 
 ```
 Product: Notebooks
-Subtotal: 74.85
+Subtotal: 51.0
 ```
 
-If your output shows `74.85000...` instead, use `System.out.printf("Subtotal: %.2f%n", subtotal);` to format it. (The `%n` is a newline. The `%.2f` means: print the `double` with two decimal places.)
+The skill is the same one you used for `PayCalculator`: an `int` multiplied by a `double`
+produces a `double`, and `println` prints it. Only the data and the labels changed.
 
 </details>
 
@@ -348,6 +355,12 @@ Answer one of the following:
 - What surprised you about integer division? How would you explain it to a classmate?
 - Why does the execute gate require a prediction before running? What is the value of writing the prediction even when you are confident?
 - What is one question you still have about variables or expressions?
+
+**Looking ahead.** Change `price` to `4.99` and run the transfer task again. The subtotal prints
+as `74.85000000000001` rather than `74.85`, because a `double` stores a value in binary and
+`4.99` has no exact binary form. Nothing here is broken and nothing here can fix it: controlling
+the printed decimals needs `System.out.printf`, which is the first thing Module 2 teaches.
+Nothing in this lesson depends on that, so try it if you are curious and leave it if you are not.
 
 ---
 

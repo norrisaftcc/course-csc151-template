@@ -58,23 +58,30 @@ After this module, students can:
 
 | Beat | Course name | What you do here |
 |------|------------|------------------|
-| **Learn** | Study the Play | Read how a method declares parameters and a return type, how scope and the call stack work, and what distinguishes a compile-time, runtime, and logic error. |
-| **Practice** | Run the Play | Trace a call stack by hand. Read a stack trace and name the line that caused it. Repair a method that compiles and returns a confidently wrong answer. |
-| **Apply** | Team Practice | Complete the handshake, then write the `ScoreUtils` methods and their tests with a coach present. Run `bash scripts/verify.sh test`. |
-| **Assess** | The Big Game | Write a normal, boundary, and failure test for a method you did not write. |
+| **Learn** | Study the Play | **5.1:** read the four parts of a method declaration, `return` against `void`, scope, the call stack, and overloading, with `MethodBasics.java` as the worked example. **5.2:** read what tells a compile-time, runtime, and logic error apart, how a stack trace is read from the bottom up, the three evidence tiers, and every part of a JUnit test method as `ScoreUtilsTest.java` is taken apart one method at a time. |
+| **Practice** | Run the Play | **5.1:** predict the printed order of `MethodBasics.java` as control enters and leaves each call, and name which variables are in scope at each line. Repair `RepairMethods`, whose two defects produce four compiler messages. **5.2:** read a real stack trace and name the file and line that caused it, then predict which of the three shipped `average` tests fail once the `(double)` cast is removed. Repair two defects: `average` without its cast, and a test whose name claims `letterGrade_returnsA_atExactly90` while its assertion expects `"B"`. |
+| **Apply** | Team Practice | **5.1:** complete the handshake, then write `MyScoreUtils.java` with `letterGrade` and `clamp` written from scratch. **5.2:** complete the handshake, then write one test per tier against those methods with a coach present, run `bash scripts/fetch-junit.sh` once and `bash scripts/verify.sh test`, and read the PASS and FAIL lines aloud. |
+| **Assess** | The Big Game | **5.1:** write `PassCheck.java`, whose method returns a `boolean` the caller uses as a condition. **5.2:** write a three-tier evidence set for `ScoreUtils.average`, a method the student did not write, including `average(new int[0])`, and decide in one sentence whether the method or its documented contract is at fault. |
 
 *The four course names are American football terms. Their literal meanings, and the rule the
 cycle keeps, are in the [Course Map](../../docs/course-map.md#the-lpaa-cycle). You do not need
 to know anything about football to take this course.*
 
 
-**The lesson file for this module is not written yet.** The table above states what its four
-beats must contain, and the examples and tests below are already in place. An instructor
-teaching from this module today runs the beats from these notes.
-
 **The Assess beat here needs a skill that is worth naming explicitly:** reading a failing test's
 output and deciding whether the test or the method is wrong. That judgment is rehearsed in the
-Practice beat, on the deliberately broken `average` method, before it is graded.
+Practice beat of Lesson 5.2, on the deliberately broken `average` method and on the test whose
+name and assertion disagree, before it is graded.
+
+**Writing a JUnit test method from scratch is met four times.** It is taught in the Learn beat
+of Lesson 5.2, half-written in that lesson's Practice repair, coached in its Apply beat, and
+only then graded. The transfer task changes one condition: the method under test belongs to
+someone else, and one of its inputs falls outside the contract its Javadoc states.
+
+**The empty-array case is recorded rather than asserted.** `average(new int[0])` returns `NaN`
+today, and the method's Javadoc promises nothing about an empty array. Students observe the
+result, then decide whether the method or the contract is at fault. Writing an assertion before
+that decision would freeze current behaviour as if someone had chosen it.
 
 ---
 
@@ -82,6 +89,9 @@ Practice beat, on the deliberately broken `average` method, before it is graded.
 
 | File | Description |
 |------|-------------|
+| [lesson-1-methods.md](lesson-1-methods.md) | Submodule 5.1: declarations, `return` and `void`, scope, the call stack, overloading, handshake, and transfer task |
+| [lesson-2-testing-and-debugging.md](lesson-2-testing-and-debugging.md) | Submodule 5.2: the three error kinds, reading a stack trace, the evidence tiers, JUnit part by part, handshake, and transfer task |
+| [examples/MethodBasics.java](examples/MethodBasics.java) | Runnable program: a `void` method, a value-returning method used inside an expression, and an overloaded pair, with markers printed as control enters and leaves each call |
 | [examples/ScoreUtils.java](examples/ScoreUtils.java) | Three static methods used first as method practice, then as the code under test |
 | [examples/ScoreUtils.expected](examples/ScoreUtils.expected) | The exact output `ScoreUtils` prints, checked by the verifier |
 | [tests/ScoreUtilsTest.java](tests/ScoreUtilsTest.java) | JUnit tests showing all three evidence tiers |

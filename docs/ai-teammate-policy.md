@@ -88,7 +88,7 @@ After the gate opens, the AI may help you write, trace, or repair code. It may n
 
 ## Notes for instructors
 
-- **Ask one diagnostic question at submission.** This is the whole enforcement mechanism, and it takes about thirty seconds. A student who used the tool well answers easily.
+- **Ask one diagnostic question at submission.** This is the whole enforcement mechanism, and it takes about thirty seconds. A student who used the tool well answers in one sentence.
 - **Do not ask students to prove they did not use a tool.** That standard cannot be met and it punishes honest students. Ask what the work does instead.
 - **Treat detection software as unreliable evidence.** Base academic integrity decisions on what a student can explain, not on a classifier score.
 - **Say the policy out loud in week 1.** Students who are unsure whether help is allowed will either avoid a useful tool or hide their use of it. Both outcomes are worse than a clear rule.

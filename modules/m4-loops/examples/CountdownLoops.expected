@@ -1,0 +1,16 @@
+while, counting down from 3:
+3
+2
+1
+do-while, counting down from 3:
+3
+2
+1
+for, counting down from 3:
+3
+2
+1
+The same three loops, started at 0:
+while body runs: 0
+do-while body runs: 1
+for body runs: 0

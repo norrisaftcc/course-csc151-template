@@ -1,0 +1,6 @@
+start: left 0, right 0
+left.increment(): left 1, right 0
+left.increment(): left 2, right 0
+right.increment(): left 2, right 1
+left.increment(): left 3, right 1
+right.increment(): left 3, right 2

@@ -234,11 +234,19 @@ This standard is not punitive. It trains students to verify programs, not merely
 
 ## Facilitation examples by module
 
-See each module's `README.md` for specific facilitation notes and example handshakes. The sample modules with full facilitation notes are:
+Every module README carries facilitation notes: what to prepare before class, the mistakes this
+module produces, and how to run the beats accessibly.
 
 - [Module 0: Getting on The Bus](../modules/m0-getting-on-the-bus/README.md)
 - [Module 1: Variables and Expressions](../modules/m1-variables-expressions/README.md)
+- [Module 2: Input and Output](../modules/m2-input-output/README.md)
+- [Module 3: Conditionals](../modules/m3-conditionals/README.md)
+- [Module 4: Loops](../modules/m4-loops/README.md)
+- [Module 5: Methods and Testing](../modules/m5-methods-and-testing/README.md)
 - [Module 6: Arrays and Collections](../modules/m6-arrays-collections/README.md)
+- [Module 7: Classes and Objects](../modules/m7-classes-objects/README.md)
+- [Module 8: Events and Capstone](../modules/m8-events-and-capstone/README.md)
+- [Appendix: Reference](../modules/appendix/README.md)
 
 ---
 

@@ -40,7 +40,8 @@ set -euo pipefail
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 TOOLS_DIR="$REPO_ROOT/.tools"
 
-# Confirm this version is the one you want before you record its checksum.
+# Accepted for this course. Changing it means re-recording JUNIT_SHA256 below,
+# because the pinned checksum describes this exact jar.
 JUNIT_VERSION="1.11.4"
 
 # Recorded from a real download that CI verified against the checksum Maven Central

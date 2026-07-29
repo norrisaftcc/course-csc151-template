@@ -53,9 +53,9 @@ After this module, students can:
 | Beat | Course name | What you do here |
 |------|------------|------------------|
 | **Learn** | Study the Play | Read the three STE-100 rules, the Markdown and Mermaid syntax, what a Java program is, the compile-run cycle, and the five AI teammate rules. |
-| **Practice** | Run the Play | Repair a broken Mermaid diagram. Trace `HelloWorld.java` before running it. Repair a request that fails the floor test. Nothing here is graded, and a wrong prediction costs nothing. |
+| **Practice** | Run the Play | Repair a broken Mermaid diagram. Trace `HelloWorld.java` before running it. Repair two defects in lesson 2: a missing semicolon, and a `public class MyLocation` saved as `mylocation.java`. Repair a request that fails the floor test. Nothing here is graded, and a wrong prediction costs nothing. |
 | **Apply** | Team Practice | Complete your first execute-gate handshake with a coach. Write and run `HelloWorld.java`, then `Surface.java`. |
-| **Assess** | The Big Game | Rewrite an unfamiliar task description in STE. Diagram a process you have not seen. Assay a classmate's request and report what survives. |
+| **Assess** | The Big Game | Rewrite an unfamiliar task description in STE. Diagram a process you have not seen. Write `MyLocation.java`, whose file name and class name change together. Assay a classmate's request and report what survives. |
 
 *The four course names are American football terms. Their literal meanings, and the rule the
 cycle keeps, are in the [Course Map](../../docs/course-map.md#the-lpaa-cycle). You do not need
@@ -64,6 +64,13 @@ to know anything about football to take this course.*
 
 This module runs the cycle twice before any of it counts, which is the point of putting it
 first. Every later module assumes you have met all four beats already.
+
+**The name-match rule is rehearsed before it is graded.** Lesson 2 states it in the Concept
+explanation, repairs it in the Practice beat against the compiler's own message, requires it in
+the Apply beat (`MyName.java`), and only then grades it in the transfer task
+(`MyLocation.java`). The Practice repair exists so that no student meets
+`class X is public, should be declared in a file named X.java` for the first time while graded
+work is running.
 
 ---
 

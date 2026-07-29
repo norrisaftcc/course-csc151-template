@@ -14,6 +14,9 @@ After this lesson, you can:
 - Access elements by index.
 - Write a single-pass `for` loop to find the maximum value in an `int` array.
 - Identify and test at least two edge cases: a one-element array and an all-negative array.
+- Build an `ArrayList` with `add`, and read it with `get`, `size`, and `remove`.
+- Traverse an array or an `ArrayList` with an enhanced `for`.
+- State which container reports `.length` and which reports `size()`.
 
 ---
 
@@ -80,6 +83,83 @@ for (int i = 0; i < numbers.length; i++) {
 ```
 
 The loop variable `i` starts at `0` and stops when `i` equals `numbers.length`. The last valid index is `numbers.length - 1`.
+
+### When the size is not known in advance: `ArrayList`
+
+An array fixes its length when it is created. `new String[4]` holds four slots forever, and
+there is no way to make it hold a fifth.
+
+An **`ArrayList`** starts empty and grows as you add to it.
+
+```java
+import java.util.ArrayList;
+
+ArrayList<String> roster = new ArrayList<>();
+
+roster.add("Avery");        // the list now holds 1 entry
+roster.add("Brooks");       // 2 entries
+```
+
+The type in angle brackets says what the list holds. `ArrayList<String>` holds `String` values;
+`ArrayList<Book>` in Module 7 holds `Book` objects.
+
+The four methods this course uses:
+
+| You write | It does | The array equivalent |
+|-----------|---------|---------------------|
+| `list.add(value)` | Puts a value at the end, growing the list | No equivalent — an array cannot grow |
+| `list.get(0)` | Reads the entry at an index | `array[0]` |
+| `list.size()` | Reports how many entries the list holds | `array.length` |
+| `list.remove(1)` | Takes an entry out and closes the gap | No equivalent |
+
+**Two spellings that are worth learning as a pair.** An `ArrayList` reports `size()` **with**
+parentheses, because size is a method. An array reports `.length` **without** them, because
+length is a field. Asking either container for the other one's spelling does not compile.
+
+**`remove` shifts every later index down by one.** After `roster.remove(1)`, nothing is blank
+at index 1: the entry that was at index 2 answers to index 1 now. A loop that counts indexes
+upward while removing therefore skips an entry after every removal.
+
+### The enhanced `for`
+
+An **enhanced `for`** hands you each entry in turn and never mentions an index.
+
+```java
+for (String name : roster) {
+    System.out.println(name);
+}
+```
+
+Read the colon as "in": for each `String` called `name` in `roster`. It works on arrays too:
+
+```java
+for (int number : numbers) {
+    System.out.println(number);
+}
+```
+
+Use it whenever you want every element and do not need to know where each one sits. Use the
+counted `for` when the index itself matters — as `findMax` does, because it starts at index 1
+rather than index 0.
+
+`examples/RosterList.java` runs all of this: four adds, `size()`, `get(0)`, one `remove`, and
+an enhanced `for` over what is left.
+
+**Expected output:**
+```
+Size after four adds: 4
+First entry: Avery
+Index 1 before the remove: Brooks
+Size after removing index 1: 3
+Index 1 after the remove: Casey
+Every entry:
+  Avery
+  Casey
+  Devon
+```
+
+Module 8's dispatcher holds its command words and its handlers in two `ArrayList` values built
+exactly this way, and Module 7's `Shelf` holds books in one.
 
 ---
 
@@ -173,6 +253,10 @@ Use the table below. Fill in one row per iteration. Do not run the code yet.
 
 ## Repair code
 
+This beat holds **three defects**: two in `RepairMax`, and one in a second snippet below it.
+
+### Defects 1 and 2 — the running maximum
+
 The following code contains two errors. Find them, fix them, and explain each repair. Do not run the code until you have written your explanations.
 
 ```java
@@ -232,6 +316,51 @@ public class RepairMax {
 
 </details>
 
+### Defect 3 — the wrong container answers
+
+The snippet below asks each container for the other one's spelling. It contains **one** error,
+and the compiler reports it twice.
+
+```java
+import java.util.ArrayList;
+
+public class RepairSize {
+    public static void main(String[] args) {
+        int[] scores = {90, 85, 77};
+        ArrayList<String> names = new ArrayList<>();
+        names.add("Avery");
+        names.add("Brooks");
+
+        System.out.println("Names: " + names.length);      // error 3
+        System.out.println("Scores: " + scores.size());    // error 3
+    }
+}
+```
+
+**Task:** name which container answers which question, and write both corrected lines. Say what
+kind of error this is — compile-time, runtime, or logic — before you compile.
+
+<details>
+<summary>Correction — open only after writing your answer</summary>
+
+**Both lines are the same mistake, in mirror image.**
+
+- `names` is an `ArrayList`, and it reports `names.size()` — a method, so it takes parentheses.
+- `scores` is an array, and it reports `scores.length` — a field, so it takes none.
+
+The corrected lines:
+
+```java
+System.out.println("Names: " + names.size());
+System.out.println("Scores: " + scores.length);
+```
+
+**This is a compile-time error**, and that is the good news. `javac` names both lines and
+refuses to build the program, so the mistake cannot reach a run. Compare it with defect 1 above,
+which compiles cleanly and returns a wrong answer.
+
+</details>
+
 ---
 
 ## Execute-gate handshake
@@ -247,7 +376,10 @@ You are now going to write your own `findMax` method from scratch. Complete the 
 > - `{42}` — an array with one element
 > - `{-7, -3, -10}` — an array with all negative values
 >
-> Constraint: You may not sort the array. You may not use `Math.max` or any other library method. You must initialize `max` to `numbers[0]`.
+> Collect your three result lines in an `ArrayList<String>` as you compute them, and print them
+> all at the end with an enhanced `for`. Do not print inside the loop that computes them.
+>
+> Constraint: You may not sort the array. You may not use `Math.max` or any other library method. You must initialize `max` to `numbers[0]`. `ArrayList` is allowed and required — it holds the report, not the data.
 
 **Player: complete the handshake using this format:**
 
@@ -269,7 +401,8 @@ Write a Java program in a file named `MyArrayMax.java` that:
 
 1. Declares the static method `findMax(int[] numbers)`.
 2. Tests it with all three arrays listed in the handshake.
-3. Prints one line per test showing the array description and the result.
+3. Builds one result line per test and adds it to an `ArrayList<String>`.
+4. Prints every entry of that list at the end with an enhanced `for`.
 
 **Required output format:**
 ```
@@ -278,17 +411,39 @@ One element max: 42
 All negative max: -3
 ```
 
+The list holds three `String` values by the time you print it, and `report.size()` is `3`. Build
+it the way `examples/RosterList.java` builds its roster:
+
+```java
+import java.util.ArrayList;
+
+ArrayList<String> report = new ArrayList<>();
+report.add("Typical array max: " + findMax(typical));
+// ... two more adds ...
+
+for (String line : report) {
+    System.out.println(line);
+}
+```
+
 ---
 
 ## Test evidence
 
-After running, fill in this table:
+Evidence in this course has three tiers, and you record all three every time. **Normal** is the
+case the method was written for. **Boundary** is the smallest case it still has to handle.
+**Failure** is the case that exposes the wrong starting value.
 
-| Test | Expected | Actual | Match? |
-|------|----------|--------|--------|
-| `{5, 2, 8, 1, 9}` | `9` | | |
-| `{42}` | `42` | | |
-| `{-7, -3, -10}` | `-3` | | |
+| Tier | Array | Expected | Actual | Match? |
+|------|-------|----------|--------|--------|
+| **Normal** | `{5, 2, 8, 1, 9}` | `9` | | |
+| **Boundary** | `{42}` | `42` — one element, and the loop body never runs | | |
+| **Failure** | `{-7, -3, -10}` | `-3` | | |
+
+The failure tier is the one worth your attention. A `findMax` that starts with `int max = 0`
+returns `9` and `42` correctly and then returns `0` for the all-negative array, because `0` is
+larger than every element and `0` is not in the array. Starting with `numbers[0]` is what makes
+the third row pass.
 
 ---
 
@@ -358,6 +513,12 @@ Answer one of the following:
 | Trace a loop using a table | | | |
 | Write a single-pass `findMax` method | | | |
 | Initialize `max` to `numbers[0]` (not `0`) | | | |
+| Build an `ArrayList` and `add` to it | | | |
+| Read an entry with `get` | | | |
+| Report how many entries a list holds with `size()` | | | |
+| Take an entry out with `remove`, and say what happens to the later indexes | | | |
+| Traverse a collection with an enhanced `for` | | | |
+| State which container reports `.length` and which reports `size()` | | | |
 | Test a normal case, edge case, and failure case | | | |
 | Complete the execute-gate handshake | | | |
 | Explain the result with evidence | | | |

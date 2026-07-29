@@ -87,7 +87,7 @@ The module sequence follows the [Course Map](course-map.md). Submodule 0.1 (writ
 #### Week 15
 
 - Submodule 8.1: the handler interface, registering a handler with the dispatcher, the calculator command set, separating the handler layer from the logic class.
-- Optional for students working locally: wire the same handlers to Swing buttons.
+- Alternative path for students working locally: wire the same handler classes to Swing buttons. Both triggers are accepted evidence for CLO-4, and the console path carries full credit.
 - **Assessment:** Assignment 07 due (one registered handler and one calculation). Final project proposal due; project work begins.
 
 #### Week 16
@@ -121,7 +121,7 @@ The module sequence follows the [Course Map](course-map.md). Submodule 0.1 (writ
 - **Do not cut lesson 0.3 for time.** Its two subjects — which surface a student works on, and what honest AI use requires — both get more expensive to settle the later they are raised. If the schedule is tight, shorten the transfer task rather than dropping the lesson.
 - **Do not combine Modules 3 and 4.** Conditionals and loops are both high-misconception topics. Students need time to trace each one independently before using them together.
 - **Do not drop submodule 5.2.** In an accelerated term the temptation is to cut testing. CLO-5 and CLO-6 both depend on it, and the capstone assumes students can already read a stack trace. Reduce the JUnit content instead: one normal case, one boundary case, one failure case is enough.
-- **Submodule 8.1** can be reduced to the calculator command set only. CLO-4 is satisfied by registering one handler that runs one calculation. The Swing version stays optional.
+- **Submodule 8.1** can be reduced to the calculator command set only. CLO-4 is satisfied by registering one handler that runs one calculation. The Swing version is an alternative trigger for the same handler, not an extra requirement.
 
 ---
 

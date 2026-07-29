@@ -27,15 +27,21 @@ If you cannot do both of these, ask your coach before continuing.
 
 ---
 
-## Part 1: Simplified Technical English
+## Concept explanation
 
-### What is STE-100?
+This lesson teaches three tools in one pass. STE-100 governs the sentences you write. Markdown
+formats those sentences so a reader can scan them. Mermaid turns a sequence of steps into a
+diagram. Each part below covers one tool.
+
+### Part 1: Simplified Technical English
+
+#### What is STE-100?
 
 **Simplified Technical English (STE)** is a writing standard for technical documents. It makes instructions clear for readers who are not native English speakers and for readers who must act on what they read.
 
 The full standard has over 60 rules. This lesson covers the three most useful rules for writing code tasks and course materials.
 
-### Rule 1: Use active voice.
+#### Rule 1: Use active voice.
 
 In **active voice**, the subject does the action.
 
@@ -47,7 +53,7 @@ In **active voice**, the subject does the action.
 
 Active sentences are shorter. They name the actor first.
 
-### Rule 2: Use one topic per sentence.
+#### Rule 2: Use one topic per sentence.
 
 Each sentence states one idea. If a sentence contains "and" or "but" and can be split, split it.
 
@@ -56,7 +62,7 @@ Each sentence states one idea. If a sentence contains "and" or "but" and can be 
 | State your prediction and then wait for the coach to approve it. | State your prediction. Wait for the coach to approve it. |
 | Write the code and run it and record the output. | Write the code. Run it. Record the output. |
 
-### Rule 3: Use the same term for the same thing.
+#### Rule 3: Use the same term for the same thing.
 
 Do not use synonyms for technical terms. Choose one word and use it throughout.
 
@@ -69,15 +75,15 @@ In this course, the structured agreement before execution is called the **handsh
 
 ---
 
-## Part 2: Markdown
+### Part 2: Markdown
 
-### What is Markdown?
+#### What is Markdown?
 
 **Markdown** is a plain-text formatting syntax. You write plain characters and they display as formatted text. GitHub renders Markdown automatically in `.md` files.
 
-### Basic syntax
+#### Basic syntax
 
-#### Headers
+##### Headers
 
 ```markdown
 # Level 1 header — page title
@@ -87,7 +93,7 @@ In this course, the structured agreement before execution is called the **handsh
 
 Use one `#` for the page title. Use `##` for major sections. Use `###` for sub-sections.
 
-#### Bold and italic
+##### Bold and italic
 
 ```markdown
 **bold text**
@@ -96,7 +102,7 @@ Use one `#` for the page title. Use `##` for major sections. Use `###` for sub-s
 
 Use **bold** for terms you are defining and for steps the reader must take. Use *italic* sparingly — for titles and for a term's first use when you will define it immediately after.
 
-#### Inline code and code blocks
+##### Inline code and code blocks
 
 Use backticks for short code: `int count = 0;`
 
@@ -112,7 +118,7 @@ public class Hello {
 ```
 ````
 
-#### Lists
+##### Lists
 
 Unordered list:
 ```markdown
@@ -134,7 +140,7 @@ Checklist (task list):
 - [x] Done
 ```
 
-#### Tables
+##### Tables
 
 ```markdown
 | Column A | Column B |
@@ -145,26 +151,26 @@ Checklist (task list):
 
 ---
 
-## Part 3: Mermaid — How to Diagram a Play
+### Part 3: Mermaid — How to Diagram a Play
 
-### What is Mermaid?
+#### What is Mermaid?
 
 **Mermaid** is a diagram-as-code tool. You write a text description and Mermaid renders it as a visual diagram. GitHub renders Mermaid inside a fenced code block with the tag `mermaid`.
 
-### What is a play diagram?
+#### What is a play diagram?
 
 In team sports, a **play diagram** shows each actor's position and the sequence of actions in a planned play. It makes a plan visible before the play starts.
 
 In this course, a Mermaid flowchart serves the same purpose: it makes the steps and decisions in a handshake visible so that every participant understands the plan before execution begins. Diagramming a play means drawing the sequence of actions and decisions so that no step is assumed or skipped.
 
-### Flowchart basics
+#### Flowchart basics
 
 A Mermaid flowchart starts with `flowchart` followed by a direction:
 
 - `TD` — top-down
 - `LR` — left-right
 
-#### Node shapes
+##### Node shapes
 
 ```
 A[Rectangular node]       — a step or action
@@ -172,14 +178,14 @@ B(Rounded node)           — a start or end point
 C{Diamond node}           — a decision
 ```
 
-#### Arrows
+##### Arrows
 
 ```
 A --> B                   plain arrow
 A -- label --> B          arrow with a label
 ```
 
-#### A simple example
+##### A short example
 
 ```mermaid
 flowchart LR
@@ -193,7 +199,7 @@ flowchart LR
 **Plain-text description:**
 The coach states the goal. The player restates it. If the restatement matches, the gate opens. If not, the coach clarifies and the player tries again.
 
-### Diagramming the handshake
+#### Diagramming the handshake
 
 The **handshake** is the four-part agreement before execution. The canonical play diagram for the handshake is in [docs/workflow-diagrams.md](../../docs/workflow-diagrams.md).
 
@@ -231,7 +237,10 @@ The following is a task description written in plain prose, then rewritten using
 
 ---
 
-## Trace before reading
+## Trace before running
+
+*In this lesson the thing you trace is a passage of prose rather than a program. You read it,
+predict what is wrong with it, and only then check.*
 
 **Task:** Read the following passage. Do not evaluate it yet. Write your answers to the questions below. Then open the answers.
 
@@ -264,7 +273,10 @@ Or as a numbered list:
 
 ---
 
-## Repair the diagram
+## Repair code
+
+*The code you repair here is Mermaid source. Mermaid is diagram-as-code, so a diagram carries
+syntax errors and logic errors exactly as a Java program does.*
 
 The following Mermaid source has two errors. Find them and fix them. Do not render the diagram until you have written your explanations.
 
@@ -299,6 +311,11 @@ flowchart LR
     C -- No --> B
 ```
 
+**Plain-text description:**
+The coach states the goal. The player restates the goal. A decision asks whether the two match.
+If they match, the player executes. If they do not match, the flow returns to the player's
+restatement.
+
 </details>
 
 ---
@@ -326,7 +343,10 @@ Success check: We know it works when ______.
 
 ---
 
-## Small writing task
+## Small coding task
+
+*The code you write here is Markdown and Mermaid source rather than Java. You write source
+text, render it, and check what it produced — the same cycle every later lesson uses.*
 
 Write a Markdown file that contains:
 
@@ -346,7 +366,21 @@ Write a Markdown file that contains:
 
 ## Test evidence
 
-After completing your writing task, check each item:
+Evidence in this course has three tiers, and you record all three every time. **Normal** is the
+case the work was built for. **Boundary** is the smallest or largest case it still has to
+handle. **Failure** is the case that breaks it, recorded so you know what the break looks like.
+
+| Tier | What to do | Expected | Actual | Match? |
+|------|-----------|----------|--------|--------|
+| **Normal** | Preview your finished file in GitHub | Headers, list, and diagram all render | | |
+| **Boundary** | Count the decision nodes in your diagram | Exactly one `{diamond}` node, the fewest the task allows | | |
+| **Failure** | Delete the closing `}` from that decision node, preview again, then restore it | GitHub reports a parse error and shows no diagram at all | | |
+
+The failure tier is the one worth your attention. A Mermaid diagram does not render partially.
+One missing brace removes the whole diagram, which is why the repair exercise above starts with
+a missing brace.
+
+Then check each item:
 
 | Check | Criterion | Met? |
 |-------|-----------|------|

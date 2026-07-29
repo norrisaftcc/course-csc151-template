@@ -63,7 +63,7 @@ List every class you plan to write (other than the GUI frame class). For each cl
 
 ## Section 4 — GUI layout
 
-Sketch your GUI below in words or as a simple text diagram. Identify each component by type and label.
+Sketch your GUI below in words or as a plain-text diagram. Identify each component by type and label.
 
 ```
 Example sketch:

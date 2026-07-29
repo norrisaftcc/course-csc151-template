@@ -1,0 +1,5 @@
+Enter a word: 
+You typed: yes
+literal == "yes" is true
+typed == "yes" is false
+typed.equals("yes") is true
