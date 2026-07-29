@@ -4,6 +4,28 @@ This glossary defines terms used throughout the course. Terms are listed alphabe
 
 ---
 
+## A
+
+### Apply (Team Practice)
+
+The third beat of the [LPAA cycle](course-map.md#the-lpaa-cycle). The player completes the execute-gate handshake and writes code with a coach present. Apply is not graded. Its lesson sections are the handshake, the small coding task, the test evidence, and the explanation.
+
+**Team practice** is the course's name for this beat. Literal meaning: do the whole thing with your coach beside you, still not for a score.
+
+See also: **LPAA cycle**, **execute gate**.
+
+### Assess (The Big Game)
+
+The fourth beat of the [LPAA cycle](course-map.md#the-lpaa-cycle). The player transfers the skill to a task they have not seen before, and it counts toward the grade. Its lesson sections are role rotation, the transfer task, the reflection, and the mastery record.
+
+**The Big Game** is the course's name for this beat. Literal meaning: the work that counts toward your grade. The phrase comes from American team sports; you do not need to know anything about sports to take this course.
+
+Nothing appears in an Assess beat that has not already appeared in a Learn, a Practice, and an Apply beat. See **no-new-plays rule**.
+
+See also: **LPAA cycle**, **transfer**.
+
+---
+
 ## C
 
 ### Coach
@@ -84,11 +106,49 @@ Compare **handoff**, which is the role switch that happens after a task is compl
 
 ---
 
+## L
+
+### Learn (Study the Plays)
+
+The first beat of the [LPAA cycle](course-map.md#the-lpaa-cycle). The player reads the concept and walks through a worked example. Nothing is at stake. Its lesson sections are the learning goal, the prior knowledge check, the concept explanation, and the worked example.
+
+**Study the plays** is the course's name for this beat. Literal meaning: read and understand the material before you touch it. A playbook is the written record of what a team intends to do, and players read it before they rehearse.
+
+See also: **LPAA cycle**.
+
+### LPAA cycle
+
+The four beats every module runs, in order: **Learn**, **Practice**, **Apply**, **Assess**. Each beat has a second name used with students: Study the Plays, Run the Play, Team Practice, and The Big Game. Both names are correct, and neither replaces the other.
+
+Only the fourth beat is graded. The first three exist so that the fourth is never the first time a student meets a skill. See **no-new-plays rule**.
+
+The full cycle, including the mapping from beats to lesson sections, is in the [Course Map](course-map.md#the-lpaa-cycle).
+
+---
+
 ## M
 
 ### Method
 
 A named block of code that performs a task and can be called by name. Methods have a return type, a name, and a parameter list. Example: `public int add(int a, int b)`.
+
+---
+
+## N
+
+### No-new-plays rule
+
+The design constraint the [LPAA cycle](course-map.md#the-lpaa-cycle) exists to keep:
+
+> "We would never make you use a play in The Big Game that you haven't run during practice until you understood it."
+
+**Literal meaning:** nothing is graded that has not first been taught, rehearsed alone, and then practiced with a coach.
+
+The rule is checkable. For every skill assessed in an Assess beat, an earlier Learn beat taught it, a Practice beat rehearsed it, and an Apply beat ran it with a coach — in the same module or an earlier one. A skill that first appears in an Assess beat is a defect in the course, and the repair is the author's work: add the missing beats, or move the assessment later.
+
+A student who meets an unfamiliar skill in a graded task has found a bug and should report it.
+
+See also: **LPAA cycle**, **transfer**.
 
 ---
 
@@ -99,6 +159,16 @@ A named block of code that performs a task and can be called by name. Methods ha
 The person who restates the task, predicts the result, writes or modifies code, executes, reports evidence, and explains the result. Students rotate into the player role regularly.
 
 See also: **coach**, **execute gate**, **role rotation**.
+
+### Practice (Run the Play)
+
+The second beat of the [LPAA cycle](course-map.md#the-lpaa-cycle). The player rehearses one movement alone: tracing a program on paper, or repairing a broken one. Answers are available, and a wrong prediction costs nothing. Its lesson sections are "trace before running" and "repair or modify code".
+
+**Run the play** is the course's name for this beat. Literal meaning: rehearse one movement by itself, slowly, with nothing at stake.
+
+Practice is where the prediction is cheap to get wrong, which is why the prediction habit is built here rather than at the gate.
+
+See also: **LPAA cycle**, **prediction**, **trace**.
 
 ### Prediction
 

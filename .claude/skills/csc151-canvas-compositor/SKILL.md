@@ -54,12 +54,31 @@ content in the wrong module. Refuse it and ask.
 sections group into the four LPAA beats, and the beat sets how much scaffolding the devices
 carry:
 
-| Beat | Lesson sections it covers | Register | Device consequences |
-|---|---|---|---|
-| **Learn** | Learning goal · Prior knowledge check · Concept explanation · Worked example | Exposition | Prose-heavy. Code blocks are read, not typed. Longest of the four. |
-| **Practice** | Trace before running · Repair code | Check | Very short. Usually no breakouts at all. Predictions stay hidden — see *Predictions*. |
-| **Apply** | Execute-gate handshake · Small coding task · Test evidence · Explanation | Instructor-led walkthrough | Numbered `<ol>` steps carry the page. The handshake panel is mandatory and comes before any code. |
-| **Assess** | Role rotation · Transfer task · Reflection · Mastery record | Contract | Terse. Task statement first. Numbered requirements. Pre-flight checklist mandatory. |
+| Beat | Course name | Lesson sections it covers | Register | Device consequences |
+|---|---|---|---|---|
+| **Learn** | Study the Plays | Learning goal · Prior knowledge check · Concept explanation · Worked example | Exposition | Prose-heavy. Code blocks are read, not typed. Longest of the four. |
+| **Practice** | Run the Play | Trace before running · Repair code | Check | Very short. Usually no breakouts at all. Predictions stay hidden — see *Predictions*. |
+| **Apply** | Team Practice | Execute-gate handshake · Small coding task · Test evidence · Explanation | Instructor-led walkthrough | Numbered `<ol>` steps carry the page. The handshake panel is mandatory and comes before any code. |
+| **Assess** | The Big Game | Role rotation · Transfer task · Reflection · Mastery record | Contract | Terse. Task statement first. Numbered requirements. Pre-flight checklist mandatory. |
+
+**The dial takes the LPAA name, not the course name.** `<!-- compositor: M5 · apply -->`, never
+`· team-practice`. The instructional names are the stable tokens; the course names are prose.
+
+**Emit the course name in the page kicker, and the LPAA name nowhere in the body.** A student
+reads "Module 5 · Team Practice". The word *Apply* is a design term and does not appear on
+student-facing pages. Both names live in `docs/course-map.md`, which is where an instructor
+reads the mapping.
+
+**Every course name needs its gloss on first use per page** — they are all American football
+idioms, and the repository's idiom rule is not suspended for a recurring one. The kicker does
+not count as a use, because a kicker is a label rather than a sentence. If the body copy says
+"in The Big Game," the literal meaning follows it.
+
+**The no-new-plays rule constrains what an Assess page may contain.** Nothing graded may be
+the first appearance of a skill. If composing an Assess beat surfaces a requirement that no
+earlier beat taught, that is a defect in the source — stop and report it rather than writing
+around it with an explanatory aside. An aside that teaches a skill inside The Big Game is the
+rule being broken quietly.
 
 **The Make gradient** lives in the Apply row and nowhere else: code blocks are complete and
 typed verbatim (M0–M2), 80% complete with a marked gap (M3–M6), or absent (M7–M8).
@@ -331,7 +350,7 @@ checklists, worked examples, the handshake panel. These get an enclosure.
 Pages only. **No `<h2>` title** — Canvas already renders the title as the `<h1>`.
 
 ```html
-<p style="margin:0 0 .5rem;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#1F6F5C;">Module 5 &middot; Methods and Testing</p>
+<p style="margin:0 0 .5rem;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#1F6F5C;">Module 5 &middot; Team Practice</p>
 <p style="margin:0 0 1.4rem;font-size:1.1rem;">One or two sentences on why this page exists and what the student will be able to do after it.</p>
 <hr style="border:0;border-top:1px solid #DFE3E8;margin:0 0 1.6rem;">
 ```
@@ -530,6 +549,10 @@ Never copy Appendix prose back into a module page. Link to it.
 - No due dates, points, availability, submission type, navigation, or title in the body.
 - Apply beat has the handshake panel, and it precedes any runnable code.
 - Assess beat ends with a pre-flight panel.
+- The kicker carries the course beat name; the word *Learn*, *Practice*, *Apply*, or *Assess*
+  appears nowhere in the body.
+- Every course beat name used in a sentence carries its literal-meaning gloss on first use.
+- No Assess page introduces a skill for the first time.
 - Every diagram has its plain-text description.
 - Predictions and their answers are never adjacent on a tier-one page.
 - Placeholder marker counts sum to the number of placeholder links.

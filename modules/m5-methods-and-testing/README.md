@@ -54,6 +54,30 @@ After this module, students can:
 
 ---
 
+## The LPAA cycle in this module
+
+| Beat | Course name | What you do here |
+|------|------------|------------------|
+| **Learn** | Study the Plays | Read how a method declares parameters and a return type, how scope and the call stack work, and what distinguishes a compile-time, runtime, and logic error. |
+| **Practice** | Run the Play | Trace a call stack by hand. Read a stack trace and name the line that caused it. Repair a method that compiles and returns a confidently wrong answer. |
+| **Apply** | Team Practice | Complete the handshake, then write the `ScoreUtils` methods and their tests with a coach present. Run `bash scripts/verify.sh test`. |
+| **Assess** | The Big Game | Write a normal, boundary, and failure test for a method you did not write. |
+
+*The four course names are American football terms. Their literal meanings, and the rule the
+cycle keeps, are in the [Course Map](../../docs/course-map.md#the-lpaa-cycle). You do not need
+to know anything about football to take this course.*
+
+
+**The lesson file for this module is not written yet.** The table above states what its four
+beats must contain, and the examples and tests below are already in place. An instructor
+teaching from this module today runs the beats from these notes.
+
+**The Assess beat here needs a skill that is worth naming explicitly:** reading a failing test's
+output and deciding whether the test or the method is wrong. That judgment is rehearsed in the
+Practice beat, on the deliberately broken `average` method, before it is graded.
+
+---
+
 ## Files in this module
 
 | File | Description |

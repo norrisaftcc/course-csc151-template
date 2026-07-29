@@ -51,6 +51,11 @@ Instructors who forked an earlier version of this template can use this log to i
 
 ### Changed
 
+- **The LPAA cycle is themed, and both name sets are kept.** Learn / Practice / Apply / Assess gain the course names Study the Plays / Run the Play / Team Practice / The Big Game. Neither set replaces the other: the LPAA names are the stable tokens used by design documents, outcome mapping, and the compositor dial; the course names are what students hear. The four course names are American football idioms and carry their literal meanings wherever they appear, per the repository's idiom rule.
+- **The no-new-plays rule is now a stated design constraint.** *"We would never make you use a play in The Big Game that you haven't run during practice until you understood it."* It is written as something checkable rather than as a slogan: for every skill assessed in an Assess beat, an earlier Learn beat taught it, a Practice beat rehearsed it, and an Apply beat ran it with a coach. A skill that first appears in an Assess beat is a defect in the course, and the repair belongs to the author — add the missing beats, or move the requirement. Patching it with an explanation inside the assessment is the rule being broken quietly. `docs/instructor-guide.md` carries the audit procedure, and the compositor refuses to compose around a violation.
+- Each module README gains a **"The LPAA cycle in this module"** table naming that module's real trace, real repair, and real transfer task, rather than restating the general cycle.
+- `templates/lesson-template.md` marks where each beat begins, so new lessons inherit the mapping.
+
 - **CLO-4 is resolved and no longer carries a caveat.** Curriculum review settled it: CLO-4 is fulfilled by **processing a user event as a function call**, and a console menu selection and a Swing button press are both accepted evidence. The console path is not the lesser one — no part of the grade is reserved for the graphical version. Swing is therefore an alternative path for students working locally, not optional enrichment, and submodule 8.2 carries no local-machine requirement. Open question 4 in `docs/clo-mlo-map.md` is struck through with the decision recorded, so a fork can see what was decided rather than only what remains open.
 
 ### Fixed

@@ -26,6 +26,25 @@ After this module, students can:
 
 ---
 
+## The LPAA cycle in this module
+
+| Beat | Course name | What you do here |
+|------|------------|------------------|
+| **Learn** | Study the Plays | Read how `Scanner` reads a value, and how `printf` format specifiers control output. |
+| **Practice** | Run the Play | Trace `TipCalculator` against given input before running it. Repair `Broken.java`, which has two errors. |
+| **Apply** | Team Practice | Complete the handshake, then write `AreaCalc` with a coach present. |
+| **Assess** | The Big Game | Extend the program to print both area and perimeter, formatted to a stated number of decimal places. |
+
+*The four course names are American football terms. Their literal meanings, and the rule the
+cycle keeps, are in the [Course Map](../../docs/course-map.md#the-lpaa-cycle). You do not need
+to know anything about football to take this course.*
+
+
+**The transfer task adds a second computed value and no new syntax.** Reading input, computing,
+and formatting were each rehearsed before it.
+
+---
+
 ## Files in this module
 
 | File | Description |

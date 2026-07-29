@@ -64,6 +64,30 @@ name to a sentence they did not say.
 
 ---
 
+## The LPAA cycle
+
+Every module runs four beats: **Learn**, **Practice**, **Apply**, **Assess**. Each has a second
+name used with students, and **both names stay** — neither replaces the other:
+
+| Beat | Course name | Lesson sections |
+|------|------------|-----------------|
+| Learn | Study the Plays | Learning goal · Prior knowledge check · Concept explanation · Worked example |
+| Practice | Run the Play | Trace before running · Repair or modify code |
+| Apply | Team Practice | Execute-gate handshake · Small coding task · Test evidence · Explanation |
+| Assess | The Big Game | Role rotation · Transfer task · Reflection · Mastery record |
+
+Design documents use the LPAA names. Student-facing prose uses the course names, each with its
+literal gloss on first use — they are football idioms and the idiom rule is not suspended for a
+recurring one. `docs/course-map.md` is the authority.
+
+**The no-new-plays rule:** *"We would never make you use a play in The Big Game that you
+haven't run during practice until you understood it."* Nothing graded is the first appearance
+of a skill. Before adding a requirement to an Assess beat, find the earlier Learn, Practice,
+and Apply beats that cover it. If they do not exist, add them or move the requirement — never
+patch it with an explanation inside the assessment.
+
+---
+
 ## Structure that must not drift
 
 **Every lesson uses this section order, complete and unreordered:**
@@ -72,9 +96,14 @@ Learning goal → Prior knowledge check → Concept explanation → Worked examp
 running → Repair code → Execute-gate handshake → Small coding task → Test evidence →
 Explanation → Role rotation → Transfer task → Reflection → Mastery record
 
-**Every module README:** What this module covers → Learning goal → Files table → Instructor
-facilitation notes (Before class / Common mistakes / Accessible facilitation) → How this
-module connects to the next → closing homily with its literal gloss.
+**Every module README:** What this module covers → Learning goal → **The LPAA cycle in this
+module** → Files table → Instructor facilitation notes (Before class / Common mistakes /
+Accessible facilitation) → How this module connects to the next → closing homily with its
+literal gloss.
+
+The LPAA table names what the module's own four beats actually contain — the real trace, the
+real repair, the real transfer task. A generic restatement of the cycle is not useful there;
+`docs/course-map.md` already holds the general version.
 
 **The execute gate is four parts** — goal, constraints, prediction, success check — in that
 order. Never renamed, never a fifth. The gate opens on the coach's literal word "Agreed."

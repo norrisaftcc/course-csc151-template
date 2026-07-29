@@ -44,6 +44,81 @@ Each solid arrow represents a dependency. Students should complete earlier modul
 
 ---
 
+## The LPAA cycle
+
+Every module runs the same four beats, in the same order. The beats have two names each: the
+instructional name, which is what the design documents use, and the course's own name, which
+is what students hear.
+
+| Beat | Course name | What happens | Graded |
+|------|------------|--------------|--------|
+| **Learn** | **Study the Plays** | You read the concept and walk through a worked example. Nothing is at stake yet. | No |
+| **Practice** | **Run the Play** | You rehearse one movement alone: trace a program on paper, repair a broken one. Answers are available. | No |
+| **Apply** | **Team Practice** | You complete the handshake and write code with a coach present. Still not for a score. | No |
+| **Assess** | **The Big Game** | You transfer the skill to a task you have not seen, and it counts. | Yes |
+
+**Both names are correct and both stay.** The instructional names carry the mapping to
+outcomes and to the delivery platform. The course names carry the reason a student should
+trust the sequence. Neither replaces the other, and a document that uses one may use the
+other beside it.
+
+**Literal meaning of the four course names.** These are American football terms, and you do
+not need to know anything about football to take this course:
+
+| Course name | Literal meaning |
+|-------------|----------------|
+| Study the Plays | Read and understand the material before you touch it. A playbook is the written record of what a team intends to do; players read it before they rehearse. |
+| Run the Play | Rehearse one movement by itself, slowly, with nothing at stake. |
+| Team Practice | Do the whole thing with your coach beside you, still not for a score. |
+| The Big Game | The work that counts toward your grade. |
+
+### The rule the cycle exists to keep
+
+> **"We would never make you use a play in The Big Game that you haven't run during practice
+> until you understood it."**
+>
+> **Literal meaning:** nothing is graded that has not first been taught, rehearsed alone, and
+> then practiced with a coach. If a skill is on the assessment, it appeared in all three
+> earlier beats.
+
+Call this the **no-new-plays rule**. It is the point of the cycle, and it is a design
+constraint on the course rather than a promise about attitude.
+
+**It is checkable, and it should be checked.** For every skill assessed in an Assess beat,
+there is an earlier Learn beat that taught it, a Practice beat that rehearsed it, and an Apply
+beat that ran it with a coach — in the same module or in an earlier one.
+
+A skill that first appears in an Assess beat is a defect in the course, not a challenge for
+the student. There are two repairs, and both are the author's work rather than the student's:
+
+1. Add the missing beats before the assessment, or
+2. Move the assessment to a later module where the beats already exist.
+
+This is what makes the sequence trustworthy. A student who meets something unfamiliar in The
+Big Game has found a bug, and should say so.
+
+### Where the beats live inside a lesson
+
+The fourteen lesson sections are not a separate structure. They are the four beats:
+
+| Beat | Course name | Lesson sections |
+|------|------------|-----------------|
+| Learn | Study the Plays | Learning goal · Prior knowledge check · Concept explanation · Worked example |
+| Practice | Run the Play | Trace before running · Repair or modify code |
+| Apply | Team Practice | Execute-gate handshake · Small coding task · Test evidence · Explanation |
+| Assess | The Big Game | Role rotation · Transfer task · Reflection · Mastery record |
+
+The **transfer task** is the load-bearing section of the Assess beat, because transfer is what
+the no-new-plays rule protects. The task must be unfamiliar in its surface and familiar in
+every skill it requires. A transfer task that needs a skill the lesson never rehearsed breaks
+the rule.
+
+**The gate sits at the Practice/Apply boundary.** Practice is where a wrong prediction costs
+nothing, which is exactly why the prediction is written there. By Apply the student has
+already been wrong once in private, and the handshake is a statement of what they now expect.
+
+---
+
 ## Work surfaces
 
 Students work in **GitHub Codespaces**, in **local VS Code with the Java extension**, or in both. Every graded task in this course runs on either surface.

@@ -26,6 +26,26 @@ After this module, students can:
 
 ---
 
+## The LPAA cycle in this module
+
+| Beat | Course name | What you do here |
+|------|------------|------------------|
+| **Learn** | Study the Plays | Read how `int`, `double`, `boolean`, and `String` are declared and assigned, and how an expression is evaluated. |
+| **Practice** | Run the Play | Trace `ExpressionTrace.java` on paper, including the integer division. Repair `RepairMe.java`, which has two errors. |
+| **Apply** | Team Practice | Complete the handshake, then write `PayCalculator.java` with a coach present. |
+| **Assess** | The Big Game | Write the same calculation for three different values and a changed output format. |
+
+*The four course names are American football terms. Their literal meanings, and the rule the
+cycle keeps, are in the [Course Map](../../docs/course-map.md#the-lpaa-cycle). You do not need
+to know anything about football to take this course.*
+
+
+**The transfer task changes the data and the format, not the skill.** Every operation it needs
+was declared in the Learn beat, traced in the Practice beat, and written once in the Apply
+beat.
+
+---
+
 ## Files in this module
 
 | File | Description |

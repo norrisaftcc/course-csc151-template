@@ -26,6 +26,26 @@ After this module, students can:
 
 ---
 
+## The LPAA cycle in this module
+
+| Beat | Course name | What you do here |
+|------|------------|------------------|
+| **Learn** | Study the Plays | Read how an array is declared, indexed, and traversed, and how `ArrayList` differs. |
+| **Practice** | Run the Play | Trace `findMax` against `{-3, -5, -1, -8}` one iteration at a time — the all-negative case, where initializing to 0 gives the wrong answer. Repair `RepairMax.java`. |
+| **Apply** | Team Practice | Complete the handshake, then write `MyArrayMax.java` and test it against all three arrays named in the handshake. |
+| **Assess** | The Big Game | Write `findMin` and apply the same three test cases to it. |
+
+*The four course names are American football terms. Their literal meanings, and the rule the
+cycle keeps, are in the [Course Map](../../docs/course-map.md#the-lpaa-cycle). You do not need
+to know anything about football to take this course.*
+
+
+**The transfer task reverses the comparison and changes nothing else.** The one-element array
+and the all-negative array were both traced in the Practice beat, which is where the
+initialization mistake is meant to be made.
+
+---
+
 ## Files in this module
 
 | File | Description |
