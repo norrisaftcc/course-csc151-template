@@ -16,9 +16,12 @@ This repository gives instructors and students a starting framework for a first 
 - An **execute gate** — a shared handshake before running or submitting code.
 - **Simplified technical English** so explanations are clear to every reader.
 - **Mermaid diagrams** that render on GitHub.
-- **Original Java examples** with expected output.
+- **Original Java examples** with expected output, checked automatically.
+- A **course verifier** that compiles each example, runs it, and compares what it prints against a recorded expectation.
+- An **AI teammate policy**: coding assistants are explicitly allowed, with a clear standard for honest use.
 - Reusable **templates** for lessons, labs, assignments, and rubrics.
-- Two **complete sample modules** demonstrating the full lesson cycle.
+- **Five sample modules** demonstrating the full lesson cycle.
+- A **dev container** so a Codespace is ready with no setup.
 
 ---
 
@@ -100,6 +103,12 @@ course-csc151-template/
 │   │   └── examples/
 │   │       ├── ScannerDemo.java
 │   │       └── FormattedOutput.java
+│   ├── m5-methods-and-testing/       # Sample module: methods, JUnit, debugging
+│   │   ├── README.md
+│   │   ├── examples/
+│   │   │   └── ScoreUtils.java
+│   │   └── tests/
+│   │       └── ScoreUtilsTest.java
 │   └── m6-arrays-collections/        # Sample module: arrays and collections
 │       ├── README.md
 │       ├── lesson.md
@@ -116,7 +125,7 @@ course-csc151-template/
     └── post-create.sh
 ```
 
-Modules 3, 4, 5, 7, and 8 and the Appendix are specified in the
+Modules 3, 4, 7, and 8 and the Appendix are specified in the
 [Course Map](docs/course-map.md) and are not yet built as directories.
 
 ---
@@ -139,6 +148,7 @@ Modules 3, 4, 5, 7, and 8 and the Appendix are specified in the
 | Second sample lesson | [Module 1: Variables and Expressions](modules/m1-variables-expressions/lesson.md) |
 | Third sample lesson | [Module 2: Input and Output](modules/m2-input-output/lesson.md) |
 | Fourth sample lesson | [Module 6: Arrays and Collections](modules/m6-arrays-collections/lesson.md) |
+| Testing and the verifier | [Module 5: Methods and Testing](modules/m5-methods-and-testing/README.md) |
 
 ---
 
