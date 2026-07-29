@@ -35,7 +35,7 @@ Instructors who forked an earlier version of this template can use this log to i
 ### Added
 
 - `scripts/verify.sh` — the course verifier, replacing compile-only checking. Subcommands: `compile`, `run`, `examples`, `test`, `all`. It compiles each file, runs examples, and compares real standard output against a recorded `.expected` file, with an optional `.stdin` fixture for programs that read input.
-- `scripts/fetch-junit.sh` — installs the JUnit console runner into a gitignored `.tools/` directory. The jar is not committed, so forks stay small and the download is checksum-verified.
+- `scripts/fetch-junit.sh` — installs the JUnit console runner into a gitignored `.tools/` directory. The jar is not committed, so forks stay small. `JUNIT_SHA256` is pinned to the SHA-256 of JUnit 1.11.4, recorded from a download that was verified against the checksum Maven Central publishes beside the jar. A download that does not match is deleted rather than installed.
 - `.devcontainer/` — Codespaces and local dev container setup: JDK 21, the VS Code Java extension pack, and a post-create script that installs the test runner and runs a smoke check.
 - `modules/m5-methods-and-testing/` — `ScoreUtils.java` and `ScoreUtilsTest.java`, demonstrating the `tests/` convention and the three required test tiers (normal, boundary, failure).
 - `.expected` fixtures for every existing example, and a `.stdin` fixture for `ScannerDemo`.

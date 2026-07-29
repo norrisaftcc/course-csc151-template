@@ -12,24 +12,24 @@
 #   bash scripts/fetch-junit.sh
 #
 # ---------------------------------------------------------------------------
-# For the instructor maintaining this fork: record the checksum
+# For the instructor maintaining this fork: the checksum
 # ---------------------------------------------------------------------------
 #
-# JUNIT_SHA256 below is empty. While it is empty, this script checks the
-# download against the checksum that Maven Central publishes beside the jar.
-# That catches a corrupted download. It does not protect you if Maven Central
-# itself serves something unexpected, because both files come from the same
-# place.
+# JUNIT_SHA256 below is recorded, so every download is verified against that
+# exact value. A jar that does not match is deleted rather than installed.
 #
-# Record the value once and the check becomes a real pin:
+# The recorded value came from a real download that was checked against the
+# checksum Maven Central publishes beside the jar. That pairing is the reason
+# it is trustworthy: the publisher's own value agreed with the bytes received.
 #
-#   1. Run this script.
-#   2. Copy the SHA-256 value it prints.
-#   3. Paste it into JUNIT_SHA256 below.
-#   4. Commit the change.
+# If you change JUNIT_VERSION, the recorded checksum no longer describes the
+# file you are asking for, and the download will fail the check. Clear
+# JUNIT_SHA256, run this script once, and record the value it prints.
 #
-# After that, every student and every CI run verifies against the exact file
-# you approved.
+# While JUNIT_SHA256 is empty the script falls back to checking against the
+# published checksum. That catches a corrupted download. It does not protect
+# you if Maven Central itself serves something unexpected, because both files
+# then come from the same place — which is why the pin exists.
 #
 # Working without a network:
 #   Download the jar named below on any machine, copy it to
@@ -43,8 +43,10 @@ TOOLS_DIR="$REPO_ROOT/.tools"
 # Confirm this version is the one you want before you record its checksum.
 JUNIT_VERSION="1.11.4"
 
-# Empty until the instructor records it. See the note above.
-JUNIT_SHA256=""
+# Recorded from a real download that CI verified against the checksum Maven Central
+# publishes for this jar. If you change JUNIT_VERSION, clear this value, run the script
+# once, and record the new one it prints.
+JUNIT_SHA256="b016ef6b1c3454d6d7c2c88ce081dabf289699686af6622d6e4e2e1b54b4a2fc"
 
 JUNIT_JAR_NAME="junit-platform-console-standalone-${JUNIT_VERSION}.jar"
 JUNIT_URL="https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/${JUNIT_VERSION}/${JUNIT_JAR_NAME}"
