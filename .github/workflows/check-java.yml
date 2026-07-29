@@ -16,6 +16,8 @@ jobs:
   compile:
     name: Compile all Java examples
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
       - name: Check out repository
