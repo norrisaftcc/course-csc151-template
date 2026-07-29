@@ -1,0 +1,89 @@
+# Assignment Metadata Schema
+# CSC 151 Java Programming I
+#
+# Copy this file for each assignment. Fill in all fields.
+# Fields marked with a comment [REQUIRED] must be present.
+# Fields marked [OPTIONAL] may be omitted if not applicable.
+
+assignment:
+  id: ""                   # [REQUIRED] Unique identifier, e.g., "lab-02" or "hw-03"
+  title: ""                # [REQUIRED] Short descriptive title
+  module: ""               # [REQUIRED] Module number and name, e.g., "02 — Variables and Expressions"
+  type: ""                 # [REQUIRED] One of: lesson, lab, assignment, project
+  estimated_minutes: 0     # [OPTIONAL] Suggested time in minutes
+
+  learning_goal: ""        # [REQUIRED] One observable goal statement
+
+  prerequisites:           # [OPTIONAL] List prior lessons or concepts required
+    - ""
+
+  java_topic: ""           # [REQUIRED] Primary Java concept, e.g., "for loop", "array traversal"
+
+  prior_knowledge_check:   # [OPTIONAL] Questions or tasks to check prerequisites
+    - ""
+
+  # Activity sequence — list all activity types present in this lesson.
+  # Use: learn, trace, repair, build, explain, transfer
+  activity_sequence:
+    - learn
+    - trace
+    - repair
+    - build
+    - explain
+    - transfer
+
+  # Execute-gate handshake state.
+  # Update these fields as the student completes the handshake.
+  execute_handshake:
+    goal_confirmed: false
+    constraints_confirmed: false
+    prediction_recorded: false
+    success_check_confirmed: false
+    coach_approval: false
+    gate_open: false
+
+  # Prediction recorded by the player before execution.
+  prediction:
+    recorded: false
+    content: ""            # What the player predicted would happen
+
+  # Test evidence recorded after execution.
+  evidence:
+    normal_test:
+      input: ""
+      expected: ""
+      actual: ""
+      passed: false
+    boundary_test:
+      input: ""
+      expected: ""
+      actual: ""
+      passed: false
+    failure_test:
+      input: ""
+      expected: ""
+      actual: ""
+      passed: false
+
+  # Explanation recorded after execution.
+  explanation:
+    behavior: ""           # What happened
+    reason: ""             # Why it works
+    evidence: ""           # Specific evidence cited
+    common_mistake: ""     # A mistake that would cause failure
+
+  # Role rotation status.
+  role_rotation:
+    completed: false
+    new_coach: ""
+    new_player: ""
+    next_task_described: false
+
+  # Transfer task status.
+  transfer:
+    changed_condition: ""  # What was changed from the original task
+    attempted: false
+    completed_independently: false
+
+  # Mastery status.
+  mastery_status: ""       # One of: not_started, in_progress, developing, secure
