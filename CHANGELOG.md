@@ -11,6 +11,63 @@ Instructors who forked an earlier version of this template can use this log to i
 
 *Changes that are complete but not yet tagged as a release.*
 
+### Changed — breaking
+
+- **Reflowed the course to a nine-module spine: Module 0 through Module 8, plus an Appendix.** The delivery platform requires exactly eight numbered modules plus a Module Zero and an Appendix. The previous twelve-unit sequence (00–11) no longer matches it. Instructors who forked an earlier version must renumber. The mapping is:
+
+  | Old | New |
+  |-----|-----|
+  | 00 Writing/Markdown/Mermaid + 01 Environment | Module 0 — Getting on The Bus (submodules 0.1, 0.2) |
+  | 02 Variables and Expressions | Module 1 |
+  | 03 Input and Output | Module 2 |
+  | 04 Conditionals | Module 3 |
+  | 05 Loops | Module 4 |
+  | 06 Methods + 09 Testing and Debugging | Module 5 — Methods and Testing (submodules 5.1, 5.2) |
+  | 07 Arrays and Collections | Module 6 |
+  | 08 Classes and Objects | Module 7 |
+  | 11 GUI/Event-Driven + 10 Final Project | Module 8 — Events and Capstone (submodules 8.1, 8.2) |
+
+- Module directories renamed to match the spine: `modules/m0-getting-on-the-bus/`, `modules/m1-variables-expressions/`, `modules/m2-input-output/`, `modules/m6-arrays-collections/`.
+- **Testing and debugging moved from the end of the course to Module 5, alongside methods.** A method is the first unit a student can test on its own, so JUnit now arrives when it becomes usable rather than in the same module as the capstone.
+- **CLO-4 is no longer defined in terms of Swing.** It now reads "process a user event as a function call," which a console menu selection satisfies as fully as a Swing button press. This lets students working in a GitHub Codespace, which has no display, complete every graded task. See the Changed entry below for how curriculum review settled it.
+- `docs/course-map.md`, `docs/clo-mlo-map.md`, and `docs/pacing-guide.md` rewritten for the new sequence, including the dependency diagram and both calendars.
+
+### Added
+
+- `scripts/verify.sh` — the course verifier, replacing compile-only checking. Subcommands: `compile`, `run`, `examples`, `test`, `all`. It compiles each file, runs examples, and compares real standard output against a recorded `.expected` file, with an optional `.stdin` fixture for programs that read input.
+- `scripts/fetch-junit.sh` — installs the JUnit console runner into a gitignored `.tools/` directory. The jar is not committed, so forks stay small. `JUNIT_SHA256` is pinned to the SHA-256 of JUnit 1.11.4, recorded from a download that was verified against the checksum Maven Central publishes beside the jar. A download that does not match is deleted rather than installed.
+- `.devcontainer/` — Codespaces and local dev container setup: JDK 21, the VS Code Java extension pack, and a post-create script that installs the test runner and runs a smoke check.
+- `modules/m5-methods-and-testing/` — `ScoreUtils.java` and `ScoreUtilsTest.java`, demonstrating the `tests/` convention and the three required test tiers (normal, boundary, failure).
+- `.expected` fixtures for every existing example, and a `.stdin` fixture for `ScannerDemo`.
+- `modules/m0-getting-on-the-bus/lesson-3-work-surfaces-and-ai-teammate.md` — the two work surfaces, the verifier as the arbiter of what a program printed, the five AI teammate rules, and the floor test applied to a request. The transfer task is an assay: students report what survives in a classmate's request and hand back the finding, not a repaired version.
+- `.claude/skills/csc151-canvas-compositor/` — composes Markdown into sanitizer-safe, inline-styled Canvas HTML. Ported from `csc134-canvas-compositor`: retargeted to Java escaping, remapped onto the course's fourteen-section lesson shape, and given two new voices — *Your AI Teammate* (monospace, because a machine emitted it) and *What The Coach Might Say* (sans and italic, because a machine did not). Coach sayings are synthesized and never attributed to a real person; the skill's self-check refuses to emit without the mandatory literal-meaning gloss.
+- `.claude/skills/the-algorithm/` — vendored unmodified so the repository is self-contained. Its fixed strings are exact; it is not forked.
+- `.claude/skills/csc151-execute-gate/` — maps The Algorithm's PROVIDE and ASSAY onto course work, and states the correspondence between its floor nouns and the four gate parts. The AI policy's central rule descends from its gate-integrity rule: only a live human opens the gate.
+- `CLAUDE.md` — house style for coding agents working in this repository.
+- `docs/ai-teammate-policy.md` — AI coding assistance is explicitly allowed. States the five rules, the disclosure standard, and the explain-any-line bar.
+- `docs/prompting-your-ai-teammate.md` — the PROVIDE and ASSAY operations taught as student skills, with the four floor items mapped to the four parts of the execute gate.
+- AI teammate disclosure section and a "Coaching an AI teammate" mastery row in `templates/coach-player-record.md`.
+- Work-surface statement in the course map and in module READMEs: every graded task runs on a Codespace or a local machine.
+
+### Changed
+
+- **The LPAA cycle is themed, and both name sets are kept.** Learn / Practice / Apply / Assess gain the course names Study the Play / Run the Play / Team Practice / The Big Game. Neither set replaces the other: the LPAA names are the stable tokens used by design documents, outcome mapping, and the compositor dial; the course names are what students hear. The four course names are American football idioms and carry their literal meanings wherever they appear, per the repository's idiom rule.
+- **The no-new-plays rule is now a stated design constraint.** *"We would never make you use a play in The Big Game that you haven't run during practice until you understood it."* It is written as something checkable rather than as a slogan: for every skill assessed in an Assess beat, an earlier Learn beat taught it, a Practice beat rehearsed it, and an Apply beat ran it with a coach. A skill that first appears in an Assess beat is a defect in the course, and the repair belongs to the author — add the missing beats, or move the requirement. Patching it with an explanation inside the assessment is the rule being broken quietly. `docs/instructor-guide.md` carries the audit procedure, and the compositor refuses to compose around a violation.
+- Each module README gains a **"The LPAA cycle in this module"** table naming that module's real trace, real repair, and real transfer task, rather than restating the general cycle.
+- `templates/lesson-template.md` marks where each beat begins, so new lessons inherit the mapping.
+
+- **CLO-4 is resolved and no longer carries a caveat.** Curriculum review settled it: CLO-4 is fulfilled by **processing a user event as a function call**, and a console menu selection and a Swing button press are both accepted evidence. The console path is not the lesser one — no part of the grade is reserved for the graphical version. Swing is therefore an alternative path for students working locally, not optional enrichment, and submodule 8.2 carries no local-machine requirement. Open question 4 in `docs/clo-mlo-map.md` is struck through with the decision recorded, so a fork can see what was decided rather than only what remains open.
+
+### Fixed
+
+- **`verify.sh` could abort part-way through a run instead of reporting a failure.** `show_diagnostics` piped through `grep -v`, and `grep` exits 1 when it selects no lines — which is the normal case when a failing program wrote nothing to standard error, or wrote nothing but JVM `Picked up …` notices. Under `set -euo pipefail` that status ended the run: the file was marked FAIL, then the verifier exited before checking the remaining files and before printing the summary. A student would have seen a truncated list and no totals. Diagnostics printing can no longer change control flow, and a genuine `grep` error is reported rather than swallowed. Found in review.
+- **Week 2 of the 16-week calendar listed two different sessions both numbered 4.** Module 0 needs four sessions once lesson 0.3 is included, so Modules 1 and 2 each now occupy a full week and Module 3 starts in the weeks 5–6 block, which already held most of its content. Sessions 1 through 8 are unique again. Found in review.
+- **`docs/course-map.md` still described Swing as enrichment**, contradicting the resolved CLO-4 and the CHANGELOG entry below it. The paragraph was missed when open question 4 was closed. Both paths are now stated as equally accepted wherever CLO-4 is described. Found in review.
+
+- **`FormattedOutput.java` printed a misaligned table.** The new verifier caught it on its first run: the separator rule was 38 characters while the data rows were 41, and the grand-total line was 40, so its number did not line up under the Total column. In an example whose purpose is teaching aligned output, that was a defect. The rule and the total now match the row width, and the documented output matches what the program actually prints.
+- **`scripts/check-java.sh` is now a shim** that calls `verify.sh compile`, so older instructions and older forks keep working.
+- **Resolved the handshake/handoff synonym drift.** `modules/00-ste-markdown-mermaid/README.md` had declared "handoff" the preferred term for the execute-gate agreement while every other document said "handshake," and called the two synonymous — in a course whose first lesson bans synonym drift. The two words now name different things: a **handshake** opens the gate, a **handoff** switches the roles. `docs/glossary.md` states the distinction.
+
 ---
 
 ## [1.1.0] — 2026-07-29

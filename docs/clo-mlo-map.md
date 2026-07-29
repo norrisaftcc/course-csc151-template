@@ -19,19 +19,21 @@ These outcomes are extracted and refined from the CCL description. Each CLO uses
 | CLO-1 | Design a Java program that meets a stated requirement: select appropriate data types, control structures, and class structure. |
 | CLO-2 | Code a Java program using primitive types, expressions, control flow, methods, and at least one class. |
 | CLO-3 | Apply object-oriented principles: define a class with fields and methods, create objects, and call instance methods. |
-| CLO-4 | Apply event-driven programming: attach an `ActionListener` to a Swing GUI component (button, menu item) so that clicking it executes useful code. |
+| CLO-4 | Apply event-driven programming: **process a user event as a function call.** Register a handler so that a user action executes a defined method, and explain the register-and-dispatch cycle. A console menu selection and a Swing button press are both accepted evidence. |
 | CLO-5 | Test a Java program using normal cases, boundary cases, and failure cases; record and interpret the results. |
 | CLO-6 | Debug a Java program by reading error messages, isolating the error, applying a fix, and verifying the result. |
 
-> **Calculator analogy:** On a calculator, pressing `=` is the signal "I have finished entering numbers — now execute." That button press is an event; the calculation that follows is the handler. CLO-4 asks students to build that connection deliberately: a user action (click) triggers a defined method. This maps directly to the course's handoff model — the button click is the user's "Agreed."
+> **Calculator analogy:** On a calculator, pressing `=` is the signal "I have finished entering numbers — now execute." That press is an event; the calculation that follows is the handler. CLO-4 asks students to build that connection deliberately: a user action triggers a defined method. This maps directly to the course's handshake model — the `=` press is the user's "Agreed."
 
 ---
 
 ## Module Learning Outcomes (MLOs) and CLO Mapping
 
-### Module 00 — Technical Writing, Markdown, and Mermaid
+### Module 0 — Getting on The Bus
 
-*Prerequisite module. No Java code. Introduces course tools and the handoff format.*
+#### Submodule 0.1 — Writing and Diagrams
+
+*No Java code. Introduces course tools and the handshake format.*
 
 | MLO | CLO |
 |-----|-----|
@@ -39,22 +41,26 @@ These outcomes are extracted and refined from the CCL description. Each CLO uses
 | Format a task card in Markdown using headers, lists, code blocks, and a checklist. | — |
 | Read and write a Mermaid flowchart with at least one decision node and a plain-text description. | — |
 
-> This module builds the communication skills used in all later modules. It does not map to a CLO directly, but it is a prerequisite for demonstrating any CLO in written form.
+> This submodule builds the communication skills used in all later modules. It does not map to a CLO directly, but it is a prerequisite for demonstrating any CLO in written form.
 
----
-
-### Module 01 — Environment and First Program
+#### Submodule 0.2 — Environment and First Program
 
 | MLO | CLO |
 |-----|-----|
-| Set up or access a Java development environment. | CLO-2 |
+| Set up or access a Java development environment on a Codespace or a local machine. | CLO-2 |
 | Write a class with a `main` method that prints output. | CLO-2 |
 | Compile and run a Java program from the command line or IDE. | CLO-2 |
 | Read and interpret a compile-time error message. | CLO-6 |
+| State the four parts of the execute-gate handshake without prompting. | CLO-1 |
+| Describe what honest use of an AI teammate requires. | — |
+| Run the course verifier on either work surface and interpret its PASS and FAIL output. | CLO-5 |
+| Write a request that another party can act on without asking a question back. | CLO-1 |
+| Disclose what an AI teammate produced, what was changed, and what was kept. | — |
+| Answer one diagnostic question about any line of a submission. | CLO-2, CLO-6 |
 
 ---
 
-### Module 02 — Variables and Expressions
+### Module 1 — Variables and Expressions
 
 | MLO | CLO |
 |-----|-----|
@@ -65,7 +71,7 @@ These outcomes are extracted and refined from the CCL description. Each CLO uses
 
 ---
 
-### Module 03 — Input and Output
+### Module 2 — Input and Output
 
 | MLO | CLO |
 |-----|-----|
@@ -75,7 +81,7 @@ These outcomes are extracted and refined from the CCL description. Each CLO uses
 
 ---
 
-### Module 04 — Conditionals
+### Module 3 — Conditionals
 
 | MLO | CLO |
 |-----|-----|
@@ -86,7 +92,7 @@ These outcomes are extracted and refined from the CCL description. Each CLO uses
 
 ---
 
-### Module 05 — Loops
+### Module 4 — Loops
 
 | MLO | CLO |
 |-----|-----|
@@ -97,7 +103,11 @@ These outcomes are extracted and refined from the CCL description. Each CLO uses
 
 ---
 
-### Module 06 — Methods
+### Module 5 — Methods and Testing
+
+*A method is the first unit of Java a student can test on its own. Testing is taught here, where it becomes meaningful, rather than at the end of the course where it would arrive too late to practice.*
+
+#### Submodule 5.1 — Methods
 
 | MLO | CLO |
 |-----|-----|
@@ -106,9 +116,22 @@ These outcomes are extracted and refined from the CCL description. Each CLO uses
 | Explain variable scope and the call stack. | CLO-1 |
 | Write an overloaded method. | CLO-2 |
 
+#### Submodule 5.2 — Testing and Debugging
+
+| MLO | CLO |
+|-----|-----|
+| Distinguish between compile-time, runtime, and logic errors. | CLO-6 |
+| Read a stack trace and identify the source of a runtime error. | CLO-6 |
+| Write a unit test with a normal case, a boundary case, and a failure case. | CLO-5 |
+| Run the course verifier and interpret its PASS and FAIL output. | CLO-5 |
+| Apply the reproduce–isolate–fix–verify debugging strategy. | CLO-6 |
+| Use the class debugger to step through code and inspect variable values. | CLO-6 |
+
+> The CCL specifically lists "using object-oriented tools such as the class debugger." This submodule is the primary home for CLO-6 and for debugger use.
+
 ---
 
-### Module 07 — Arrays and Collections
+### Module 6 — Arrays and Collections
 
 | MLO | CLO |
 |-----|-----|
@@ -120,7 +143,7 @@ These outcomes are extracted and refined from the CCL description. Each CLO uses
 
 ---
 
-### Module 08 — Classes and Objects
+### Module 7 — Classes and Objects
 
 | MLO | CLO |
 |-----|-----|
@@ -132,46 +155,45 @@ These outcomes are extracted and refined from the CCL description. Each CLO uses
 
 ---
 
-### Module 09 — Testing and Debugging
+### Module 8 — Events and Capstone
+
+#### Submodule 8.1 — Event-Driven Programming
+
+*Teaches the register-and-dispatch cycle: a user action produces an event, and the event runs a handler method.*
+
+**How CLO-4 is assessed.** *Resolved in curriculum review — see open question 4.* CLO-4 is satisfied by **processing a user event as a function call.** The assessed skill is the register-and-dispatch cycle, not one graphical toolkit, and **two paths are equally acceptable:**
+
+| Path | The user action | Work surface |
+|------|----------------|--------------|
+| **Console menu** | The student selects an option from a menu | Codespace or local — both |
+| **Swing** | The student presses a `JButton` | Local machine only |
+
+Neither path is the lesser one. A student who completes only the console path has met CLO-4 in full, and no part of the grade is reserved for the graphical version. Students on a local machine may choose Swing, and students in a Codespace are not disadvantaged by choosing the menu.
+
+The handler classes are identical across both paths, because the logic layer does not know what produced the event. That is the point of the outcome, and it is what students explain: `dispatcher.register("add", new AddHandler())` and `button.addActionListener(new AddHandler())` are the same cycle with different triggers.
 
 | MLO | CLO |
 |-----|-----|
-| Distinguish between compile-time, runtime, and logic errors. | CLO-6 |
-| Read a stack trace and identify the source of a runtime error. | CLO-6 |
-| Write a unit test with a normal case, a boundary case, and a failure case. | CLO-5 |
-| Apply the reproduce–isolate–fix–verify debugging strategy. | CLO-6 |
-| Use the class debugger to step through code and inspect variable values. | CLO-6 |
+| Process a user event as a function call: implement a handler interface so that a selected menu option or a pressed button runs a defined method. | CLO-3, CLO-4 |
+| Register a handler with a dispatcher, and explain the register-and-dispatch cycle. | CLO-1, CLO-4 |
+| Read a value supplied with an event and use it in a calculation. | CLO-2, CLO-4 |
+| Display a computed result after an event fires. | CLO-4 |
+| Design a calculator-style command set: each operator command updates state; the `=` command triggers the calculation and displays the result. | CLO-1, CLO-3, CLO-4 |
+| Separate the event-handling layer from a logic class, and explain why the separation makes the logic testable. | CLO-3, CLO-5 |
+| Debug an event handler: identify why a command produces no output or the wrong output. | CLO-6 |
+| *Alternative path, local surface only:* wire the same handler classes to Swing `JButton` components using `ActionListener`, changing no logic. | CLO-4 |
 
-> The CCL specifically lists "using object-oriented tools such as the class debugger." This module is the primary home for CLO-6 and for debugger use.
-
----
-
-### Module 10 — Final Project
+#### Submodule 8.2 — Final Project
 
 | MLO | CLO |
 |-----|-----|
 | Design an original program that uses at least one class, one collection, and one method beyond `main`. | CLO-1, CLO-3 |
-| Include at least one GUI component (button or menu item) that triggers useful code via an `ActionListener`. | CLO-4 |
+| Include at least one registered handler that runs useful code when an event fires. | CLO-4 |
 | Code the program to compile and run without unhandled errors. | CLO-2 |
-| Complete the execute-gate handoff with the instructor before final submission. | CLO-1 |
+| Complete the execute-gate handshake with the instructor before final submission. | CLO-1 |
 | Test the program with at least two cases and record evidence. | CLO-5 |
 | Debug at least one error encountered during development, applying the reproduce–isolate–fix–verify strategy. | CLO-6 |
-| Explain design decisions in a written or oral reflection. | CLO-1, CLO-3 |
-
----
-
-### Module 11 — GUI and Event-Driven Programming
-
-*Introduces Swing, the `JFrame`/`JDialog` component model, and the `ActionListener` interface.*
-
-| MLO | CLO |
-|-----|-----|
-| Create a `JFrame` with at least one `JButton` and display it. | CLO-2, CLO-3 |
-| Attach an `ActionListener` to a button so that clicking it calls a defined method. | CLO-4 |
-| Read a value from a `JTextField` when a button is clicked and use it in a calculation. | CLO-2, CLO-4 |
-| Update a `JLabel` or `JTextField` to display a computed result after an event fires. | CLO-4 |
-| Design and implement a calculator-style GUI: number/operator buttons each fire an event; the `=` button triggers the calculation and displays the result. | CLO-1, CLO-3, CLO-4 |
-| Debug an event handler: identify why a button click produces no output or the wrong output. | CLO-6 |
+| Explain design decisions in a written or spoken reflection. | CLO-1, CLO-3 |
 
 ---
 
@@ -181,30 +203,31 @@ This matrix shows which modules contribute to each CLO. A filled cell means at l
 
 | Module | CLO-1 | CLO-2 | CLO-3 | CLO-4 | CLO-5 | CLO-6 |
 |--------|-------|-------|-------|-------|-------|-------|
-| 00 — Writing, Markdown, Mermaid | | | | | | |
-| 01 — Environment | | ✓ | | | | ✓ |
-| 02 — Variables | ✓ | ✓ | | | | ✓ |
-| 03 — Input/Output | ✓ | ✓ | | | | |
-| 04 — Conditionals | ✓ | ✓ | | | | ✓ |
-| 05 — Loops | ✓ | ✓ | | | | ✓ |
-| 06 — Methods | ✓ | ✓ | | | | |
-| 07 — Arrays | ✓ | ✓ | | | ✓ | |
-| 08 — Classes and Objects | | ✓ | ✓ | | | |
-| 09 — Testing and Debugging | | | | | ✓ | ✓ |
-| 10 — Final Project | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| 11 — GUI and Event-Driven | ✓ | ✓ | ✓ | ✓ | | ✓ |
+| 0 — Getting on The Bus | ✓ | ✓ | | | | ✓ |
+| 1 — Variables and Expressions | ✓ | ✓ | | | | ✓ |
+| 2 — Input and Output | ✓ | ✓ | | | | |
+| 3 — Conditionals | ✓ | ✓ | | | | ✓ |
+| 4 — Loops | ✓ | ✓ | | | | ✓ |
+| 5 — Methods and Testing | ✓ | ✓ | | | ✓ | ✓ |
+| 6 — Arrays and Collections | ✓ | ✓ | | | ✓ | |
+| 7 — Classes and Objects | | ✓ | ✓ | | | |
+| 8 — Events and Capstone | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
-> CLO-4 (event-driven/GUI) is introduced in Module 11 and assessed in Module 10's final project. Every other CLO appears in at least two modules.
+> CLO-4 (event-driven programming) is introduced in submodule 8.1 and assessed again in submodule 8.2's final project. Every other CLO appears in at least two modules.
+>
+> **Note on CLO-4 coverage.** CLO-4 appears in only one module, which is the thinnest coverage in this matrix. It is deliberate: the register-and-dispatch cycle depends on Module 7's classes, so it cannot move earlier without also moving object-oriented content. Instructors who want a second CLO-4 touchpoint can add a small handler exercise to Module 5.2, where the callback shape is already visible in test fixtures.
 
 ---
 
 ## Open questions for curriculum review
 
-Before this mapping is submitted for formal approval, resolve the following:
+Before this mapping is submitted for formal approval, resolve the following. Resolved items are kept, struck through, with the decision recorded — a fork needs to see what was decided, not only what is left.
 
-1. **CLO-3 depth:** Does "object-oriented principles" require inheritance and polymorphism, or is encapsulation (fields + methods + constructor) sufficient for CSC 151? A "Module 11" placeholder is available in the course map for inheritance/interfaces.
+1. **CLO-3 depth:** Does "object-oriented principles" require inheritance and polymorphism, or is encapsulation (fields + methods + constructor) sufficient for CSC 151? Submodule 8.1 can absorb inheritance and interfaces for sections that need the depth.
 2. **CLO-5 assessment:** Is there a common assessment rubric for test evidence, or does each instructor set their own standard? See [rubric.md](rubric.md).
-3. **Module 00 credit:** Does the institution count Module 00 (writing and tools) as a graded module, or is it an ungraded prerequisite activity?
+3. **Module 0 credit:** Does the institution count submodule 0.1 (writing and tools) as graded work, or as an ungraded prerequisite activity?
+4. ~~**CLO-4 without a graphical display.**~~ **Resolved.** CLO-4 is fulfilled by processing a user event as a function call. A console menu selection and a Swing button press are both accepted evidence, and the console path is not the lesser one. Submodule 8.2 therefore carries no local-machine requirement, and every graded task runs in a Codespace.
+5. **AI teammate disclosure:** Confirm that the disclosure standard in the [AI Teammate Policy](ai-teammate-policy.md) matches the institution's academic integrity policy.
 
 ---
 

@@ -1,0 +1,24 @@
+{
+  "name": "CSC 151 Java Programming I",
+  "image": "mcr.microsoft.com/devcontainers/java:21-bookworm",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack"
+      ],
+      "settings": {
+        "files.eol": "\n",
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4,
+        "[java]": {
+          "editor.detectIndentation": false
+        }
+      }
+    }
+  },
+
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
+
+  "remoteUser": "vscode"
+}

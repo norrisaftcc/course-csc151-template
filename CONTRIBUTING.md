@@ -28,7 +28,7 @@ Anyone may contribute. You do not need to be a computer science educator. Useful
 
 1. Fork or branch the repository.
 2. Make your changes.
-3. Run the Java compile check: `bash scripts/check-java.sh`
+3. Run the course verifier: `bash scripts/verify.sh all`
 4. Open a pull request. Describe what you changed and why.
 
 ---
@@ -39,7 +39,9 @@ Before submitting a pull request, verify each item below.
 
 ### Java code
 
-- [ ] All `.java` files compile without errors (`bash scripts/check-java.sh`).
+- [ ] All checks pass (`bash scripts/verify.sh all`).
+- [ ] Every new example has a `.expected` file holding its exact output.
+- [ ] Examples that read input have a `.stdin` fixture.
 - [ ] Code uses straightforward Java appropriate for an introductory course.
 - [ ] Expected output is included in comments or a companion file.
 - [ ] No dependencies on paid services or institution-specific infrastructure.

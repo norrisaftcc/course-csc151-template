@@ -1,20 +1,29 @@
-name: Check Java Examples
+name: Verify Java
+
+# The workflow file keeps its old name so that existing branch protection
+# rules keep matching it. What it runs has grown: it now compiles every
+# example, runs the ones with a recorded expectation, and runs the JUnit
+# tests. See scripts/verify.sh.
 
 on:
   push:
     paths:
       - '**.java'
-      - 'scripts/check-java.sh'
+      - '**.expected'
+      - '**.stdin'
+      - 'scripts/**'
       - '.github/workflows/check-java.yml'
   pull_request:
     paths:
       - '**.java'
-      - 'scripts/check-java.sh'
+      - '**.expected'
+      - '**.stdin'
+      - 'scripts/**'
       - '.github/workflows/check-java.yml'
 
 jobs:
-  compile:
-    name: Compile all Java examples
+  verify:
+    name: Compile, run, and test Java examples
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -29,5 +38,19 @@ jobs:
           distribution: temurin
           java-version: '21'
 
-      - name: Run Java compile check
-        run: bash scripts/check-java.sh
+      # The JUnit runner is not committed. It is downloaded once and cached,
+      # keyed on the version recorded in scripts/fetch-junit.sh, so a version
+      # change invalidates the cache automatically.
+      - name: Restore cached JUnit runner
+        id: junit-cache
+        uses: actions/cache@v4
+        with:
+          path: .tools
+          key: junit-${{ hashFiles('scripts/fetch-junit.sh') }}
+
+      - name: Download JUnit runner
+        if: steps.junit-cache.outputs.cache-hit != 'true'
+        run: bash scripts/fetch-junit.sh
+
+      - name: Verify
+        run: bash scripts/verify.sh all

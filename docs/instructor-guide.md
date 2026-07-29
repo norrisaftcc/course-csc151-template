@@ -21,6 +21,62 @@ A player who cannot explain the goal has not understood it. A coach who cannot i
 
 ---
 
+## The LPAA cycle, and the promise it makes
+
+Every module runs four beats: **Learn**, **Practice**, **Apply**, **Assess**. With students,
+use the course's names — **Study the Play**, **Run the Play**, **Team Practice**, and **The
+Big Game**. Both sets of names are correct. The full mapping, including which lesson sections
+belong to which beat, is in the [Course Map](course-map.md#the-lpaa-cycle).
+
+Only the fourth beat is graded. The first three exist so that the fourth is never the first
+time a student meets a skill.
+
+> **"We would never make you use a play in The Big Game that you haven't run during practice
+> until you understood it."**
+>
+> **Literal meaning:** nothing is graded that has not first been taught, rehearsed alone, and
+> then practiced with a coach.
+
+**Say this out loud in week 1, and then keep it.** It is the reason a student should trust the
+sequence, and it stops being true the first time an assessment asks for something the lessons
+never rehearsed. A promise kept in eight modules and broken in the ninth is remembered as
+broken.
+
+### Auditing your own module against the rule
+
+Before you release an assessment, list the skills it requires — including the ones you would
+not think to list, like reading a stack trace or naming a file correctly. For each one, find
+the Learn beat that taught it, the Practice beat that rehearsed it, and the Apply beat that ran
+it with a coach.
+
+If any skill has no earlier beat, the fix is yours and not the student's:
+
+1. Add the missing beats before the assessment, or
+2. Move that requirement to a later module where the beats already exist.
+
+Do not repair it by adding an explanation inside the assessment. Teaching a skill inside The
+Big Game is the rule being broken quietly, and it lands on exactly the students who are
+already spending the most attention on the task.
+
+**Tell students the rule cuts both ways.** A student who meets something unfamiliar in a graded
+task has found a defect in the course and should report it. Students who believe an unfamiliar
+requirement is a test of resilience will not tell you, and you will not find out.
+
+### What each beat asks of you
+
+| Beat | Course name | Your job |
+|------|------------|----------|
+| Learn | Study the Play | Explain and demonstrate. Nothing is at stake, so do not quiz. |
+| Practice | Run the Play | Let them be wrong cheaply. A wrong prediction here costs nothing and is the most useful thing that happens all lesson. |
+| Apply | Team Practice | Be present. Run the handshake. Ask, do not tell. |
+| Assess | The Big Game | Step back. Answer questions about the task, not about the solution. |
+
+The most common facilitation error is running Practice as though it were Assess. If a student
+is embarrassed to predict wrongly in the Practice beat, the beat is not doing its work, and the
+prediction habit will not survive to the modules where it matters.
+
+---
+
 ## The execute gate
 
 The **execute gate** is a handshake between the coach and the player. The gate controls when code may be run or submitted. It is not a bureaucratic check; it is a shared moment of alignment that prevents the most common form of wasted effort: running code before understanding what it is supposed to do.
@@ -178,11 +234,11 @@ This standard is not punitive. It trains students to verify programs, not merely
 
 ## Facilitation examples by module
 
-See each module's `README.md` for specific facilitation notes and example handshakes. The two complete sample modules are:
+See each module's `README.md` for specific facilitation notes and example handshakes. The sample modules with full facilitation notes are:
 
-- [Module 01: Environment and First Program](../modules/01-environment/README.md)
-- [Module 02: Variables and Expressions](../modules/02-variables-expressions/README.md)
-- [Module 07: Arrays](../modules/07-arrays/README.md)
+- [Module 0: Getting on The Bus](../modules/m0-getting-on-the-bus/README.md)
+- [Module 1: Variables and Expressions](../modules/m1-variables-expressions/README.md)
+- [Module 6: Arrays and Collections](../modules/m6-arrays-collections/README.md)
 
 ---
 

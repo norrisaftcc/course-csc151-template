@@ -41,6 +41,37 @@ Record what the player stated for each part before the gate opened.
 
 ---
 
+## AI teammate record
+
+See the [AI Teammate Policy](../docs/ai-teammate-policy.md). Disclosure is not a penalty. Undisclosed use is.
+
+**Did an AI teammate contribute to this activity?** ☐ No  ☐ Yes
+
+If yes, complete this section.
+
+| Question | Answer |
+|----------|--------|
+| What did you ask it for? | ______ |
+| What did it produce? | ______ |
+| What did you change or reject? | ______ |
+| What did you keep unchanged? | ______ |
+
+**Confirm each item:**
+
+- ☐ I wrote my prediction before the AI produced anything.
+- ☐ A person, not the AI, opened the execute gate.
+- ☐ I can explain every line I am submitting.
+
+**Coach's diagnostic question and the player's answer:**
+
+Question: ______
+
+Answer: ______
+
+**Answer quality:** ☐ Could not answer  ☐ Answered in general terms  ☐ Named the specific line and its effect
+
+---
+
 ## Explanation record
 
 Player's explanation (summary):
@@ -92,6 +123,7 @@ ______
 |-------|---------|------------|--------|
 | [SKILL FROM THIS LESSON] | ☐ | ☐ | ☐ |
 | Execute-gate handshake | ☐ | ☐ | ☐ |
+| Coaching an AI teammate | ☐ | ☐ | ☐ |
 | Recording evidence | ☐ | ☐ | ☐ |
 | Explaining result | ☐ | ☐ | ☐ |
 | Coach role | ☐ | ☐ | ☐ |

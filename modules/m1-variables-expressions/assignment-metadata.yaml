@@ -1,0 +1,80 @@
+# Assignment Metadata
+# Module 1 — Variables and Expressions
+# CSC 151 Java Programming I
+# This file is a populated example of the metadata schema in templates/assignment-metadata.yaml.
+
+assignment:
+  id: "hw-02"
+  title: "Variables and Arithmetic"
+  module: "02 — Variables and Expressions"
+  type: "assignment"
+  estimated_minutes: 60
+
+  learning_goal: "Declare int, double, and String variables; compute arithmetic expressions; and predict the effect of integer division."
+
+  prerequisites:
+    - "Module 0: compile and run a Java program"
+    - "System.out.println for output"
+
+  java_topic: "variables, arithmetic expressions, integer division, casting"
+
+  prior_knowledge_check:
+    - "Can compile a .java file from the command line or IDE"
+    - "Can run a compiled program and read the output"
+    - "Knows what int and double mean"
+
+  activity_sequence:
+    - learn
+    - trace
+    - repair
+    - build
+    - explain
+    - transfer
+
+  execute_handshake:
+    goal_confirmed: false
+    constraints_confirmed: false
+    prediction_recorded: false
+    success_check_confirmed: false
+    coach_approval: false
+    gate_open: false
+
+  prediction:
+    recorded: false
+    content: ""
+
+  evidence:
+    normal_test:
+      input: "rawScore = 85, bonus = 1.5"
+      expected: "Adjusted score: 127.5"
+      actual: ""
+      passed: false
+    boundary_test:
+      input: "rawScore = 85, divisor 2 using int"
+      expected: "Half score: 42"
+      actual: ""
+      passed: false
+    failure_test:
+      input: "rawScore = 85, divisor 2 using double cast"
+      expected: "42.5"
+      actual: ""
+      passed: false
+
+  explanation:
+    behavior: ""
+    reason: ""
+    evidence: ""
+    common_mistake: "Initializing the result variable as int when the expression produces a double, causing a type mismatch or silent truncation."
+
+  role_rotation:
+    completed: false
+    new_coach: ""
+    new_player: ""
+    next_task_described: false
+
+  transfer:
+    changed_condition: "Compute a price with tax instead of a student score"
+    attempted: false
+    completed_independently: false
+
+  mastery_status: "not_started"

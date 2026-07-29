@@ -1,0 +1,81 @@
+# Assignment Metadata
+# Module 6 — Arrays and Collections
+# CSC 151 Java Programming I
+# This file is a populated example of the metadata schema in templates/assignment-metadata.yaml.
+
+assignment:
+  id: "hw-07"
+  title: "Array Traversal and Algorithms"
+  module: "07 — Arrays"
+  type: "assignment"
+  estimated_minutes: 90
+
+  learning_goal: "Declare and traverse an int array; implement findMax using a single-pass algorithm; and test with normal, one-element, and all-negative arrays."
+
+  prerequisites:
+    - "Module 4: for loops"
+    - "Module 5: static methods with parameters and return values"
+    - "Module 1: arithmetic and comparison operators"
+
+  java_topic: "arrays, for loop traversal, findMax algorithm, edge cases"
+
+  prior_knowledge_check:
+    - "Can write a for loop that iterates from 0 to n-1"
+    - "Can write a static method with a parameter and a return value"
+    - "Can call a static method and use its return value"
+
+  activity_sequence:
+    - learn
+    - trace
+    - repair
+    - build
+    - explain
+    - transfer
+
+  execute_handshake:
+    goal_confirmed: false
+    constraints_confirmed: false
+    prediction_recorded: false
+    success_check_confirmed: false
+    coach_approval: false
+    gate_open: false
+
+  prediction:
+    recorded: false
+    content: ""
+
+  evidence:
+    normal_test:
+      input: "{10, 30, 20, 50, 40}"
+      expected: "50"
+      actual: ""
+      passed: false
+    boundary_test:
+      input: "{42}"
+      expected: "42"
+      actual: ""
+      passed: false
+    failure_test:
+      input: "{-3, -5, -1, -8}"
+      expected: "-1"
+      actual: ""
+      passed: false
+
+  explanation:
+    behavior: ""
+    reason: ""
+    evidence: ""
+    common_mistake: "Initializing max to 0 instead of numbers[0], which returns 0 for all-negative arrays."
+
+  role_rotation:
+    completed: false
+    new_coach: ""
+    new_player: ""
+    next_task_described: false
+
+  transfer:
+    changed_condition: "Find the minimum value instead of the maximum"
+    attempted: false
+    completed_independently: false
+
+  mastery_status: "not_started"

@@ -1,4 +1,4 @@
-# Final Project Proposal — Module 10
+# Final Project Proposal — Module 8
 
 **Course:** CSC 151 Java Programming I  
 **Student name:** ______  
@@ -28,7 +28,7 @@ Write in complete sentences where prompted. Be specific. Vague responses ("it wi
 
 ## Section 2 — Requirements checklist
 
-Confirm that your program will satisfy the Module 10 requirements. Mark each item.
+Confirm that your program will satisfy the Module 8 requirements. Mark each item.
 
 | Requirement | Your plan |
 |-------------|-----------|
