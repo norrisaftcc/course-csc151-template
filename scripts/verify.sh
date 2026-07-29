@@ -42,6 +42,10 @@ FAIL_LIST=()
 # Every temporary directory this run creates, removed on exit.
 WORK_DIRS=()
 cleanup() {
+    # ${WORK_DIRS[@]+"${WORK_DIRS[@]}"} looks redundant and is not. The inner
+    # expansion stays quoted, so a path containing a space survives as one
+    # word. The outer +-form is what keeps an empty array from tripping
+    # `set -u` on bash 3.2, which is what macOS still ships.
     for d in ${WORK_DIRS[@]+"${WORK_DIRS[@]}"}; do
         rm -rf "$d"
     done
@@ -76,12 +80,30 @@ warn() {
 #     error points at a file the student can actually open.
 #   - Drops the JVM's "Picked up ..." notices, which are set by the
 #     environment and say nothing about the student's code.
+#   - Never changes control flow. `grep` exits 1 when it selects no lines,
+#     which is a normal outcome here: the file may be empty, or may hold
+#     nothing but JVM notices. Under `set -e` that status would abort the run
+#     part-way through and print no summary, so it is absorbed. An exit status
+#     above 1 is a real grep error and is reported rather than hidden.
 show_diagnostics() {
     local msg_file="$1" work_dir="$2" real_file="$3"
-    grep -v '^Picked up [A-Z_]*JAVA[A-Z_]*OPTIONS:' "$msg_file" \
+    local filtered status=0
+
+    filtered="$(grep -v '^Picked up [A-Z_]*JAVA[A-Z_]*OPTIONS:' "$msg_file")" || status=$?
+
+    if [ "$status" -gt 1 ]; then
+        echo "      (could not read the diagnostics for this file)"
+        return 0
+    fi
+
+    [ -n "$filtered" ] || return 0
+
+    printf '%s\n' "$filtered" \
         | sed "s#$work_dir/$(basename "$real_file")#$(relative_path "$real_file")#g" \
         | sed "s#$work_dir/##g" \
         | sed 's/^/      /'
+
+    return 0
 }
 
 require_javac() {

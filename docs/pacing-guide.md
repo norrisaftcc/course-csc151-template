@@ -39,25 +39,24 @@ The module sequence follows the [Course Map](course-map.md). Submodule 0.1 (writ
 #### Week 2
 
 - **Session 3:** Submodule 0.2 continued. Fix a broken program. Practice the execute-gate handshake for the first time with code.
-- **Session 4:** Lesson 0.3. Confirm every student's work surface runs `bash scripts/verify.sh all`. State the AI teammate policy out loud, and run the floor test on a request. Ask the diagnostic question at this session's submission, so that students meet it in week 1 rather than in week 15.
-- **Session 4:** Module 1 begins. Declare `int` and `double` variables. Predict arithmetic output.
+- **Session 4:** Lesson 0.3. Confirm every student's work surface runs `bash scripts/verify.sh all`. State the AI teammate policy out loud, and run the floor test on a request. Ask the diagnostic question at this session's submission, so that students meet it in week 2 rather than in week 15.
 - **Assessment:** Lab 01 due (environment confirmation).
 
 #### Week 3
 
-- **Session 5:** Module 1 continued. Integer division, casting, `String` concatenation.
-- **Session 6:** Module 2 begins. `import Scanner`. Read one `int` from the user.
+- **Session 5:** Module 1 begins. Declare `int` and `double` variables. Predict arithmetic output.
+- **Session 6:** Module 1 continued. Integer division, casting, `String` concatenation.
 - **Assessment:** Assignment 01 due (variables and arithmetic).
 
 #### Week 4
 
-- **Session 7:** Module 2 continued. `nextLine`, `printf`, the input → process → output pattern.
-- **Session 8:** Module 3 begins. Boolean expressions. `if` and `if-else`.
+- **Session 7:** Module 2 begins. `import Scanner`. Read one `int` from the user.
+- **Session 8:** Module 2 continued. `nextLine`, `printf`, the input → process → output pattern.
 - **Assessment:** Lab 03 due (Scanner exercise).
 
 #### Weeks 5–6
 
-- Module 3 continued: `else if` chains, `switch`, common Boolean mistakes.
+- Module 3: Boolean expressions, `if` and `if-else`, `else if` chains, `switch`, common Boolean mistakes.
 - **Assessment:** Assignment 02 due (conditionals).
 
 #### Weeks 6–8

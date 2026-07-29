@@ -298,7 +298,7 @@ Submodule 8.2 — Final project:
 - The execute-gate handshake with the instructor before final submission.
 - A short written or spoken reflection on design decisions.
 
-**How CLO-4 is assessed without a graphical display.** CLO-4 is event-driven programming. The assessed skill is the *register-and-dispatch cycle*, not one graphical toolkit. Students implement a handler interface and register it with a console dispatcher that reads commands from standard input. That cycle has the same shape as `addActionListener`, and it runs and is verified in a Codespace with no display. Students working locally may then wire the same handler classes to Swing buttons, changing no logic — which demonstrates separation of concerns directly. The graphical version is enrichment; the handler cycle is the graded outcome.
+**How CLO-4 is assessed.** CLO-4 is satisfied by **processing a user event as a function call.** The assessed skill is the *register-and-dispatch cycle*, not one graphical toolkit. Students implement a handler interface and register it with a dispatcher. Selecting an option from a console menu triggers the handler, and so does pressing a Swing button; **both are accepted evidence, and neither is the lesser path.** The console version runs and is verified in a Codespace with no display, so no student is disadvantaged by their work surface. Students working locally may wire the same handler classes to Swing buttons, changing no logic — which demonstrates separation of concerns directly, because the logic layer does not know what produced the event.
 
 Suggested time: 3–4 class sessions for 8.1, then 1–2 weeks for 8.2.
 
