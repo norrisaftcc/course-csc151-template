@@ -54,31 +54,58 @@ Instruction should prepare students for their *next* achievable move, not only c
 course-csc151-template/
 ├── README.md                         # This file
 ├── CONTRIBUTING.md                   # How to add or improve content
+├── CHANGELOG.md                      # Version history for instructors who forked this template
 ├── LICENSE                           # MIT
+├── .github/
+│   ├── workflows/
+│   │   └── check-java.yml            # CI: compiles all Java examples on push/PR
+│   └── PULL_REQUEST_TEMPLATE.md      # Contribution checklist for pull requests
 ├── docs/
 │   ├── instructor-guide.md           # Coach/player dynamics, facilitation
 │   ├── student-guide.md              # How to work through a lesson
 │   ├── course-map.md                 # Recommended topic sequence
+│   ├── clo-mlo-map.md                # Course and module learning outcome mapping
 │   ├── glossary.md                   # Key terms defined
 │   ├── rubric.md                     # How to evaluate educational content
-│   └── workflow-diagrams.md          # Mermaid diagrams for the full workflow
+│   ├── workflow-diagrams.md          # Mermaid diagrams for the full workflow
+│   ├── faq.md                        # 10 most common beginner Java errors
+│   └── pacing-guide.md               # 16-week and 8-week calendar templates
 ├── templates/
 │   ├── lesson-template.md            # Blank lesson structure
 │   ├── assignment-template.md        # Blank assignment structure
 │   ├── lab-template.md               # Blank lab structure
 │   ├── rubric-template.md            # Blank rubric
 │   ├── coach-player-record.md        # Activity record form
-│   └── assignment-metadata.yaml      # YAML schema for assignment metadata
+│   ├── assignment-metadata.yaml      # YAML schema for assignment metadata
+│   └── project-proposal-template.md  # Module 10 final project proposal form
 ├── modules/
-│   ├── 02-variables-expressions/     # Sample module: variables and expressions
+│   ├── 00-ste-markdown-mermaid/      # Orientation: STE writing, Markdown, Mermaid
+│   │   ├── README.md
+│   │   └── lesson.md
+│   ├── 01-environment/               # Sample module: environment and first program
 │   │   ├── README.md
 │   │   ├── lesson.md
 │   │   └── examples/
+│   │       └── HelloWorld.java
+│   ├── 02-variables-expressions/     # Sample module: variables and expressions
+│   │   ├── README.md
+│   │   ├── lesson.md
+│   │   ├── assignment-01.md          # Filled assignment example
+│   │   ├── lab-01.md                 # Filled lab example
+│   │   ├── assignment-metadata.yaml  # Populated metadata example
+│   │   └── examples/
 │   │       ├── VariablesDemo.java
 │   │       └── ExpressionTrace.java
+│   ├── 03-input-output/              # Sample module: Scanner and printf
+│   │   ├── README.md
+│   │   ├── lesson.md
+│   │   └── examples/
+│   │       ├── ScannerDemo.java
+│   │       └── FormattedOutput.java
 │   └── 07-arrays/                    # Sample module: arrays
 │       ├── README.md
 │       ├── lesson.md
+│       ├── assignment-metadata.yaml  # Populated metadata example
 │       └── examples/
 │           ├── ArrayMax.java
 │           └── ArrayStats.java
@@ -95,12 +122,17 @@ course-csc151-template/
 | Start teaching | [Instructor Guide](docs/instructor-guide.md) |
 | Start learning | [Student Guide](docs/student-guide.md) |
 | See the course sequence | [Course Map](docs/course-map.md) |
+| See the pacing calendar | [Pacing Guide](docs/pacing-guide.md) |
 | Look up a term | [Glossary](docs/glossary.md) |
+| Diagnose a common error | [FAQ](docs/faq.md) |
 | Score an assignment | [Rubric](docs/rubric.md) |
 | See the workflow diagrams | [Workflow Diagrams](docs/workflow-diagrams.md) |
 | Copy a lesson template | [Lesson Template](templates/lesson-template.md) |
-| First sample lesson | [Module 02: Variables and Expressions](modules/02-variables-expressions/lesson.md) |
-| Second sample lesson | [Module 07: Arrays](modules/07-arrays/lesson.md) |
+| Propose a final project | [Project Proposal Template](templates/project-proposal-template.md) |
+| First sample lesson | [Module 01: Environment and First Program](modules/01-environment/lesson.md) |
+| Second sample lesson | [Module 02: Variables and Expressions](modules/02-variables-expressions/lesson.md) |
+| Third sample lesson | [Module 03: Input and Output](modules/03-input-output/lesson.md) |
+| Fourth sample lesson | [Module 07: Arrays](modules/07-arrays/lesson.md) |
 
 ---
 
@@ -131,13 +163,14 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Current status
 
-This is an initial template. The following are complete:
+This is a living template. The following are complete:
 
 - Course structure and navigation
 - Instructor and student guides
-- Two complete sample modules (variables/expressions, arrays)
-- All templates
+- Four complete sample modules (environment, variables/expressions, input/output, arrays)
+- All templates, including a final project proposal template
 - Workflow and diagram documentation
-- Rubric and glossary
+- Rubric, glossary, FAQ, and pacing guide
+- GitHub Actions CI workflow for Java compile checking
 
-Instructors should add institution-specific policies, grading systems, and additional modules as needed.
+Instructors should add institution-specific policies, grading systems, and the remaining modules as needed. See [CHANGELOG.md](CHANGELOG.md) for a version history.

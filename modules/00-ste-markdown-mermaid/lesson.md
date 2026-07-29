@@ -195,23 +195,9 @@ The coach states the goal. The player restates it. If the restatement matches, t
 
 ### Diagramming the handoff
 
-The **handoff** is the four-part agreement before execution. Below is the play diagram for the handoff.
+The **handoff** is the four-part agreement before execution. The canonical play diagram for the handoff is in [docs/workflow-diagrams.md](../../docs/workflow-diagrams.md).
 
-```mermaid
-flowchart TD
-    A[Task assigned] --> B[Coach states goal]
-    B --> C[Coach states constraints]
-    C --> D[Player states prediction]
-    D --> E[Player states success check]
-    E --> F{All four parts confirmed?}
-    F -- No --> G[Coach clarifies one part]
-    G --> F
-    F -- Yes --> H[Coach says: Agreed]
-    H --> I[Player executes]
-```
-
-**Plain-text description:**
-A task is assigned. The coach states the goal, then the constraints. The player states a prediction and a success check. If all four parts are confirmed, the coach says "Agreed" and the player executes. If any part is missing or unclear, the coach clarifies that one part and the check repeats.
+For this exercise, use the diagram in that file as your reference. Read it before continuing.
 
 ---
 
