@@ -11,6 +11,12 @@ Instructors who forked an earlier version of this template can use this log to i
 
 *Changes that are complete but not yet tagged as a release.*
 
+### Added
+
+- `spikes/` — throwaway prototypes that answer one question each. Nothing in this directory is course content, and nothing is linked from a module.
+- `spikes/execute-gate-teaser.html` — a single-file interactive teaser for the execute gate. It states the four-part handshake as behavior rather than prose: the page will not run the code until all four parts are on the board. It then takes a prediction, shows the recorded output, and names the gap — the three most common wrong predictions each get their own response, including `3.0`, which is the right value with the wrong type. No frameworks, fonts, scripts, or images are loaded from anywhere.
+- The teaser proposes **The Huddle** and **The Snap** as names for the two sides of the execute gate, with their literal meanings. They do not rename **handshake**, which stays the name of the four-part agreement. They are not adopted: doing so means adding both to `docs/glossary.md`, and until then they live only in the spike.
+
 ### Changed — breaking
 
 - **Reflowed the course to a nine-module spine: Module 0 through Module 8, plus an Appendix.** The delivery platform requires exactly eight numbered modules plus a Module Zero and an Appendix. The previous twelve-unit sequence (00–11) no longer matches it. Instructors who forked an earlier version must renumber. The mapping is:
