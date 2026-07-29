@@ -13,7 +13,7 @@ Before submitting this pull request, confirm each item:
 ### Course alignment
 
 - [ ] Each new lesson or assignment maps to at least one CLO in `docs/clo-mlo-map.md`.
-- [ ] New module directories use the course map numbering (`01-environment`, `02-variables-expressions`, etc.).
+- [ ] New module directories use the course map numbering (`m0-getting-on-the-bus`, `m1-variables-expressions`, … `m8-events-and-capstone`, `appendix`). The spine is nine modules; adding a tenth is a breaking change.
 - [ ] Cross-references in `README.md`, `docs/course-map.md`, and `docs/instructor-guide.md` are updated.
 
 ### Coach/player model
@@ -21,6 +21,10 @@ Before submitting this pull request, confirm each item:
 - [ ] Any new lesson includes an execute-gate handshake section with all four parts (goal, constraints, prediction, success check).
 - [ ] Any new lesson includes a transfer task with a changed condition.
 - [ ] Any new lesson includes a mastery record table.
+- [ ] Any new lesson uses the full fourteen-section order, unreordered, ending at the mastery record.
+- [ ] Every skill an Assess beat requires appears in an earlier Learn, Practice, and Apply beat — the no-new-plays rule.
+- [ ] Every football idiom is paired with its literal meaning at the point of use.
+- [ ] No coaching saying is attributed to a real person.
 
 ### Metadata
 

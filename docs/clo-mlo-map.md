@@ -53,6 +53,10 @@ These outcomes are extracted and refined from the CCL description. Each CLO uses
 | Read and interpret a compile-time error message. | CLO-6 |
 | State the four parts of the execute-gate handshake without prompting. | CLO-1 |
 | Describe what honest use of an AI teammate requires. | — |
+| Run the course verifier on either work surface and interpret its PASS and FAIL output. | CLO-5 |
+| Write a request that another party can act on without asking a question back. | CLO-1 |
+| Disclose what an AI teammate produced, what was changed, and what was kept. | — |
+| Answer one diagnostic question about any line of a submission. | CLO-2, CLO-6 |
 
 ---
 
