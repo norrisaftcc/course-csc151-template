@@ -86,6 +86,7 @@ course-csc151-template/
 │   │   ├── README.md                 #   environment, first program, AI teammate
 │   │   ├── lesson-1-writing-and-diagrams.md
 │   │   ├── lesson-2-environment-and-first-program.md
+│   │   ├── lesson-3-work-surfaces-and-ai-teammate.md
 │   │   └── examples/
 │   │       └── HelloWorld.java
 │   ├── m1-variables-expressions/     # Sample module: variables and expressions
@@ -148,6 +149,7 @@ Modules 3, 4, 7, and 8 and the Appendix are specified in the
 | Second sample lesson | [Module 1: Variables and Expressions](modules/m1-variables-expressions/lesson.md) |
 | Third sample lesson | [Module 2: Input and Output](modules/m2-input-output/lesson.md) |
 | Fourth sample lesson | [Module 6: Arrays and Collections](modules/m6-arrays-collections/lesson.md) |
+| Work surfaces and AI use | [Module 0, Lesson 3](modules/m0-getting-on-the-bus/lesson-3-work-surfaces-and-ai-teammate.md) |
 | Testing and the verifier | [Module 5: Methods and Testing](modules/m5-methods-and-testing/README.md) |
 
 ---

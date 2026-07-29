@@ -2,7 +2,7 @@
 
 **Course:** CSC 151 Java Programming I  
 **Position in sequence:** First module (before all coding modules)  
-**Estimated time:** 2–3 class sessions  
+**Estimated time:** 3–4 class sessions  
 **Work surface:** Codespace or local VS Code — both work for every task in this module.
 
 ---
@@ -42,6 +42,9 @@ After this module, students can:
 5. Write and run a "Hello, world!" program.
 6. Read a compile-time error message and identify the problem.
 7. State the four parts of the execute-gate handshake without prompting.
+8. Run the course verifier on their own work surface and interpret its output.
+9. State the five AI teammate rules, and disclose AI use in one sentence.
+10. Write a request that another party can act on without asking a question back.
 
 ---
 
@@ -51,6 +54,7 @@ After this module, students can:
 |------|-------------|
 | [lesson-1-writing-and-diagrams.md](lesson-1-writing-and-diagrams.md) | STE-100, Markdown, Mermaid, the handshake, and a transfer task |
 | [lesson-2-environment-and-first-program.md](lesson-2-environment-and-first-program.md) | Compile-run cycle, error reading, handshake, and a transfer task |
+| [lesson-3-work-surfaces-and-ai-teammate.md](lesson-3-work-surfaces-and-ai-teammate.md) | Work surfaces, the verifier, the five AI teammate rules, the floor test, and a transfer task |
 | [examples/HelloWorld.java](examples/HelloWorld.java) | Minimal runnable Java program — the first program students run |
 
 Related course documents:
@@ -96,6 +100,25 @@ Announce explicitly: "The gate opens when I say 'Agreed.' Not before."
 - Passive voice: "the diagram is drawn by the player" → "the player draws the diagram."
 - Compound sentences: "write the step and label the decision" → "write the step. Label the decision."
 - Synonym drift: using "handshake," "agreement," and "handoff" interchangeably. This course uses **handshake** every time.
+
+### Facilitating the AI teammate lesson
+
+Say the policy out loud in week 1. Students who are unsure whether help is allowed will either
+avoid a useful tool or hide that they used it. Both outcomes are worse than a clear rule.
+
+- **Ask the diagnostic question every time, from the first submission.** It takes about thirty
+  seconds and it is the entire enforcement mechanism. A student who meets it in week 1 is not
+  surprised by it in week 15.
+- **Do not ask a student to prove they did not use a tool.** That standard cannot be met and it
+  punishes honest students. Ask what the work does.
+- **Treat detection software as unreliable evidence.** Base decisions on what a student can
+  explain, not on a classifier score.
+- **A student who cannot answer has not cheated — the work is not finished.** Send them back to
+  a smaller task rather than to an integrity process. Make that distinction out loud, because
+  students who fear the second one will hide their tool use rather than learn to coach it.
+- **Watch for the reversed roles.** "Fix my program" hands over the coach role. "What in this
+  calculation produces a whole number?" keeps it. This is the single most useful correction in
+  the lesson, and most students need it once.
 
 ### Common environment problems
 

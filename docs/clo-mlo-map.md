@@ -19,7 +19,7 @@ These outcomes are extracted and refined from the CCL description. Each CLO uses
 | CLO-1 | Design a Java program that meets a stated requirement: select appropriate data types, control structures, and class structure. |
 | CLO-2 | Code a Java program using primitive types, expressions, control flow, methods, and at least one class. |
 | CLO-3 | Apply object-oriented principles: define a class with fields and methods, create objects, and call instance methods. |
-| CLO-4 | Apply event-driven programming: register a handler so that a user action executes a defined method, and explain the register-and-dispatch cycle. Swing's `ActionListener` is the graphical form of this cycle and is the optional enrichment path. |
+| CLO-4 | Apply event-driven programming: **process a user event as a function call.** Register a handler so that a user action executes a defined method, and explain the register-and-dispatch cycle. A console menu selection and a Swing button press are both accepted evidence. |
 | CLO-5 | Test a Java program using normal cases, boundary cases, and failure cases; record and interpret the results. |
 | CLO-6 | Debug a Java program by reading error messages, isolating the error, applying a fix, and verifying the result. |
 
@@ -157,18 +157,27 @@ These outcomes are extracted and refined from the CCL description. Each CLO uses
 
 *Teaches the register-and-dispatch cycle: a user action produces an event, and the event runs a handler method.*
 
-**How CLO-4 is assessed.** CLO-4 is event-driven programming. The assessed skill is the register-and-dispatch cycle, not one graphical toolkit. Students implement a handler interface and register it with a console dispatcher that reads commands from standard input. That cycle has the same shape as `addActionListener`, and it runs and is verified on either work surface, including a Codespace with no display. Students working locally may then wire the same handler classes to Swing buttons, changing no logic. The graphical version is enrichment; the handler cycle is the graded outcome.
+**How CLO-4 is assessed.** *Resolved in curriculum review — see open question 4.* CLO-4 is satisfied by **processing a user event as a function call.** The assessed skill is the register-and-dispatch cycle, not one graphical toolkit, and **two paths are equally acceptable:**
+
+| Path | The user action | Work surface |
+|------|----------------|--------------|
+| **Console menu** | The student selects an option from a menu | Codespace or local — both |
+| **Swing** | The student presses a `JButton` | Local machine only |
+
+Neither path is the lesser one. A student who completes only the console path has met CLO-4 in full, and no part of the grade is reserved for the graphical version. Students on a local machine may choose Swing, and students in a Codespace are not disadvantaged by choosing the menu.
+
+The handler classes are identical across both paths, because the logic layer does not know what produced the event. That is the point of the outcome, and it is what students explain: `dispatcher.register("add", new AddHandler())` and `button.addActionListener(new AddHandler())` are the same cycle with different triggers.
 
 | MLO | CLO |
 |-----|-----|
-| Implement a handler interface so that a named command runs a defined method. | CLO-3, CLO-4 |
+| Process a user event as a function call: implement a handler interface so that a selected menu option or a pressed button runs a defined method. | CLO-3, CLO-4 |
 | Register a handler with a dispatcher, and explain the register-and-dispatch cycle. | CLO-1, CLO-4 |
 | Read a value supplied with an event and use it in a calculation. | CLO-2, CLO-4 |
 | Display a computed result after an event fires. | CLO-4 |
 | Design a calculator-style command set: each operator command updates state; the `=` command triggers the calculation and displays the result. | CLO-1, CLO-3, CLO-4 |
 | Separate the event-handling layer from a logic class, and explain why the separation makes the logic testable. | CLO-3, CLO-5 |
 | Debug an event handler: identify why a command produces no output or the wrong output. | CLO-6 |
-| *Optional enrichment, local surface only:* wire the same handler classes to Swing `JButton` components using `ActionListener`, changing no logic. | CLO-4 |
+| *Alternative path, local surface only:* wire the same handler classes to Swing `JButton` components using `ActionListener`, changing no logic. | CLO-4 |
 
 #### Submodule 8.2 — Final Project
 
@@ -208,12 +217,12 @@ This matrix shows which modules contribute to each CLO. A filled cell means at l
 
 ## Open questions for curriculum review
 
-Before this mapping is submitted for formal approval, resolve the following:
+Before this mapping is submitted for formal approval, resolve the following. Resolved items are kept, struck through, with the decision recorded — a fork needs to see what was decided, not only what is left.
 
 1. **CLO-3 depth:** Does "object-oriented principles" require inheritance and polymorphism, or is encapsulation (fields + methods + constructor) sufficient for CSC 151? Submodule 8.1 can absorb inheritance and interfaces for sections that need the depth.
 2. **CLO-5 assessment:** Is there a common assessment rubric for test evidence, or does each instructor set their own standard? See [rubric.md](rubric.md).
 3. **Module 0 credit:** Does the institution count submodule 0.1 (writing and tools) as graded work, or as an ungraded prerequisite activity?
-4. **CLO-4 without a graphical display:** This mapping assesses CLO-4 on the register-and-dispatch cycle and treats Swing as optional enrichment, so that students working in a Codespace can complete every graded task. Confirm that the department accepts a console dispatcher as evidence for "event-driven programming methods" in the CCL description. If the department requires a graphical component for credit, then submodule 8.2 needs a local-machine requirement and the work-surface matrix must say so.
+4. ~~**CLO-4 without a graphical display.**~~ **Resolved.** CLO-4 is fulfilled by processing a user event as a function call. A console menu selection and a Swing button press are both accepted evidence, and the console path is not the lesser one. Submodule 8.2 therefore carries no local-machine requirement, and every graded task runs in a Codespace.
 5. **AI teammate disclosure:** Confirm that the disclosure standard in the [AI Teammate Policy](ai-teammate-policy.md) matches the institution's academic integrity policy.
 
 ---

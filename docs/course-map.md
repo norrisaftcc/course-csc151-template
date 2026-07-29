@@ -48,7 +48,7 @@ Each solid arrow represents a dependency. Students should complete earlier modul
 
 Students work in **GitHub Codespaces**, in **local VS Code with the Java extension**, or in both. Every graded task in this course runs on either surface.
 
-Graphical (Swing) programs need a display, which a Codespace does not provide. For that reason **every assignment ships a console version as the graded default**, and graphical work is an optional enrichment path for students working locally. Module 8 teaches the event-driven cycle in a form that runs and is verified without a display. See Module 8 below for how CLO-4 is assessed.
+Graphical (Swing) programs need a display, which a Codespace does not provide. For that reason **every assignment ships a console version**, and it is graded evidence in its own right, not a fallback. CLO-4 asks students to process a user event as a function call; selecting an option from a console menu does that, and so does pressing a Swing button. Students working locally may take either path. Students in a Codespace take the console path and lose no credit for it. See Module 8 below.
 
 Each module README states its work surface. The Appendix carries the full work-surface matrix.
 
@@ -213,7 +213,7 @@ Submodule 8.1 — Event-driven programming:
 - Implementing a handler interface and registering it with a dispatcher.
 - Reading and writing values between the input layer and program logic.
 - Separating the interface layer from a logic class.
-- Optional enrichment, local surface only: the same handlers wired to Swing `JButton` components with `ActionListener`.
+- Alternative path, local surface only: the same handlers wired to Swing `JButton` components with `ActionListener`. Same handler classes, same credit, different trigger.
 
 Submodule 8.2 — Final project:
 - An original program of the student's own design.

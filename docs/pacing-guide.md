@@ -39,6 +39,7 @@ The module sequence follows the [Course Map](course-map.md). Submodule 0.1 (writ
 #### Week 2
 
 - **Session 3:** Submodule 0.2 continued. Fix a broken program. Practice the execute-gate handshake for the first time with code.
+- **Session 4:** Lesson 0.3. Confirm every student's work surface runs `bash scripts/verify.sh all`. State the AI teammate policy out loud, and run the floor test on a request. Ask the diagnostic question at this session's submission, so that students meet it in week 1 rather than in week 15.
 - **Session 4:** Module 1 begins. Declare `int` and `double` variables. Predict arithmetic output.
 - **Assessment:** Lab 01 due (environment confirmation).
 
@@ -118,6 +119,7 @@ The module sequence follows the [Course Map](course-map.md). Submodule 0.1 (writ
 - **Submodule 0.1** should be completed asynchronously before the first class session if possible, or during the first half of week 1.
 - **Do not skip the execute-gate handshake.** Shortening the handshake is acceptable; removing it is not. Students who skip the handshake consistently produce code they cannot explain.
 - **Combine submodule 0.2 and Module 1** if students have prior programming experience. The compile/run cycle can be a brief 20-minute review.
+- **Do not cut lesson 0.3 for time.** Its two subjects — which surface a student works on, and what honest AI use requires — both get more expensive to settle the later they are raised. If the schedule is tight, shorten the transfer task rather than dropping the lesson.
 - **Do not combine Modules 3 and 4.** Conditionals and loops are both high-misconception topics. Students need time to trace each one independently before using them together.
 - **Do not drop submodule 5.2.** In an accelerated term the temptation is to cut testing. CLO-5 and CLO-6 both depend on it, and the capstone assumes students can already read a stack trace. Reduce the JUnit content instead: one normal case, one boundary case, one failure case is enough.
 - **Submodule 8.1** can be reduced to the calculator command set only. CLO-4 is satisfied by registering one handler that runs one calculation. The Swing version stays optional.

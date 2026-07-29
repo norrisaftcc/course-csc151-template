@@ -39,6 +39,7 @@ Instructors who forked an earlier version of this template can use this log to i
 - `.devcontainer/` — Codespaces and local dev container setup: JDK 21, the VS Code Java extension pack, and a post-create script that installs the test runner and runs a smoke check.
 - `modules/m5-methods-and-testing/` — `ScoreUtils.java` and `ScoreUtilsTest.java`, demonstrating the `tests/` convention and the three required test tiers (normal, boundary, failure).
 - `.expected` fixtures for every existing example, and a `.stdin` fixture for `ScannerDemo`.
+- `modules/m0-getting-on-the-bus/lesson-3-work-surfaces-and-ai-teammate.md` — the two work surfaces, the verifier as the arbiter of what a program printed, the five AI teammate rules, and the floor test applied to a request. The transfer task is an assay: students report what survives in a classmate's request and hand back the finding, not a repaired version.
 - `.claude/skills/csc151-canvas-compositor/` — composes Markdown into sanitizer-safe, inline-styled Canvas HTML. Ported from `csc134-canvas-compositor`: retargeted to Java escaping, remapped onto the course's fourteen-section lesson shape, and given two new voices — *Your AI Teammate* (monospace, because a machine emitted it) and *What The Coach Might Say* (sans and italic, because a machine did not). Coach sayings are synthesized and never attributed to a real person; the skill's self-check refuses to emit without the mandatory literal-meaning gloss.
 - `.claude/skills/the-algorithm/` — vendored unmodified so the repository is self-contained. Its fixed strings are exact; it is not forked.
 - `.claude/skills/csc151-execute-gate/` — maps The Algorithm's PROVIDE and ASSAY onto course work, and states the correspondence between its floor nouns and the four gate parts. The AI policy's central rule descends from its gate-integrity rule: only a live human opens the gate.
@@ -47,6 +48,10 @@ Instructors who forked an earlier version of this template can use this log to i
 - `docs/prompting-your-ai-teammate.md` — the PROVIDE and ASSAY operations taught as student skills, with the four floor items mapped to the four parts of the execute gate.
 - AI teammate disclosure section and a "Coaching an AI teammate" mastery row in `templates/coach-player-record.md`.
 - Work-surface statement in the course map and in module READMEs: every graded task runs on a Codespace or a local machine.
+
+### Changed
+
+- **CLO-4 is resolved and no longer carries a caveat.** Curriculum review settled it: CLO-4 is fulfilled by **processing a user event as a function call**, and a console menu selection and a Swing button press are both accepted evidence. The console path is not the lesser one — no part of the grade is reserved for the graphical version. Swing is therefore an alternative path for students working locally, not optional enrichment, and submodule 8.2 carries no local-machine requirement. Open question 4 in `docs/clo-mlo-map.md` is struck through with the decision recorded, so a fork can see what was decided rather than only what remains open.
 
 ### Fixed
 
