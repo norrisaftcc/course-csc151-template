@@ -15,7 +15,7 @@ Instructors who forked an earlier version of this template can use this log to i
 
 - `spikes/` — throwaway prototypes that answer one question each. Nothing in this directory is course content, and nothing is linked from a module.
 - `spikes/execute-gate-teaser.html` — a single-file interactive teaser for the execute gate. It states the four-part handshake as behavior rather than prose: the page will not run the code until all four parts are on the board. It then takes a prediction, shows the recorded output, and names the gap — the three most common wrong predictions each get their own response, including `3.0`, which is the right value with the wrong type. No frameworks, fonts, scripts, or images are loaded from anywhere.
-- The teaser proposes **The Huddle** and **The Snap** as names for the two sides of the execute gate, with their literal meanings. They do not rename **handshake**, which stays the name of the four-part agreement. They are not adopted: doing so means adding both to `docs/glossary.md`, and until then they live only in the spike.
+- The teaser uses **The Huddle** and **The Snap** as working names for the two sides of the execute gate, each with its literal meaning. They are pitch vocabulary rather than a proposal, and dropping them changes nothing in the course. They never rename **handshake**, which stays the name of the four-part agreement — that boundary is stated because this repository has already had one bug caused by drift between *handshake* and *handoff*. If they are worth keeping, it is as a worked example of the idiom rule rather than as course terminology.
 
 ### Changed — breaking
 

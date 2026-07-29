@@ -11,7 +11,7 @@ Keep them here so a reviewer can see the idea working without it leaking into th
 
 | Spike | Question it answers | Status |
 |-------|--------------------|--------|
-| [execute-gate-teaser.html](execute-gate-teaser.html) | What does the execute gate feel like as an interactive page, and do "The Huddle" and "The Snap" work as names for its two sides? | For review |
+| [execute-gate-teaser.html](execute-gate-teaser.html) | What does the execute gate feel like as an interactive page rather than as prose? | For review |
 
 ---
 
@@ -36,20 +36,26 @@ same graph drawn by hand, and the page shows the Mermaid source next to it so th
 compared. A Canvas **tier three** artifact could render Mermaid natively; see the
 `csc151-canvas-compositor` skill for what the tiers mean.
 
-**Two new terms, proposed not adopted**
+**Two working terms, not a proposal**
 
-| Term | Proposed meaning | Literal meaning |
-|------|-----------------|-----------------|
+| Term | Working meaning | Literal meaning |
+|------|----------------|-----------------|
 | **The Huddle** | Everything before the gate: the four parts, stated and confirmed. Nothing runs. | In American football, players gather before a play to agree on what each of them will do. |
 | **The Snap** | Everything after the gate opens: execute, report evidence, explain. | The snap is the moment the ball moves and the play starts. |
 
-These name the two **sides** of the execute gate. They do not rename the **handshake**, which
-stays the name of the four-part agreement itself. That distinction matters here, because this
-repository has already had one bug caused by synonym drift between *handshake* and *handoff*.
+These are pitch vocabulary. **Drop them and nothing in the course changes** — they name the
+two *sides* of the execute gate, and they never rename the **handshake**, which stays the name
+of the four-part agreement itself. That boundary is stated because this repository has already
+had one bug caused by synonym drift between *handshake* and *handoff*, and a third term
+arriving without a stated boundary is how that happens again.
 
-Adopting them means adding both to `docs/glossary.md` with the glosses above, and stating the
-relationship to *handshake* in the same entry. Until that happens they live only in this
-spike.
+If they are worth keeping, it is as a **worked example of the idiom rule**: two sports phrases,
+each paired with its literal meaning at the point of use, in a page a student would actually
+read. That is the rule demonstrated rather than described, and it would belong in Module 0
+rather than in the glossary.
+
+Keeping them for that purpose means a `docs/glossary.md` entry stating the relationship to
+*handshake*. Nothing here assumes that decision.
 
 **What it does not do**
 
