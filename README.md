@@ -1,2 +1,176 @@
-# course-csc151-template
-java programming I
+# CSC 151 Java Programming I — Course Template
+
+A reusable, open course framework for community college students learning introductory Java.
+
+> **Status:** Initial template — ready to adapt and extend.  
+> **License:** MIT  
+> **Attribution:** This design is inspired by general interactive-learning patterns (including the activity shape of Runestone-style courses). All content is original. This is not an official Runestone Academy course.
+
+---
+
+## What this repository is
+
+This repository gives instructors and students a starting framework for a first Java programming course. It includes:
+
+- A **coach/player teaching model** with explicit handoffs.
+- An **execute gate** — a shared handshake before running or submitting code.
+- **Simplified technical English** so explanations are clear to every reader.
+- **Mermaid diagrams** that render on GitHub.
+- **Original Java examples** with expected output.
+- Reusable **templates** for lessons, labs, assignments, and rubrics.
+- Two **complete sample modules** demonstrating the full lesson cycle.
+
+---
+
+## Who this is for
+
+| Role | How to use this repository |
+|------|---------------------------|
+| **Instructor** | Copy the repository, adapt the course map, customize modules, and follow the instructor guide. |
+| **Student** | Start with the student guide, then follow the module lessons in order. |
+| **Contributor** | Read `CONTRIBUTING.md` before adding content. |
+
+---
+
+## The teaching model in one paragraph
+
+Every lesson uses a **coach/player** structure. Before a student (the *player*) runs or submits code, the student and instructor (the *coach*) complete a short handshake called the **execute gate**. The player states the goal, the constraints, a prediction, and the success check. The coach confirms each one. When both agree, the gate opens and work begins. After execution, the player reports evidence, explains the result, and the two roles switch so the player practices coaching as well.
+
+The shorthand for completing the gate is **"snap the ball"** — meaning both sides are ready and play begins. (This phrase comes from American football, where snapping the ball starts a play. You do not need to know football to use this course. The full literal meaning is always provided alongside the shorthand.)
+
+---
+
+## A core homily
+
+> **"You don't throw where they're standing; you throw where they're going to be."**
+
+Instruction should prepare students for their *next* achievable move, not only correct their current position. Plan each lesson to open the door to the one after it.
+
+---
+
+## Repository structure
+
+```
+course-csc151-template/
+├── README.md                         # This file
+├── CONTRIBUTING.md                   # How to add or improve content
+├── CHANGELOG.md                      # Version history for instructors who forked this template
+├── LICENSE                           # MIT
+├── .github/
+│   ├── workflows/
+│   │   └── check-java.yml            # CI: compiles all Java examples on push/PR
+│   └── PULL_REQUEST_TEMPLATE.md      # Contribution checklist for pull requests
+├── docs/
+│   ├── instructor-guide.md           # Coach/player dynamics, facilitation
+│   ├── student-guide.md              # How to work through a lesson
+│   ├── course-map.md                 # Recommended topic sequence
+│   ├── clo-mlo-map.md                # Course and module learning outcome mapping
+│   ├── glossary.md                   # Key terms defined
+│   ├── rubric.md                     # How to evaluate educational content
+│   ├── workflow-diagrams.md          # Mermaid diagrams for the full workflow
+│   ├── faq.md                        # 10 most common beginner Java errors
+│   └── pacing-guide.md               # 16-week and 8-week calendar templates
+├── templates/
+│   ├── lesson-template.md            # Blank lesson structure
+│   ├── assignment-template.md        # Blank assignment structure
+│   ├── lab-template.md               # Blank lab structure
+│   ├── rubric-template.md            # Blank rubric
+│   ├── coach-player-record.md        # Activity record form
+│   ├── assignment-metadata.yaml      # YAML schema for assignment metadata
+│   └── project-proposal-template.md  # Module 10 final project proposal form
+├── modules/
+│   ├── 00-ste-markdown-mermaid/      # Orientation: STE writing, Markdown, Mermaid
+│   │   ├── README.md
+│   │   └── lesson.md
+│   ├── 01-environment/               # Sample module: environment and first program
+│   │   ├── README.md
+│   │   ├── lesson.md
+│   │   └── examples/
+│   │       └── HelloWorld.java
+│   ├── 02-variables-expressions/     # Sample module: variables and expressions
+│   │   ├── README.md
+│   │   ├── lesson.md
+│   │   ├── assignment-01.md          # Filled assignment example
+│   │   ├── lab-01.md                 # Filled lab example
+│   │   ├── assignment-metadata.yaml  # Populated metadata example
+│   │   └── examples/
+│   │       ├── VariablesDemo.java
+│   │       └── ExpressionTrace.java
+│   ├── 03-input-output/              # Sample module: Scanner and printf
+│   │   ├── README.md
+│   │   ├── lesson.md
+│   │   └── examples/
+│   │       ├── ScannerDemo.java
+│   │       └── FormattedOutput.java
+│   └── 07-arrays/                    # Sample module: arrays
+│       ├── README.md
+│       ├── lesson.md
+│       ├── assignment-metadata.yaml  # Populated metadata example
+│       └── examples/
+│           ├── ArrayMax.java
+│           └── ArrayStats.java
+└── scripts/
+    └── check-java.sh                 # Lightweight Java compile check
+```
+
+---
+
+## Navigation
+
+| What you need | Where to go |
+|---------------|-------------|
+| Start teaching | [Instructor Guide](docs/instructor-guide.md) |
+| Start learning | [Student Guide](docs/student-guide.md) |
+| See the course sequence | [Course Map](docs/course-map.md) |
+| See the pacing calendar | [Pacing Guide](docs/pacing-guide.md) |
+| Look up a term | [Glossary](docs/glossary.md) |
+| Diagnose a common error | [FAQ](docs/faq.md) |
+| Score an assignment | [Rubric](docs/rubric.md) |
+| See the workflow diagrams | [Workflow Diagrams](docs/workflow-diagrams.md) |
+| Copy a lesson template | [Lesson Template](templates/lesson-template.md) |
+| Propose a final project | [Project Proposal Template](templates/project-proposal-template.md) |
+| First sample lesson | [Module 01: Environment and First Program](modules/01-environment/lesson.md) |
+| Second sample lesson | [Module 02: Variables and Expressions](modules/02-variables-expressions/lesson.md) |
+| Third sample lesson | [Module 03: Input and Output](modules/03-input-output/lesson.md) |
+| Fourth sample lesson | [Module 07: Arrays](modules/07-arrays/lesson.md) |
+
+---
+
+## Quick start for instructors
+
+1. Click **Use this template** (or fork the repository).
+2. Read the [Instructor Guide](docs/instructor-guide.md).
+3. Review the [Course Map](docs/course-map.md) and adjust the sequence for your institution.
+4. Copy a template from `templates/` for each new lesson or assignment.
+5. Replace placeholder text with your own content.
+6. Run `scripts/check-java.sh` to verify that all Java examples compile.
+
+---
+
+## Reuse and licensing
+
+This repository is released under the [MIT License](LICENSE). You may adapt it freely. If you publish a derived course, a brief acknowledgment is appreciated but not required.
+
+This design is inspired by general principles of interactive learning (including activity shapes found in Runestone-style courses). No proprietary course text or exercises have been copied. All Java examples and instructional text are original.
+
+---
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+---
+
+## Current status
+
+This is a living template. The following are complete:
+
+- Course structure and navigation
+- Instructor and student guides
+- Four complete sample modules (environment, variables/expressions, input/output, arrays)
+- All templates, including a final project proposal template
+- Workflow and diagram documentation
+- Rubric, glossary, FAQ, and pacing guide
+- GitHub Actions CI workflow for Java compile checking
+
+Instructors should add institution-specific policies, grading systems, and the remaining modules as needed. See [CHANGELOG.md](CHANGELOG.md) for a version history.
