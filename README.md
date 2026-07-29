@@ -20,7 +20,7 @@ This repository gives instructors and students a starting framework for a first 
 - A **course verifier** that compiles each example, runs it, and compares what it prints against a recorded expectation.
 - An **AI teammate policy**: coding assistants are explicitly allowed, with a clear standard for honest use.
 - Reusable **templates** for lessons, labs, assignments, and rubrics.
-- **Five sample modules** demonstrating the full lesson cycle.
+- **Nine modules plus an Appendix**, each running the full lesson cycle.
 - A **dev container** so a Codespace is ready with no setup.
 
 ---
@@ -89,7 +89,7 @@ course-csc151-template/
 │   │   ├── lesson-3-work-surfaces-and-ai-teammate.md
 │   │   └── examples/
 │   │       └── HelloWorld.java
-│   ├── m1-variables-expressions/     # Sample module: variables and expressions
+│   ├── m1-variables-expressions/     # Variables and expressions
 │   │   ├── README.md
 │   │   ├── lesson.md
 │   │   ├── assignment-01.md          # Filled assignment example
@@ -98,36 +98,77 @@ course-csc151-template/
 │   │   └── examples/
 │   │       ├── VariablesDemo.java
 │   │       └── ExpressionTrace.java
-│   ├── m2-input-output/              # Sample module: Scanner and printf
+│   ├── m2-input-output/              # Scanner and printf
 │   │   ├── README.md
 │   │   ├── lesson.md
 │   │   └── examples/
 │   │       ├── ScannerDemo.java
+│   │       ├── ScannerMixedInput.java
 │   │       └── FormattedOutput.java
-│   ├── m5-methods-and-testing/       # Sample module: methods, JUnit, debugging
+│   ├── m3-conditionals/              # Boolean expressions, if/else, switch
 │   │   ├── README.md
+│   │   ├── lesson.md
+│   │   └── examples/
+│   │       ├── TicketPrice.java
+│   │       ├── StringMatch.java
+│   │       └── MenuSwitch.java
+│   ├── m4-loops/                     # while, do-while, for, nested loops
+│   │   ├── README.md
+│   │   ├── lesson.md
+│   │   └── examples/
+│   │       ├── CountdownLoops.java
+│   │       ├── SumToN.java
+│   │       └── SentinelLoop.java
+│   ├── m5-methods-and-testing/       # Methods, JUnit, debugging
+│   │   ├── README.md
+│   │   ├── lesson-1-methods.md
+│   │   ├── lesson-2-testing-and-debugging.md
 │   │   ├── examples/
+│   │   │   ├── MethodBasics.java
 │   │   │   └── ScoreUtils.java
 │   │   └── tests/
 │   │       └── ScoreUtilsTest.java
-│   └── m6-arrays-collections/        # Sample module: arrays and collections
-│       ├── README.md
-│       ├── lesson.md
-│       ├── assignment-metadata.yaml  # Populated metadata example
-│       └── examples/
-│           ├── ArrayMax.java
-│           └── ArrayStats.java
+│   ├── m6-arrays-collections/        # Arrays and collections
+│   │   ├── README.md
+│   │   ├── lesson.md
+│   │   ├── assignment-metadata.yaml  # Populated metadata example
+│   │   ├── examples/
+│   │   │   ├── ArrayMax.java
+│   │   │   ├── ArrayStats.java
+│   │   │   └── RosterList.java
+│   │   └── tests/
+│   │       └── ArrayStatsTest.java
+│   ├── m7-classes-objects/           # Fields, constructors, methods, toString
+│   │   ├── README.md
+│   │   ├── lesson.md
+│   │   ├── examples/
+│   │   │   ├── Counter.java
+│   │   │   └── Book.java
+│   │   └── tests/
+│   │       └── BookTest.java
+│   ├── m8-events-and-capstone/       # Register-and-dispatch, final project
+│   │   ├── README.md
+│   │   ├── lesson-1-event-driven-programming.md
+│   │   ├── lesson-2-final-project.md
+│   │   ├── examples/
+│   │   │   ├── HandlerIntro.java
+│   │   │   └── EventDemo.java
+│   │   └── tests/
+│   │       └── CommandDispatcherTest.java
+│   └── appendix/                     # Reference, composed from docs/
+│       └── README.md
 ├── scripts/
 │   ├── verify.sh                     # The course verifier: compile, run, test
 │   ├── fetch-junit.sh                # Installs the JUnit runner into .tools/
 │   └── check-java.sh                 # Compatibility shim; calls verify.sh compile
+├── spikes/                           # Throwaway prototypes; not course content
 └── .devcontainer/                    # Codespaces and local dev container setup
     ├── devcontainer.json
     └── post-create.sh
 ```
 
-Modules 3, 4, 7, and 8 and the Appendix are specified in the
-[Course Map](docs/course-map.md) and are not yet built as directories.
+Every module in the [Course Map](docs/course-map.md) now exists as a directory: Module 0
+through Module 8, plus the Appendix.
 
 ---
 
@@ -145,12 +186,22 @@ Modules 3, 4, 7, and 8 and the Appendix are specified in the
 | See the workflow diagrams | [Workflow Diagrams](docs/workflow-diagrams.md) |
 | Copy a lesson template | [Lesson Template](templates/lesson-template.md) |
 | Propose a final project | [Project Proposal Template](templates/project-proposal-template.md) |
-| First sample lesson | [Module 0: Getting on The Bus](modules/m0-getting-on-the-bus/lesson-2-environment-and-first-program.md) |
-| Second sample lesson | [Module 1: Variables and Expressions](modules/m1-variables-expressions/lesson.md) |
-| Third sample lesson | [Module 2: Input and Output](modules/m2-input-output/lesson.md) |
-| Fourth sample lesson | [Module 6: Arrays and Collections](modules/m6-arrays-collections/lesson.md) |
-| Work surfaces and AI use | [Module 0, Lesson 3](modules/m0-getting-on-the-bus/lesson-3-work-surfaces-and-ai-teammate.md) |
-| Testing and the verifier | [Module 5: Methods and Testing](modules/m5-methods-and-testing/README.md) |
+| Look something up mid-module | [Appendix: Reference](modules/appendix/README.md) |
+
+### The modules in order
+
+| Module | Directory | Lessons |
+|--------|-----------|---------|
+| 0 — Getting on The Bus | [m0-getting-on-the-bus](modules/m0-getting-on-the-bus/README.md) | [Writing and diagrams](modules/m0-getting-on-the-bus/lesson-1-writing-and-diagrams.md) · [Environment and first program](modules/m0-getting-on-the-bus/lesson-2-environment-and-first-program.md) · [Work surfaces and AI teammate](modules/m0-getting-on-the-bus/lesson-3-work-surfaces-and-ai-teammate.md) |
+| 1 — Variables and Expressions | [m1-variables-expressions](modules/m1-variables-expressions/README.md) | [Lesson](modules/m1-variables-expressions/lesson.md) |
+| 2 — Input and Output | [m2-input-output](modules/m2-input-output/README.md) | [Lesson](modules/m2-input-output/lesson.md) |
+| 3 — Conditionals | [m3-conditionals](modules/m3-conditionals/README.md) | [Lesson](modules/m3-conditionals/lesson.md) |
+| 4 — Loops | [m4-loops](modules/m4-loops/README.md) | [Lesson](modules/m4-loops/lesson.md) |
+| 5 — Methods and Testing | [m5-methods-and-testing](modules/m5-methods-and-testing/README.md) | [Methods](modules/m5-methods-and-testing/lesson-1-methods.md) · [Testing and debugging](modules/m5-methods-and-testing/lesson-2-testing-and-debugging.md) |
+| 6 — Arrays and Collections | [m6-arrays-collections](modules/m6-arrays-collections/README.md) | [Lesson](modules/m6-arrays-collections/lesson.md) |
+| 7 — Classes and Objects | [m7-classes-objects](modules/m7-classes-objects/README.md) | [Lesson](modules/m7-classes-objects/lesson.md) |
+| 8 — Events and Capstone | [m8-events-and-capstone](modules/m8-events-and-capstone/README.md) | [Event-driven programming](modules/m8-events-and-capstone/lesson-1-event-driven-programming.md) · [Final project](modules/m8-events-and-capstone/lesson-2-final-project.md) |
+| Appendix — Reference | [appendix](modules/appendix/README.md) | — |
 
 ---
 
@@ -197,10 +248,10 @@ This is a living template. The following are complete:
 
 - Course structure and navigation
 - Instructor and student guides
-- Four complete sample modules (environment, variables/expressions, input/output, arrays)
+- All nine modules and the Appendix, each with a README, at least one lesson, and runnable examples
 - All templates, including a final project proposal template
 - Workflow and diagram documentation
 - Rubric, glossary, FAQ, and pacing guide
 - GitHub Actions CI workflow for Java compile checking
 
-Instructors should add institution-specific policies, grading systems, and the remaining modules as needed. See [CHANGELOG.md](CHANGELOG.md) for a version history.
+Instructors should add institution-specific policies and grading systems, which this template deliberately leaves out. See [CHANGELOG.md](CHANGELOG.md) for a version history.

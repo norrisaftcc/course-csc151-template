@@ -164,6 +164,10 @@ Write your answers before continuing.
 
 ## Repair code
 
+This beat holds **two defects**, in two separate programs.
+
+### Defect 1 — a missing symbol
+
 The following code contains one syntax error.
 
 ```java
@@ -183,6 +187,59 @@ Do not run the code until you have written your explanation.
 <summary>Answer (open after writing your explanation)</summary>
 
 The semicolon is missing at the end of the first `println` statement. Add `;` after `"Line one")` to fix it.
+
+</details>
+
+### Defect 2 — a name that does not match
+
+A student saved the code below in a file named **`mylocation.java`** and tried to compile it.
+
+```java
+public class MyLocation {
+    public static void main(String[] args) {
+        System.out.println("Asheville");
+    }
+}
+```
+
+`javac mylocation.java` refuses to compile it and prints:
+
+```
+mylocation.java:1: error: class MyLocation is public, should be declared in a file named MyLocation.java
+public class MyLocation {
+       ^
+1 error
+```
+
+The wording differs slightly between Java versions. Recent compilers print *"should be declared
+in a file named"*, and older ones print *"should be in a file named"*. Both mean the same thing,
+and the [FAQ](../../docs/faq.md) lists it under the shorter wording.
+
+**Task:** Nothing inside the braces is wrong. Name what disagrees with what, and state the
+repair in one sentence. Then say which line the caret points at, and why the compiler points
+there rather than at the file name.
+
+Do not read the answer until you have written yours.
+
+<details>
+<summary>Answer (open after writing your explanation)</summary>
+
+**The file name disagrees with the `public` class name.** Java requires a `public` class to sit
+in a file whose name matches it exactly, including its capital letters. The class is
+`MyLocation` and the file is `mylocation.java`, so `M` and `L` are lower case where they should
+be upper case.
+
+**The repair is to rename the file to `MyLocation.java`.** Renaming the class to `mylocation`
+would also compile, and it is the wrong repair: Java class names start with a capital letter,
+and the assignment names the class.
+
+**The caret points at line 1, at the class declaration.** That line is the one thing the
+compiler can see inside the file. It reads the class name there, compares it to the name of the
+file it was handed, and reports the mismatch at the place it found the name it could read. The
+other half of the disagreement is not in the file at all.
+
+This message is entry 7 in the [FAQ](../../docs/faq.md). You will meet it again: the coding task
+below requires the file `MyName.java`, and the transfer task requires `MyLocation.java`.
 
 </details>
 
@@ -229,13 +286,19 @@ Test cases to pass:
 
 ## Test evidence
 
-After running your code, record the following:
+Evidence in this course has three tiers, and you record all three every time. **Normal** is the
+case the program was written for. **Boundary** is the smallest or largest case it still has to
+handle. **Failure** is the case that breaks it, recorded so you know what the break looks like.
 
-| Test | Expected output | Actual output | Pass? |
-|------|----------------|---------------|-------|
-| First line | your first name | | |
-| Second line | your last name | | |
-| Compiles | no errors | | |
+| Tier | What to run | Expected | Actual | Match? |
+|------|-------------|----------|--------|--------|
+| **Normal** | `java MyName` as written | Two lines: your first name, then your last name | | |
+| **Boundary** | A name that contains a space, such as `Mary Anne` | Still two lines — a space does not start a new line | | |
+| **Failure** | Delete the semicolon at the end of your first `println`, recompile, then restore it | `javac` reports `';' expected` with a line number and a caret, and produces no `.class` file | | |
+
+The failure tier is the one worth your attention. The compiler names the file, the line, and
+the character it expected. Read that message now, while you already know what you broke. The
+next time you see it you will not know.
 
 ---
 

@@ -44,6 +44,12 @@ to know anything about football to take this course.*
 was declared in the Learn beat, traced in the Practice beat, and written once in the Apply
 beat.
 
+**The transfer data is chosen so that `println` alone produces the required output.** `12` units
+at `4.25` prints `Subtotal: 51.0` exactly. Values whose product has no exact binary form — `15`
+units at `4.99` prints `74.85000000000001` — would require `System.out.printf` with `%.2f`,
+which Module 2 teaches. A graded beat may not be the first place a student meets a skill, so
+that pointer lives in the lesson's Reflection section, where nothing depends on it.
+
 ---
 
 ## Files in this module

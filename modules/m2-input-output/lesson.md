@@ -300,13 +300,20 @@ Test cases to pass:
 
 ## Test evidence
 
-After running your code, record the following:
+Evidence in this course has three tiers, and you record all three every time. **Normal** is the
+case the program was written for. **Boundary** is the smallest or largest case it still has to
+handle. **Failure** is the case that breaks it, recorded so you know what the break looks like.
 
-| Test | Expected output | Actual output | Pass? |
-|------|----------------|---------------|-------|
-| 5.0 × 3.0 | `Area: 15.00` | | |
-| 10.0 × 2.5 | `Area: 25.00` | | |
-| 1.0 × 1.0 | `Area: 1.00` | | |
+| Tier | What you type | Expected | Actual | Match? |
+|------|--------------|----------|--------|--------|
+| **Normal** | `5.0` then `3.0` | `Area: 15.00` | | |
+| **Boundary** | `0` then `3.0` | `Area: 0.00` — a rectangle with no width still has an area | | |
+| **Failure** | `wide` then anything | The program stops at the first read. The terminal shows `Exception in thread "main" java.util.InputMismatchException` and no `Area:` line appears | | |
+
+The failure tier is the one worth your attention. Record what the terminal printed. You are not
+asked to handle this case, and nothing in this module requires your program to survive it —
+`nextDouble` refuses a word, and the program ends there. Knowing what that ending looks like is
+the evidence.
 
 ---
 

@@ -1,0 +1,12 @@
+Registered commands: 4
+Type add <value>, subtract <value>, equals, clear, or quit.
+> Added 5.0
+> Added 7.5
+> Total: 12.5
+> Subtracted 2.5
+> Total: 10.0
+> Cleared.
+> Total: 0.0
+> Unknown command: multiply
+> 
+Session ended.

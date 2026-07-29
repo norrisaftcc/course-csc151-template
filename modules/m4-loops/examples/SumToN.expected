@@ -1,0 +1,7 @@
+i = 1, total after this pass = 1
+i = 2, total after this pass = 3
+i = 3, total after this pass = 6
+i = 4, total after this pass = 10
+i = 5, total after this pass = 15
+Sum of 1 through 5 is 15
+The loop body ran 5 times.

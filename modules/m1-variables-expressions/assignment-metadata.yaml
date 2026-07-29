@@ -6,7 +6,7 @@
 assignment:
   id: "hw-02"
   title: "Variables and Arithmetic"
-  module: "02 — Variables and Expressions"
+  module: "1 — Variables and Expressions"
   type: "assignment"
   estimated_minutes: 60
 

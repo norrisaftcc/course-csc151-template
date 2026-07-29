@@ -1,0 +1,12 @@
+main starts
+enter announce
+  Method markers
+leave announce
+enter doubled(21)
+leave doubled, returning 42
+total = 50
+enter addUp(int, int)
+addUp(2, 3) = 5
+enter addUp(double, double)
+addUp(2.5, 3.5) = 6.0
+main ends

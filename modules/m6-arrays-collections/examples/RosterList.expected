@@ -1,0 +1,9 @@
+Size after four adds: 4
+First entry: Avery
+Index 1 before the remove: Brooks
+Size after removing index 1: 3
+Index 1 after the remove: Casey
+Every entry:
+  Avery
+  Casey
+  Devon
