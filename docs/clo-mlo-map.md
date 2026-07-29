@@ -19,11 +19,11 @@ These outcomes are extracted and refined from the CCL description. Each CLO uses
 | CLO-1 | Design a Java program that meets a stated requirement: select appropriate data types, control structures, and class structure. |
 | CLO-2 | Code a Java program using primitive types, expressions, control flow, methods, and at least one class. |
 | CLO-3 | Apply object-oriented principles: define a class with fields and methods, create objects, and call instance methods. |
-| CLO-4 | Apply event-driven programming concepts: write code that responds to input or program events using method calls. ⚠️ |
+| CLO-4 | Apply event-driven programming: attach an `ActionListener` to a Swing GUI component (button, menu item) so that clicking it executes useful code. |
 | CLO-5 | Test a Java program using normal cases, boundary cases, and failure cases; record and interpret the results. |
 | CLO-6 | Debug a Java program by reading error messages, isolating the error, applying a fix, and verifying the result. |
 
-> ⚠️ **CLO-4 decision needed:** The CCL lists "event-driven programming methods" prominently. In an introductory Java course this can mean (a) responding to user input via `Scanner`, (b) GUI event handling (Swing/JavaFX), or (c) OOP method dispatch as a form of event response. Decide which interpretation applies at your institution before mapping CLO-4 to MLOs. The mapping below treats interpretation (a/c) as the default. If GUI programming is required, add a Module 11 and map CLO-4 there.
+> **Calculator analogy:** On a calculator, pressing `=` is the signal "I have finished entering numbers — now execute." That button press is an event; the calculation that follows is the handler. CLO-4 asks students to build that connection deliberately: a user action (click) triggers a defined method. This maps directly to the course's handoff model — the button click is the user's "Agreed."
 
 ---
 
@@ -69,9 +69,9 @@ These outcomes are extracted and refined from the CCL description. Each CLO uses
 
 | MLO | CLO |
 |-----|-----|
-| Read user input using `Scanner` for `int`, `double`, and `String` values. | CLO-2, CLO-4 |
+| Read user input using `Scanner` for `int`, `double`, and `String` values. | CLO-2 |
 | Format output using `System.out.printf`. | CLO-2 |
-| Write a program that completes an input → process → output cycle. | CLO-1, CLO-2, CLO-4 |
+| Write a program that completes an input → process → output cycle. | CLO-1, CLO-2 |
 
 ---
 
@@ -151,11 +151,27 @@ These outcomes are extracted and refined from the CCL description. Each CLO uses
 | MLO | CLO |
 |-----|-----|
 | Design an original program that uses at least one class, one collection, and one method beyond `main`. | CLO-1, CLO-3 |
+| Include at least one GUI component (button or menu item) that triggers useful code via an `ActionListener`. | CLO-4 |
 | Code the program to compile and run without unhandled errors. | CLO-2 |
 | Complete the execute-gate handoff with the instructor before final submission. | CLO-1 |
 | Test the program with at least two cases and record evidence. | CLO-5 |
 | Debug at least one error encountered during development, applying the reproduce–isolate–fix–verify strategy. | CLO-6 |
 | Explain design decisions in a written or oral reflection. | CLO-1, CLO-3 |
+
+---
+
+### Module 11 — GUI and Event-Driven Programming
+
+*Introduces Swing, the `JFrame`/`JDialog` component model, and the `ActionListener` interface.*
+
+| MLO | CLO |
+|-----|-----|
+| Create a `JFrame` with at least one `JButton` and display it. | CLO-2, CLO-3 |
+| Attach an `ActionListener` to a button so that clicking it calls a defined method. | CLO-4 |
+| Read a value from a `JTextField` when a button is clicked and use it in a calculation. | CLO-2, CLO-4 |
+| Update a `JLabel` or `JTextField` to display a computed result after an event fires. | CLO-4 |
+| Design and implement a calculator-style GUI: number/operator buttons each fire an event; the `=` button triggers the calculation and displays the result. | CLO-1, CLO-3, CLO-4 |
+| Debug an event handler: identify why a button click produces no output or the wrong output. | CLO-6 |
 
 ---
 
@@ -168,16 +184,17 @@ This matrix shows which modules contribute to each CLO. A filled cell means at l
 | 00 — Writing, Markdown, Mermaid | | | | | | |
 | 01 — Environment | | ✓ | | | | ✓ |
 | 02 — Variables | ✓ | ✓ | | | | ✓ |
-| 03 — Input/Output | ✓ | ✓ | | ✓ | | |
+| 03 — Input/Output | ✓ | ✓ | | | | |
 | 04 — Conditionals | ✓ | ✓ | | | | ✓ |
 | 05 — Loops | ✓ | ✓ | | | | ✓ |
 | 06 — Methods | ✓ | ✓ | | | | |
 | 07 — Arrays | ✓ | ✓ | | | ✓ | |
 | 08 — Classes and Objects | | ✓ | ✓ | | | |
 | 09 — Testing and Debugging | | | | | ✓ | ✓ |
-| 10 — Final Project | ✓ | ✓ | ✓ | | ✓ | ✓ |
+| 10 — Final Project | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| 11 — GUI and Event-Driven | ✓ | ✓ | ✓ | ✓ | | ✓ |
 
-> **CLO-4 gap:** If CLO-4 requires GUI or event-listener programming beyond input/output, Modules 03 and 10 are insufficient. Add a module or expand Module 08 to include event handling before the course is submitted to curriculum review.
+> CLO-4 (event-driven/GUI) is introduced in Module 11 and assessed in Module 10's final project. Every other CLO appears in at least two modules.
 
 ---
 
@@ -185,10 +202,9 @@ This matrix shows which modules contribute to each CLO. A filled cell means at l
 
 Before this mapping is submitted for formal approval, resolve the following:
 
-1. **CLO-4 scope:** What does "event-driven programming methods" mean at this institution — `Scanner` input, GUI events, or something else? ⚠️
-2. **CLO-3 depth:** Does "object-oriented principles" require inheritance and polymorphism, or is encapsulation (fields + methods + constructor) sufficient for CSC 151? A "Module 11" placeholder is available in the course map for inheritance/interfaces.
-3. **CLO-5 assessment:** Is there a common assessment rubric for test evidence, or does each instructor set their own standard? See [rubric.md](rubric.md).
-4. **Module 00 credit:** Does the institution count Module 00 (writing and tools) as a graded module, or is it an ungraded prerequisite activity?
+1. **CLO-3 depth:** Does "object-oriented principles" require inheritance and polymorphism, or is encapsulation (fields + methods + constructor) sufficient for CSC 151? A "Module 11" placeholder is available in the course map for inheritance/interfaces.
+2. **CLO-5 assessment:** Is there a common assessment rubric for test evidence, or does each instructor set their own standard? See [rubric.md](rubric.md).
+3. **Module 00 credit:** Does the institution count Module 00 (writing and tools) as a graded module, or is it an ungraded prerequisite activity?
 
 ---
 

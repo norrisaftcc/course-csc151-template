@@ -17,6 +17,8 @@ flowchart TD
     M07 --> M08[Module 08\nClasses and Objects]
     M08 --> M09[Module 09\nTesting and Debugging]
     M09 --> M10[Module 10\nFinal Project]
+    M08 --> M11[Module 11\nGUI and Event-Driven]
+    M11 --> M10
 ```
 
 *Each arrow represents a dependency. Students should complete earlier modules before later ones. Some instructors move Module 03 before Module 02 for motivational purposes; adjust as needed.*
@@ -172,10 +174,11 @@ Suggested time: 2–3 class sessions.
 
 ### Module 10 — Final Project
 
-**Goal:** Students complete an original program of their own design that demonstrates the course skills.
+**Goal:** Students complete an original program of their own design that demonstrates the course skills, including a GUI with at least one event-driven component.
 
 Requirements (adapt as needed):
 - The program must use at least one class, one array or collection, and at least one method beyond `main`.
+- The program must include at least one GUI component (button or menu item) that triggers useful code via an `ActionListener`.
 - The program must compile and run.
 - The student must submit a prediction of the output for at least two test cases.
 - The student must complete the execute-gate handshake with the instructor before the final submission.
@@ -185,12 +188,31 @@ Suggested time: 1–2 weeks.
 
 ---
 
+### Module 11 — GUI and Event-Driven Programming
+
+**Goal:** Students can create a Swing GUI with buttons, attach `ActionListener` handlers, read input from text fields, and display computed results — the complete event-driven cycle.
+
+Topics:
+- `JFrame`, `JPanel`, `JButton`, `JLabel`, `JTextField`.
+- Attaching an `ActionListener` using a lambda or anonymous class.
+- Reading and writing values between GUI components and program logic.
+- The event-dispatch model: user action → event → handler method.
+- Calculator pattern: each operator button updates state; the `=` button fires the calculation.
+- Connecting GUI layer to a separate logic class (separation of concerns).
+
+**The calculator analogy:**  
+On a calculator, pressing `=` is the signal "I have finished entering numbers — now execute." That button press is an event; the calculation that follows is the handler. This is also the course's handoff model made visible in code: the button click is the user's "Agreed."
+
+Suggested time: 3–4 class sessions.
+
+---
+
 ## Adaptation notes
 
 - **Slower pace:** Split each module into two or three shorter meetings. Add more trace-and-predict exercises before the coding task.
 - **Faster pace:** Combine Modules 01 and 02, or combine Modules 03 and 04. Do not skip the execute gate or the transfer task.
 - **Online or hybrid delivery:** The coach/player model works in breakout rooms, shared code editors, and asynchronous discussion boards. Adjust the handshake to the medium.
-- **Dual enrollment or advanced students:** Add a Module 11 covering inheritance, interfaces, or file I/O. Keep Module 10 (final project) as the integrative capstone.
+- **Dual enrollment or advanced students:** Expand Module 11 (GUI and Event-Driven) to include inheritance, interfaces, or file I/O. Keep Module 10 (final project) as the integrative capstone.
 
 ---
 
