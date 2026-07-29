@@ -1,7 +1,7 @@
 # Lab 01: Variables and Expressions
 
 **Course:** CSC 151 Java Programming I  
-**Module:** 02 — Variables and Expressions  
+**Module:** 1 — Variables and Expressions  
 **Partner:** Work in pairs. Switch coach and player roles at each numbered step.  
 **Estimated time:** 50 minutes
 

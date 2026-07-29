@@ -1,7 +1,7 @@
 # Assignment 01: Variables and Arithmetic
 
 **Course:** CSC 151 Java Programming I  
-**Module:** 02 — Variables and Expressions  
+**Module:** 1 — Variables and Expressions  
 **Type:** Individual  
 **Due:** End of Module 1 (confirm timing with your instructor)
 
