@@ -1,16 +1,17 @@
 # Test Evidence Rubric — CSC 151 Java Programming I
 
-This rubric scores one artifact: a student's **test evidence** — the completed "Test
-evidence" table, or authored JUnit tests, and the "Explanation" that follows — the work a
-lesson's **Team Practice** or **The Big Game** asks for. **Team Practice** is the course's
-name for the Apply beat. Literal meaning: do the whole thing with your coach beside you,
-still not for a score. **The Big Game** is the course's name for the Assess beat. Literal
-meaning: the work that counts toward your grade. It is a different artifact from the one
-[rubric.md](rubric.md) scores. `rubric.md` evaluates *lesson and assignment design* — whether
-a lesson an instructor writes has an observable goal, a complete handshake, and the rest.
-This document evaluates *what a student turned in* after running that lesson: the recorded
-evidence and the written explanation. Use `rubric.md` when reviewing course material. Use
-this rubric when grading a submission.
+This rubric scores one artifact: a student's **test evidence**. Test evidence is the
+completed "Test evidence" table, or authored JUnit tests, plus the "Explanation" that
+follows. It is the work a lesson's **Team Practice** or **The Big Game** asks for.
+**Team Practice** is the course's name for the Apply beat. Literal meaning: do the whole
+thing with your coach beside you, still not for a score. **The Big Game** is the course's
+name for the Assess beat. Literal meaning: the work that counts toward your grade.
+
+This rubric is a different artifact from the one [rubric.md](rubric.md) scores. `rubric.md`
+evaluates *lesson and assignment design* — whether a lesson an instructor writes has an
+observable goal, a complete handshake, and the rest. This document evaluates *what a student
+turned in* after running that lesson: the recorded evidence and the written explanation. Use
+`rubric.md` when reviewing course material. Use this rubric when grading a submission.
 
 This rubric implements the decision recorded in open question 2 of
 [clo-mlo-map.md](clo-mlo-map.md): four categories, five points each, twenty points total.
@@ -58,16 +59,21 @@ plus the Explanation beat that follows.
 
 ## Scoring guide
 
-Each category scores on the same 0-to-5 scale, grouped into four bands. The top band splits
-into two points: one for evidence that is complete, and one more for evidence that leaves no
-gap for a reader to fill in.
+Each of the four categories scores on the same 0-to-5 scale, grouped into four bands. The top
+band splits into two points: one for work that is complete, and one more for work that leaves
+no gap for a reader to fill in.
+
+The normal-case, boundary-case, and failure-case categories are each evidenced in one of the
+two submission forms — JUnit or table — described below. The explanation category has no
+submission form of its own; its band criteria are prose, not a test method or a table row, and
+appear in its own entry under "Category detail and worked anchors."
 
 ### 0 — Missing
-No evidence for this tier is present in either form. There is no test method, and there is no
-completed row.
+For an evidence category, no evidence is present in either form: there is no test method, and
+there is no completed row. For the explanation category, no explanation is written.
 
 ### 1–2 — Partial
-Evidence for this tier exists but has a gap.
+For an evidence category, evidence exists but has a gap:
 
 - **JUnit form:** the test name does not describe what it claims (`test3` instead of
   `findMax_returnsMinusOne_forAllNegativeArray`), or the test targets the wrong tier (a
@@ -76,6 +82,8 @@ Evidence for this tier exists but has a gap.
   not actually performed, or the row's input is not really this tier (a second normal case
   submitted as the boundary row).
 
+For the explanation category, see its own band criteria below.
+
 ### 3–4 — Complete
 
 - **JUnit form:** the test targets the correct tier, the name follows the course's
@@ -83,11 +91,14 @@ Evidence for this tier exists but has a gap.
 - **Table form:** the row's input is a genuine example of this tier, and the Expected,
   Actual, and Match? columns are filled in and consistent with each other.
 
+For the explanation category, see its own band criteria below.
+
 ### 5 — Complete and load-bearing
-The evidence meets every criterion in the Complete band, in whichever form it takes. It also
-would expose the misconception it targets if that misconception were still present. A
-boundary test or row of `{42}` that would also pass, or show a Match, against a broken
-traversal scores a 4, not a 5. The result has to depend on the fix, not merely follow it.
+For an evidence category, the work meets every criterion in the Complete band, in whichever
+form it takes. It also would expose the misconception it targets if that misconception were
+still present. A boundary test or row of `{42}` that would also pass, or show a Match, against
+a broken traversal scores a 4, not a 5. The result has to depend on the fix, not merely follow
+it. For the explanation category, see its own band criteria below.
 
 ---
 
