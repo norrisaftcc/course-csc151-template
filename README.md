@@ -70,6 +70,7 @@ course-csc151-template/
 │   ├── clo-mlo-map.md                # Course and module learning outcome mapping
 │   ├── glossary.md                   # Key terms defined
 │   ├── rubric.md                     # How to evaluate educational content
+│   ├── test-evidence-rubric.md       # How to score a student's test evidence (CLO-5)
 │   ├── workflow-diagrams.md          # Mermaid diagrams for the full workflow
 │   ├── faq.md                        # 10 most common beginner Java errors
 │   └── pacing-guide.md               # 16-week and 8-week calendar templates
@@ -183,6 +184,7 @@ through Module 8, plus the Appendix.
 | Look up a term | [Glossary](docs/glossary.md) |
 | Diagnose a common error | [FAQ](docs/faq.md) |
 | Score an assignment | [Rubric](docs/rubric.md) |
+| Score a student's test evidence | [Test Evidence Rubric](docs/test-evidence-rubric.md) |
 | See the workflow diagrams | [Workflow Diagrams](docs/workflow-diagrams.md) |
 | Copy a lesson template | [Lesson Template](templates/lesson-template.md) |
 | Propose a final project | [Project Proposal Template](templates/project-proposal-template.md) |

@@ -252,7 +252,7 @@ module produces, and how to run the beats accessibly.
 
 ## Evaluation
 
-Use the [Rubric](rubric.md) to evaluate the quality of a lesson or assignment. The minimum passing criteria are:
+Use the [Rubric](rubric.md) to evaluate the quality of a lesson or assignment. Use the [Test Evidence Rubric](test-evidence-rubric.md) to score a student's submitted test evidence for CLO-5 — a different artifact, scored on a different scale. The minimum passing criteria are:
 
 - Learning goal is observable.
 - Execution requires a handshake.
