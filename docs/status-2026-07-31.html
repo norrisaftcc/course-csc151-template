@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSC 151 Template — Completion Status, 2026-07-31</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page:           #f9f9f7;
+    --surface-1:      #fcfcfb;
+    --text-primary:   #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted:     #898781;
+    --grid:           #e1e0d9;
+    --baseline:       #c3c2b7;
+    --border:         rgba(11,11,11,0.10);
+    --seq:            #2a78d6;   /* sequential blue, magnitude */
+    --seq-deep:       #1c5cab;
+    --status-good:    #0ca30c;
+    --status-warn:    #fab219;
+    --good-text:      #006300;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --page:           #0d0d0d;
+      --surface-1:      #1a1a19;
+      --text-primary:   #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted:     #898781;
+      --grid:           #2c2c2a;
+      --baseline:       #383835;
+      --border:         rgba(255,255,255,0.10);
+      --seq:            #3987e5;
+      --seq-deep:       #86b6ef;
+      --status-good:    #0ca30c;
+      --status-warn:    #fab219;
+      --good-text:      #0ca30c;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--page);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.5;
+    padding: 32px 20px 48px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; }
+  header h1 { font-size: 1.5rem; font-weight: 650; }
+  header .sub { color: var(--text-secondary); margin-top: 4px; max-width: 70ch; }
+  header .stamp { color: var(--text-muted); font-size: 0.85rem; margin-top: 8px; }
+  .gloss { color: var(--text-secondary); }
+
+  .card {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 24px;
+  }
+  .card h2 { font-size: 1.05rem; font-weight: 650; margin-bottom: 4px; }
+  .card .desc { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 14px; max-width: 78ch; }
+
+  /* KPI row */
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-top: 24px; }
+  .tile {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .tile .label { font-size: 0.8rem; color: var(--text-secondary); }
+  .tile .value { font-size: 1.9rem; font-weight: 650; margin-top: 2px; }
+  .tile .note  { font-size: 0.78rem; color: var(--text-muted); margin-top: 2px; }
+  .tile .ok    { color: var(--good-text); font-weight: 600; }
+
+  /* Status chips: icon + word, never color alone */
+  .chip { display: inline-flex; align-items: center; gap: 5px; font-size: 0.82rem; font-weight: 600; white-space: nowrap; }
+  .chip .dot { width: 10px; height: 10px; border-radius: 50%; flex: none; display: inline-flex; align-items: center; justify-content: center; }
+  .chip.good  .dot { background: var(--status-good); }
+  .chip.warn  .dot { background: var(--status-warn); }
+  .chip.good { color: var(--good-text); }
+  .chip.warn { color: var(--text-primary); }
+  .chip.na { color: var(--text-muted); font-weight: 500; }
+
+  /* Bar chart (single hue, magnitude) */
+  .chart { display: grid; grid-template-columns: max-content 1fr; row-gap: 7px; column-gap: 12px; align-items: center; }
+  .chart .name { font-size: 0.85rem; color: var(--text-secondary); text-align: right; }
+  .chart .track { position: relative; height: 18px; border-left: 2px solid var(--baseline); }
+  .chart .bar {
+    height: 18px;
+    background: var(--seq);
+    border-radius: 0 4px 4px 0;
+    display: flex; align-items: center; justify-content: flex-end;
+  }
+  .chart .bar span {
+    color: var(--text-primary);
+    font-size: 0.78rem; font-weight: 600;
+    transform: translateX(calc(100% + 7px));
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Evidence table */
+  .tableWrap { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.88rem; }
+  th {
+    text-align: left; font-weight: 650; color: var(--text-secondary);
+    border-bottom: 2px solid var(--baseline);
+    padding: 8px 10px; white-space: nowrap;
+  }
+  td { border-bottom: 1px solid var(--grid); padding: 8px 10px; vertical-align: top; }
+  td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  tr:hover td { background: color-mix(in srgb, var(--seq) 7%, transparent); }
+  .muted { color: var(--text-muted); }
+
+  dl.glossary dt { font-weight: 650; margin-top: 10px; }
+  dl.glossary dd { color: var(--text-secondary); margin-left: 0; max-width: 80ch; }
+
+  footer { margin-top: 28px; color: var(--text-muted); font-size: 0.82rem; max-width: 80ch; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>CSC 151 Java Programming I — Template Completion Status</h1>
+    <p class="sub">This repository is a course template: the modules, lessons, example
+    programs, and instructor documents an institution forks to run the course. This page
+    reports how complete that content is, measured against the course
+    <strong>spine</strong> <span class="gloss">(the fixed sequence of Module&nbsp;0 through
+    Module&nbsp;8 plus a reference Appendix — ten units)</span>.</p>
+    <p class="stamp">Generated 2026-07-31 from a live scan and verifier run at commit <code>579af77</code>.</p>
+  </header>
+
+  <!-- KPI row -->
+  <div class="kpis">
+    <div class="tile">
+      <div class="label">Spine units with a README</div>
+      <div class="value">10 / 10</div>
+      <div class="note ok">✓ complete</div>
+    </div>
+    <div class="tile">
+      <div class="label">Lessons written</div>
+      <div class="value">13 / 13</div>
+      <div class="note ok">✓ every planned lesson exists</div>
+    </div>
+    <div class="tile">
+      <div class="label">Example programs verified</div>
+      <div class="value">21 / 21</div>
+      <div class="note ok">✓ output matches recording</div>
+    </div>
+    <div class="tile">
+      <div class="label">Verifier checks passed</div>
+      <div class="value">42 / 42</div>
+      <div class="note ok">✓ 0 failures</div>
+    </div>
+    <div class="tile">
+      <div class="label">Unit test files</div>
+      <div class="value">4 / 4</div>
+      <div class="note">⚠ present; not executed here — see note</div>
+    </div>
+  </div>
+
+  <!-- Overall view -->
+  <div class="card">
+    <h2>Overall: evidence found per artifact class</h2>
+    <p class="desc">Each bar counts real files on disk, checked against the plan in
+    <code>docs/course-map.md</code>. An <strong>.expected file</strong>
+    <span class="gloss">(a recording of an example program&rsquo;s exact output, which the
+    verifier replays and compares)</span> must exist for every example.</p>
+    <div class="chart" role="img" aria-label="Bar chart. Module READMEs: 10 of 10. Lessons: 13 of 13. Example programs: 21 of 21. Expected-output recordings: 21 of 21. Input fixtures: 6 of 6. Unit test files: 4 of 4.">
+      <div class="name">Module READMEs</div>
+      <div class="track"><div class="bar" style="width:41.9%"><span>10 / 10</span></div></div>
+      <div class="name">Lessons</div>
+      <div class="track"><div class="bar" style="width:54.5%"><span>13 / 13</span></div></div>
+      <div class="name">Example programs</div>
+      <div class="track"><div class="bar" style="width:88%"><span>21 / 21</span></div></div>
+      <div class="name">Expected-output recordings</div>
+      <div class="track"><div class="bar" style="width:88%"><span>21 / 21</span></div></div>
+      <div class="name">Input fixtures (.stdin)</div>
+      <div class="track"><div class="bar" style="width:25.1%"><span>6 / 6</span></div></div>
+      <div class="name">Unit test files</div>
+      <div class="track"><div class="bar" style="width:16.8%"><span>4 / 4</span></div></div>
+    </div>
+    <p class="desc" style="margin-top:12px; margin-bottom:0">Bar length shows the count;
+    every class is at its planned total. Tests appear only in Modules 5–8 because the
+    course teaches testing in Module&nbsp;5 — four files is the full plan, not a gap.</p>
+  </div>
+
+  <!-- Per-module examples chart -->
+  <div class="card">
+    <h2>Verified example programs per module</h2>
+    <p class="desc">Every example compiled and ran, and its output matched its recording,
+    in the verifier run behind this page. The Appendix is a reference unit and carries no
+    example programs by design.</p>
+    <div class="chart" role="img" aria-label="Bar chart of verified examples per module. Module 0: 1. Module 1: 2. Module 2: 3. Module 3: 3. Module 4: 3. Module 5: 2. Module 6: 3. Module 7: 2. Module 8: 2.">
+      <div class="name">M0 · Getting on The Bus</div>
+      <div class="track"><div class="bar" style="width:29.3%"><span>1</span></div></div>
+      <div class="name">M1 · Variables &amp; Expressions</div>
+      <div class="track"><div class="bar" style="width:58.7%"><span>2</span></div></div>
+      <div class="name">M2 · Input &amp; Output</div>
+      <div class="track"><div class="bar" style="width:88%"><span>3</span></div></div>
+      <div class="name">M3 · Conditionals</div>
+      <div class="track"><div class="bar" style="width:88%"><span>3</span></div></div>
+      <div class="name">M4 · Loops</div>
+      <div class="track"><div class="bar" style="width:88%"><span>3</span></div></div>
+      <div class="name">M5 · Methods &amp; Testing</div>
+      <div class="track"><div class="bar" style="width:58.7%"><span>2</span></div></div>
+      <div class="name">M6 · Arrays &amp; Collections</div>
+      <div class="track"><div class="bar" style="width:88%"><span>3</span></div></div>
+      <div class="name">M7 · Classes &amp; Objects</div>
+      <div class="track"><div class="bar" style="width:58.7%"><span>2</span></div></div>
+      <div class="name">M8 · Events &amp; Capstone</div>
+      <div class="track"><div class="bar" style="width:58.7%"><span>2</span></div></div>
+    </div>
+  </div>
+
+  <!-- Evidence table -->
+  <div class="card">
+    <h2>Per-unit evidence</h2>
+    <p class="desc">Counts are files found on disk. &ldquo;Planned&rdquo; comes from
+    <code>docs/course-map.md</code>, the authority on the sequence. A dash means the
+    artifact class does not apply to that unit.</p>
+    <div class="tableWrap">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Unit</th>
+          <th scope="col">README</th>
+          <th scope="col">Lessons (found / planned)</th>
+          <th scope="col">Examples</th>
+          <th scope="col">Recordings</th>
+          <th scope="col">Tests</th>
+          <th scope="col">Verifier</th>
+          <th scope="col">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>M0 — Getting on The Bus</td>
+          <td><span class="chip good"><span class="dot"></span>✓ yes</span></td>
+          <td class="num">3 / 3</td>
+          <td class="num">1</td>
+          <td class="num">1 / 1</td>
+          <td class="muted">—</td>
+          <td><span class="chip good"><span class="dot"></span>✓ pass</span></td>
+          <td class="muted">Course writing rules, environment setup, AI-teammate policy</td>
+        </tr>
+        <tr>
+          <td>M1 — Variables &amp; Expressions</td>
+          <td><span class="chip good"><span class="dot"></span>✓ yes</span></td>
+          <td class="num">1 / 1</td>
+          <td class="num">2</td>
+          <td class="num">2 / 2</td>
+          <td class="muted">—</td>
+          <td><span class="chip good"><span class="dot"></span>✓ pass</span></td>
+          <td class="muted">Also carries an assignment, a lab, and assignment metadata</td>
+        </tr>
+        <tr>
+          <td>M2 — Input &amp; Output</td>
+          <td><span class="chip good"><span class="dot"></span>✓ yes</span></td>
+          <td class="num">1 / 1</td>
+          <td class="num">3</td>
+          <td class="num">3 / 3</td>
+          <td class="muted">—</td>
+          <td><span class="chip good"><span class="dot"></span>✓ pass</span></td>
+          <td class="muted">2 input fixtures for Scanner examples</td>
+        </tr>
+        <tr>
+          <td>M3 — Conditionals</td>
+          <td><span class="chip good"><span class="dot"></span>✓ yes</span></td>
+          <td class="num">1 / 1</td>
+          <td class="num">3</td>
+          <td class="num">3 / 3</td>
+          <td class="muted">—</td>
+          <td><span class="chip good"><span class="dot"></span>✓ pass</span></td>
+          <td class="muted">2 input fixtures</td>
+        </tr>
+        <tr>
+          <td>M4 — Loops</td>
+          <td><span class="chip good"><span class="dot"></span>✓ yes</span></td>
+          <td class="num">1 / 1</td>
+          <td class="num">3</td>
+          <td class="num">3 / 3</td>
+          <td class="muted">—</td>
+          <td><span class="chip good"><span class="dot"></span>✓ pass</span></td>
+          <td class="muted">1 input fixture</td>
+        </tr>
+        <tr>
+          <td>M5 — Methods &amp; Testing</td>
+          <td><span class="chip good"><span class="dot"></span>✓ yes</span></td>
+          <td class="num">2 / 2</td>
+          <td class="num">2</td>
+          <td class="num">2 / 2</td>
+          <td class="num">1</td>
+          <td><span class="chip good"><span class="dot"></span>✓ pass</span></td>
+          <td class="muted">Testing is taught here; first unit-test file appears</td>
+        </tr>
+        <tr>
+          <td>M6 — Arrays &amp; Collections</td>
+          <td><span class="chip good"><span class="dot"></span>✓ yes</span></td>
+          <td class="num">1 / 1</td>
+          <td class="num">3</td>
+          <td class="num">3 / 3</td>
+          <td class="num">1</td>
+          <td><span class="chip good"><span class="dot"></span>✓ pass</span></td>
+          <td class="muted">Also carries assignment metadata</td>
+        </tr>
+        <tr>
+          <td>M7 — Classes &amp; Objects</td>
+          <td><span class="chip good"><span class="dot"></span>✓ yes</span></td>
+          <td class="num">1 / 1</td>
+          <td class="num">2</td>
+          <td class="num">2 / 2</td>
+          <td class="num">1</td>
+          <td><span class="chip good"><span class="dot"></span>✓ pass</span></td>
+          <td class="muted"></td>
+        </tr>
+        <tr>
+          <td>M8 — Events &amp; Capstone</td>
+          <td><span class="chip good"><span class="dot"></span>✓ yes</span></td>
+          <td class="num">2 / 2</td>
+          <td class="num">2</td>
+          <td class="num">2 / 2</td>
+          <td class="num">1</td>
+          <td><span class="chip good"><span class="dot"></span>✓ pass</span></td>
+          <td class="muted">1 input fixture; capstone project brief in lesson 8.2</td>
+        </tr>
+        <tr>
+          <td>Appendix — Reference</td>
+          <td><span class="chip good"><span class="dot"></span>✓ yes</span></td>
+          <td class="muted">—</td>
+          <td class="muted">—</td>
+          <td class="muted">—</td>
+          <td class="muted">—</td>
+          <td class="muted">—</td>
+          <td class="muted">An index composed from the 12 documents in <code>docs/</code>, all present</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <!-- Caveat -->
+  <div class="card">
+    <h2><span class="chip warn"><span class="dot"></span></span> One open item: unit tests were not executed for this report</h2>
+    <p class="desc" style="margin-bottom:0">The four JUnit test files exist and are the
+    planned set, but the environment that generated this page could not download the JUnit
+    runner (its network policy blocks Maven Central), so the tests were not run. Every
+    other number on this page comes from a real execution. To run the tests yourself:
+    <code>bash scripts/fetch-junit.sh</code> once, then
+    <code>bash scripts/verify.sh test</code>.</p>
+  </div>
+
+  <!-- Glossary -->
+  <div class="card">
+    <h2>Terms used on this page</h2>
+    <dl class="glossary">
+      <dt>Spine</dt>
+      <dd>The fixed unit sequence: Module 0 through Module 8, plus the Appendix. The
+      delivery platform requires exactly this count.</dd>
+      <dt>Verifier</dt>
+      <dd><code>scripts/verify.sh</code> — the course&rsquo;s own check script. It compiles
+      every example, runs it, and compares the output to the recording. One compile check
+      plus one run check per example gives the 42 total.</dd>
+      <dt>.expected recording</dt>
+      <dd>A file holding an example program&rsquo;s exact correct output, generated from a
+      real run. The verifier replays the program and diffs against it.</dd>
+      <dt>Input fixture (.stdin)</dt>
+      <dd>A file of typed-in input for examples that read from the keyboard, so the
+      verifier can run them unattended.</dd>
+      <dt>Getting on The Bus</dt>
+      <dd>Module 0&rsquo;s title — a sports idiom meaning &ldquo;joining the team and its way
+      of working.&rdquo; The course glosses every idiom this way; it is one of its writing rules.</dd>
+    </dl>
+  </div>
+
+  <footer>
+    <p>Source of truth for the sequence: <code>docs/course-map.md</code>. This page is a
+    snapshot; regenerate it rather than editing the numbers. It is one self-contained file
+    with no network requests, so it opens from a local copy of the repository in any
+    browser.</p>
+  </footer>
+
+</div>
+</body>
+</html>
