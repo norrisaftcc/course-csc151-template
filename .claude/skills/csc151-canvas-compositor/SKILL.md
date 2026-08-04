@@ -570,4 +570,4 @@ own pages must obey them:
 
 No visual or delivery decisions remain deferred for this skill. The default palette is black and
 gold with grayscale surfaces. The optional local Swing path ships as the
-[Module 8a addendum](../../modules/m8-events-and-capstone/lesson-3-swing-track-addendum.md).
+[Module 8a addendum](../../../modules/m8-events-and-capstone/lesson-3-swing-track-addendum.md).

@@ -246,6 +246,7 @@ module produces, and how to run the beats accessibly.
 - [Module 6: Arrays and Collections](../modules/m6-arrays-collections/README.md)
 - [Module 7: Classes and Objects](../modules/m7-classes-objects/README.md)
 - [Module 8: Events and Capstone](../modules/m8-events-and-capstone/README.md)
+  - Optional [Module 8a Swing track addendum](../modules/m8-events-and-capstone/lesson-3-swing-track-addendum.md) for students on a local machine
 - [Appendix: Reference](../modules/appendix/README.md)
 
 ---
