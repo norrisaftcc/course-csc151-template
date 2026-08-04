@@ -39,7 +39,7 @@ Each solid arrow represents a dependency. Students should complete earlier modul
 | 5 | Methods and Testing | Methods · Testing and debugging | CLO-2, CLO-5, CLO-6 |
 | 6 | Arrays and Collections | — | CLO-2 |
 | 7 | Classes and Objects | — | CLO-3 |
-| 8 | Events and Capstone | Event-driven programming · Final project | CLO-3, CLO-4, CLO-5 |
+| 8 | Events and Capstone | Event-driven programming · Final project · 8a Swing track addendum | CLO-3, CLO-4, CLO-5 |
 | Appendix | Reference | — | — |
 
 ---
@@ -310,7 +310,7 @@ Submodule 8.2 — Final project:
 
 **How CLO-4 is assessed.** CLO-4 is satisfied by **processing a user event as a function call.** The assessed skill is the *register-and-dispatch cycle*, not one graphical toolkit. Students implement a handler interface and register it with a dispatcher. Selecting an option from a console menu triggers the handler, and so does pressing a Swing button; **both are accepted evidence, and neither is the lesser path.** The console version runs and is verified in a Codespace with no display, so no student is disadvantaged by their work surface. Students working locally may wire the same handler classes to Swing buttons, changing no logic — which demonstrates separation of concerns directly, because the logic layer does not know what produced the event.
 
-Lessons in this repository: [8.1 Event-driven programming](../modules/m8-events-and-capstone/lesson-1-event-driven-programming.md) · [8.2 Final project](../modules/m8-events-and-capstone/lesson-2-final-project.md).
+Lessons in this repository: [8.1 Event-driven programming](../modules/m8-events-and-capstone/lesson-1-event-driven-programming.md) · [8.2 Final project](../modules/m8-events-and-capstone/lesson-2-final-project.md) · [8a Swing track addendum](../modules/m8-events-and-capstone/lesson-3-swing-track-addendum.md).
 
 Suggested time: 3–4 class sessions for 8.1, then 1–2 weeks for 8.2.
 

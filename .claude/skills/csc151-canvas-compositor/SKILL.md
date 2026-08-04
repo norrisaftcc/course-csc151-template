@@ -178,13 +178,13 @@ placeholder links on the page. Every emitted fragment ships with `PLACEHOLDERS.m
 
 | Role | Value | Use |
 |---|---|---|
-| ink | `#16191D` | headings, code text |
-| body | `#3C4149` | body text (set on wrapper) |
-| muted | `#6B7280` | labels, captions, checkbox borders |
-| rule | `#DFE3E8` | hairlines, table rows, default gutters |
-| wash | `#F4F6F7` | code, diagram, and panel backgrounds |
-| accent | `#1F6F5C` | kickers, sequence gutters, source-document gutters, AI teammate |
-| caution | `#9A6700` | caution gutters and labels, placeholder markers |
+| ink | `#111111` | headings, code text |
+| body | `#2F2F2F` | body text (set on wrapper) |
+| muted | `#707070` | labels, captions, checkbox borders |
+| rule | `#D6D6D6` | hairlines, table rows, default gutters |
+| wash | `#F5F5F5` | code, diagram, and panel backgrounds |
+| accent | `#8A6D1D` | kickers, sequence gutters, source-document gutters, AI teammate |
+| caution | `#4B5563` | caution gutters and labels, placeholder markers |
 | link | `#0374B5` | links only — Canvas blue, and it stays that way |
 
 Mono stack: `ui-monospace,SFMono-Regular,Menlo,Consolas,monospace`
@@ -193,16 +193,11 @@ Mono stack: `ui-monospace,SFMono-Regular,Menlo,Consolas,monospace`
 
 ### Reskinning the accent
 
-The course may adopt a crimson team palette. The accent is the only token that should move,
-and moving it has two constraints that are not negotiable:
+The default course palette is black and gold with grayscale surfaces. Gold marks navigation and
+teaching emphasis; black carries structure; grayscale carries most reading surfaces.
 
-- **Crimson must not be the caution color, and must not sit next to it.** A red accent beside
-  `#9A6700` reads as two severities of warning. If the accent goes crimson, the caution token
-  moves to a color that cannot be mistaken for it, and both are retested together.
-- **Contrast is checked, not assumed.** Accent text appears at `.7rem` in uppercase labels.
-  A crimson that passes at body size can fail there. Verify against the wash `#F4F6F7` and
-  against white before committing the change.
-
+The accent is the only token intended for a team-color change. Contrast is checked, not assumed.
+Verify any replacement at `.7rem` against the wash and against white before committing it.
 Do not reskin token-by-token in individual pages. Change the table, then recompose.
 
 ---
@@ -573,10 +568,6 @@ own pages must obey them:
 
 ## Deferred
 
-Unresolved, recorded rather than guessed:
-
-1. **The crimson palette.** The accent may move to a team color. The caution-color collision
-   and the small-size contrast check are specified above, but no palette has been chosen, so
-   nothing has been retested.
-2. **Where the Swing enrichment track lives.** GUI work is optional and local-only. Whether
-   the optional path is a separate Canvas page or an aside inside the M8 page is not settled.
+No visual or delivery decisions remain deferred for this skill. The default palette is black and
+gold with grayscale surfaces. The optional local Swing path ships as the
+[Module 8a addendum](../../modules/m8-events-and-capstone/lesson-3-swing-track-addendum.md).

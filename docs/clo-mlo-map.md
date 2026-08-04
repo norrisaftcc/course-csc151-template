@@ -183,6 +183,16 @@ The handler classes are identical across both paths, because the logic layer doe
 | Debug an event handler: identify why a command produces no output or the wrong output. | CLO-6 |
 | *Alternative path, local surface only:* wire the same handler classes to Swing `JButton` components using `ActionListener`, changing no logic. | CLO-4 |
 
+#### Module 8a — Swing Track Addendum
+
+The addendum is optional local practice. It provides a second trigger for the same CLO-4 skill.
+Students without a local display use the console path and lose no credit.
+
+| MLO | CLO |
+|-----|-----|
+| Adapt a Swing `ActionListener` to an existing event handler without changing the logic layer. | CLO-3, CLO-4 |
+| Record normal, boundary, and failure evidence for a button-triggered event. | CLO-4, CLO-5 |
+
 #### Submodule 8.2 — Final Project
 
 | MLO | CLO |
